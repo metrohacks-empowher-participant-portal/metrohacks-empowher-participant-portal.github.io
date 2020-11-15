@@ -49,31 +49,36 @@
         ParentGuardianPhone =  document.getElementById("ParentGuardianPhone").value;
         ParentGuardianAddress =  document.getElementById("ParentGuardianAddress").value;
 
+        if (!(LiabilityRelease == "" || ParentSig == ""|| Publicity == "" || Evaluation == "" || ParticipSig == ""|| ParticipDate == "" || ParticipName == ""  || ParticipDoB == "" || ParticipAddress == "" || ParentGuardianSig == "" || ParentGuardianDate == "" || ParentGuardianName == "" || ParentGuardianEmail == "" || ParentGuardianPhone == "" || ParentGuardianAddress == "")) {
 
-        mynewNCWIT = new newNCWIT();
-        mynewNCWIT.set("LiabilityRelease", LiabilityRelease);
-        mynewNCWIT.set("ParentSig", ParentSig);
-        mynewNCWIT.set("Publicity", Publicity);
-        mynewNCWIT.set("Evaluation", Evaluation);
-        mynewNCWIT.set("ParticipSig", ParticipSig);
-        mynewNCWIT.set("ParticipDate", ParticipDate);
-        mynewNCWIT.set("ParticipName", ParticipName);
-        mynewNCWIT.set("ParticipDoB", ParticipDoB);
-        mynewNCWIT.set("ParticipAddress", ParticipAddress);
-        mynewNCWIT.set("ParentGuardianSig", ParentGuardianSig);
-        mynewNCWIT.set("ParentGuardianDate", ParentGuardianDate);
-        mynewNCWIT.set("ParentGuardianName", ParentGuardianName);
-        mynewNCWIT.set("ParentGuardianEmail", ParentGuardianEmail);
-        mynewNCWIT.set("ParentGuardialPhone", ParentGuardianPhone);
-        mynewNCWIT.set("ParentGuardianAddress", ParentGuardianAddress);
+            mynewNCWIT = new newNCWIT();
+            mynewNCWIT.set("LiabilityRelease", LiabilityRelease);
+            mynewNCWIT.set("ParentSig", ParentSig);
+            mynewNCWIT.set("Publicity", Publicity);
+            mynewNCWIT.set("Evaluation", Evaluation);
+            mynewNCWIT.set("ParticipSig", ParticipSig);
+            mynewNCWIT.set("ParticipDate", ParticipDate);
+            mynewNCWIT.set("ParticipName", ParticipName);
+            mynewNCWIT.set("ParticipDoB", ParticipDoB);
+            mynewNCWIT.set("ParticipAddress", ParticipAddress);
+            mynewNCWIT.set("ParentGuardianSig", ParentGuardianSig);
+            mynewNCWIT.set("ParentGuardianDate", ParentGuardianDate);
+            mynewNCWIT.set("ParentGuardianName", ParentGuardianName);
+            mynewNCWIT.set("ParentGuardianEmail", ParentGuardianEmail);
+            mynewNCWIT.set("ParentGuardialPhone", ParentGuardianPhone);
+            mynewNCWIT.set("ParentGuardianAddress", ParentGuardianAddress);
 
-        mynewNCWIT.save().then(function(newNCWIT){
-            console.log("Successful with name " + newNCWIT.get("LiabilityRelease") + " and Parent Sig: " + newNCWIT.get("ParentSig") + newNCWIT.get("Publicity") +  newNCWIT.get("Evaluation") +  newNCWIT.get("ParticipSig") +  newNCWIT.get("ParticipDate") +  newNCWIT.get("ParticipName") +  newNCWIT.get("ParticipDoB") +  newNCWIT.get("ParticipAddress"));
-            alert("Thank you! Your form has been submitted");
+            mynewNCWIT.save().then(function(newNCWIT){
+                console.log("Successful with name " + newNCWIT.get("LiabilityRelease") + " and Parent Sig: " + newNCWIT.get("ParentSig") + newNCWIT.get("Publicity") +  newNCWIT.get("Evaluation") +  newNCWIT.get("ParticipSig") +  newNCWIT.get("ParticipDate") +  newNCWIT.get("ParticipName") +  newNCWIT.get("ParticipDoB") +  newNCWIT.get("ParticipAddress"));
+                alert("Thank you! Your form has been submitted");
 
-        }).catch(function(error){
-            console.log("Error: " + error.message);
-        });
+            }).catch(function(error){
+                console.log("Error: " + error.message);
+            });
+        }
+        
+
+        
     }
 
    
@@ -104,7 +109,7 @@
               <br></br>
 
               <label for = "ParentSig">Parent/Guardian Signature</label>
-              <input type = "text" name = "ParentSig" id = "ParentSig" value = "" >
+              <input type = "text" name = "ParentSig" id = "ParentSig" >
               
               
               
@@ -115,68 +120,68 @@
 
               <p>Do you consent to the section above to grant NCWIT the Optional Right to Publicity?*</p>
               <label for = "Publicity"> Yes/No </label>
-              <input type = "text" name = "Publicity" id = "Publicity" value = "">
+              <input type = "text" name = "Publicity" id = "Publicity"required>
     
 
 
               <p>Do you consent to the optional section above to grant NCWIT Optional Permission to Evaluate?*</p>
               <label for = "Evaluation"> Yes/No </label>
-              <input type = "text" name = "Evaluation" id = "Evaluation" value = "">
+              <input type = "text" name = "Evaluation" id = "Evaluation" required>
               
 
               <br></br>
 
               <label for = "ParticipSig"> Participant Signature: </label>
-              <input type = "text" name = "ParticipSig" id = "ParticipSig" value = "">
+              <input type = "text" name = "ParticipSig" id = "ParticipSig" required>
 
               <label for ="ParticipDate"> Date (in the form MM/DD/YY): </label>
-              <input type = "text" name = "ParticipDate" id = "ParticipDate" value = "">
+              <input type = "text" name = "ParticipDate" id = "ParticipDate" required>
 
               <br></br>
 
               <label for ="ParticipName"> Participant Name: </label>
-              <input type = "text" name = "ParticipName" id = "ParticipName" value = "">
+              <input type = "text" name = "ParticipName" id = "ParticipName" required>
               <br></br>
 
               <label for ="ParticipDoB"> Participant Date of Birth (in the form MM/DD/YY): </label>
-              <input type = "text" name = "ParticipDoB" id = "ParticipDoB" value = "">
+              <input type = "text" name = "ParticipDoB" id = "ParticipDoB" required>
 
               <br></br>
 
               <label for ="ParticipAddress"> Address: </label>
-              <input type = "text" name = "ParticipAddress" id = "ParticipAddress" value = "">
+              <input type = "text" name = "ParticipAddress" id = "ParticipAddress"  required>
 
               
 
               <div>
                 <p>Parent/Guardian</p>
                 <label for ="ParentGuardianSig"> Parent/Legal Guardian Signature: </label>
-                <input type = "text" name = "ParentGuardianSig" id = "ParentGuardianSig" value = "">
+                <input type = "text" name = "ParentGuardianSig" id = "ParentGuardianSig" required>
 
                 <br></br>
 
                 <label for ="ParentGuardianDate"> Date (in the form MM/DD/YY): </label>
-                <input type = "text" name = "ParentGuardianDate" id = "ParentGuardianDate" value = "">
+                <input type = "text" name = "ParentGuardianDate" id = "ParentGuardianDate" required>
 
                 <br></br>
 
                 <label for ="ParentGuardianName"> Printed Name of Parent/Legal Guardian: </label>
-                <input type = "text" name = "ParentGuardianName" id = "ParentGuardianName" value = "">
+                <input type = "text" name = "ParentGuardianName" id = "ParentGuardianName" required>
 
                 <br></br>
 
                 <label for ="ParentGuardianEmail"> Parent/Legal Guardian Email: </label>
-                <input type = "text" name = "ParentGuardianEmail" id = "ParentGuardianEmail" value = "">
+                <input type = "text" name = "ParentGuardianEmail" id = "ParentGuardianEmail"  required>
 
                 <br></br>
 
                 <label for ="ParentGuardianPhone"> Parent/Legal Guardian Mobile Phone: </label>
-                <input type = "text" name = "ParentGuardianPhone" id = "ParentGuardianPhone" value = "">
+                <input type = "text" name = "ParentGuardianPhone" id = "ParentGuardianPhone"  required>
 
                 <br></br>
 
                 <label for ="ParentGuardianAddress"> Address: </label>
-                <input type = "text" name = "ParentGuardianAddress" id = "ParentGuardianAddress" value = "">
+                <input type = "text" name = "ParentGuardianAddress" id = "ParentGuardianAddress"  required >
 
 
                 <br></br>
