@@ -52,6 +52,7 @@
             myParticipantLiability.save().then(function(ParticipantLiability){
                 
                 alert("Thank you! Your form has been submitted");
+            
 
             }).catch(function(error){
                 console.log("Error: " + error.message);
@@ -82,7 +83,7 @@
     <p>Parent or Legal Guardian Signature: <input type = "text" name = "ParentLegalGuardianSignature" id = "ParentLegalGuardianSignature" class = "input-text"></p>
     <p>Date: <input type = "date" name = "DateParentGuardian" id = "DateParentGuardian" class = "input-text"></p>
 
-    <input type = "submit" class = "home-button"  Value = "Submit" id = "SubmitButton" onclick="create()">
+    <input type = "submit" class = "button"  Value = "Submit" id = "SubmitButton" onclick="create()">
 </form>
 
 
