@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NCWIT Waiver</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">  
+    <link rel="stylesheet" href="empowher-assets/Waiver.css">
 
     <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
     <script type="text/javascript" type="text/javascript">
@@ -69,7 +72,7 @@
             mynewNCWIT.set("ParentGuardianAddress", ParentGuardianAddress);
 
             mynewNCWIT.save().then(function(newNCWIT){
-                //console.log("Successful with name " + newNCWIT.get("LiabilityRelease") + " and Parent Sig: " + newNCWIT.get("ParentSig") + newNCWIT.get("Publicity") +  newNCWIT.get("Evaluation") +  newNCWIT.get("ParticipSig") +  newNCWIT.get("ParticipDate") +  newNCWIT.get("ParticipName") +  newNCWIT.get("ParticipDoB") +  newNCWIT.get("ParticipAddress"));
+                console.log("Successful with name " + newNCWIT.get("LiabilityRelease") + " and Parent Sig: " + newNCWIT.get("ParentSig") + newNCWIT.get("Publicity") +  newNCWIT.get("Evaluation") +  newNCWIT.get("ParticipSig") +  newNCWIT.get("ParticipDate") +  newNCWIT.get("ParticipName") +  newNCWIT.get("ParticipDoB") +  newNCWIT.get("ParticipAddress"));
                 alert("Thank you! Your form has been submitted");
 
             }).catch(function(error){
@@ -104,12 +107,13 @@
             <div>
 
               <p>Release from Liability (Page 2):</p>
-              <label for= "LiabilityRelease"> Please type: "I agree" </label>
-              <input type = "text" name = "LiabilityRelease" id = "LiabilityRelease" >
-              <br></br>
-
-              <label for = "ParentSig">Parent/Guardian Signature</label>
-              <input type = "text" name = "ParentSig" id = "ParentSig" >
+              <p> <label for= "LiabilityRelease"> Please type: "I agree" </label>
+                <input type = "text" name = "LiabilityRelease" id = "LiabilityRelease" >
+                
+  
+                <label for = "ParentSig">Parent/Guardian Signature</label>
+                <input type = "text" name = "ParentSig" id = "ParentSig" ></p>
+              
               
               
               
@@ -119,73 +123,75 @@
               <p>Consent To Optional Release (Page 4)</p>
 
               <p>Do you consent to the section above to grant NCWIT the Optional Right to Publicity?*</p>
-              <label for = "Publicity"> Yes/No </label>
-              <input type = "text" name = "Publicity" id = "Publicity"required>
+              <p><label for = "Publicity"> Yes/No </label>
+                <input type = "text" name = "Publicity" id = "Publicity"required></p>
     
 
 
               <p>Do you consent to the optional section above to grant NCWIT Optional Permission to Evaluate?*</p>
-              <label for = "Evaluation"> Yes/No </label>
-              <input type = "text" name = "Evaluation" id = "Evaluation" required>
+              <p><label for = "Evaluation"> Yes/No </label>
+                <input type = "text" name = "Evaluation" id = "Evaluation" required></p>
               
 
-              <br></br>
+              
 
-              <label for = "ParticipSig"> Participant Signature: </label>
-              <input type = "text" name = "ParticipSig" id = "ParticipSig" required>
+              <p><label for = "ParticipSig"> Participant Signature: </label>
+                <input type = "text" name = "ParticipSig" id = "ParticipSig" required>
+  
+                <label for ="ParticipDate"> Date: </label>
+                <input type = "date" name = "ParticipDate" id = "ParticipDate" required></p>
 
-              <label for ="ParticipDate"> Date (in the form MM/DD/YY): </label>
-              <input type = "text" name = "ParticipDate" id = "ParticipDate" required>
+              
 
-              <br></br>
+              <p><label for ="ParticipName"> Participant Name: </label>
+                <input type = "text" name = "ParticipName" id = "ParticipName" required>
+                
+  
+                <label for ="ParticipDoB"> Participant Date of Birth: </label>
+                <input type = "date" name = "ParticipDoB" id = "ParticipDoB" required></p>
 
-              <label for ="ParticipName"> Participant Name: </label>
-              <input type = "text" name = "ParticipName" id = "ParticipName" required>
-              <br></br>
+              
 
-              <label for ="ParticipDoB"> Participant Date of Birth (in the form MM/DD/YY): </label>
-              <input type = "text" name = "ParticipDoB" id = "ParticipDoB" required>
-
-              <br></br>
-
-              <label for ="ParticipAddress"> Address: </label>
-              <input type = "text" name = "ParticipAddress" id = "ParticipAddress"  required>
+              <p><label for ="ParticipAddress"> Address: </label>
+                <input type = "text" name = "ParticipAddress" id = "ParticipAddress"  required></p>
 
               
 
               <div>
                 <p>Parent/Guardian</p>
-                <label for ="ParentGuardianSig"> Parent/Legal Guardian Signature: </label>
-                <input type = "text" name = "ParentGuardianSig" id = "ParentGuardianSig" required>
+                <p><label for ="ParentGuardianSig"> Parent/Legal Guardian Signature: </label>
+                    <input type = "text" name = "ParentGuardianSig" id = "ParentGuardianSig" required>
+    
+                    
+    
+                    <label for ="ParentGuardianDate"> Date: </label>
+                    <input type = "date" name = "ParentGuardianDate" id = "ParentGuardianDate" required></p>
+                
 
-                <br></br>
+                
 
-                <label for ="ParentGuardianDate"> Date (in the form MM/DD/YY): </label>
-                <input type = "text" name = "ParentGuardianDate" id = "ParentGuardianDate" required>
+                <p><label for ="ParentGuardianName"> Printed Name of Parent/Legal Guardian: </label>
+                    <input type = "text" name = "ParentGuardianName" id = "ParentGuardianName" required>
+    
+                   
+    
+                    <label for ="ParentGuardianEmail"> Parent/Legal Guardian Email: </label>
+                    <input type = "text" name = "ParentGuardianEmail" id = "ParentGuardianEmail"  required></p>
 
-                <br></br>
+                
 
-                <label for ="ParentGuardianName"> Printed Name of Parent/Legal Guardian: </label>
-                <input type = "text" name = "ParentGuardianName" id = "ParentGuardianName" required>
-
-                <br></br>
-
-                <label for ="ParentGuardianEmail"> Parent/Legal Guardian Email: </label>
-                <input type = "text" name = "ParentGuardianEmail" id = "ParentGuardianEmail"  required>
-
-                <br></br>
-
-                <label for ="ParentGuardianPhone"> Parent/Legal Guardian Mobile Phone: </label>
-                <input type = "text" name = "ParentGuardianPhone" id = "ParentGuardianPhone"  required>
-
-                <br></br>
-
-                <label for ="ParentGuardianAddress"> Address: </label>
-                <input type = "text" name = "ParentGuardianAddress" id = "ParentGuardianAddress"  required >
+                <p><label for ="ParentGuardianPhone"> Parent/Legal Guardian Mobile Phone: </label>
+                    <input type = "text" name = "ParentGuardianPhone" id = "ParentGuardianPhone"  required>
+    
+                   
+    
+                    <label for ="ParentGuardianAddress"> Address: </label>
+                    <input type = "text" name = "ParentGuardianAddress" id = "ParentGuardianAddress"  required ></p>
+                    
 
 
-                <br></br>
-                <input type = "submit" Value = "Submit" id = "SubmitButton" onclick="create()">
+                
+                <input type = "submit" class = "home-button" Value = "Submit" id = "SubmitButton" onclick="create()">
 
             </form>
 
