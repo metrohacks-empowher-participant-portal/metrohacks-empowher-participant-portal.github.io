@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Participant Waiver</title>
+    <title>NCWIT Waiver</title>
+
     <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
     <script type="text/javascript" type="text/javascript">
 
@@ -11,73 +12,190 @@
     Parse.initialize("2bLSypMifZwtcnA82P5M9LonZAiZX84xAz8E93mg","bqYQwNlW9g6dGEF3BDprzySZ2UXFjWJXXSUXu6ct"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
     Parse.serverURL = 'https://parseapi.back4app.com/'
 
-    var participantLiability = new Parse.Object.extend("ParticipantLiability");
-    var ParentLegalGuardianName1 = document.getElementById("ParentLegalGuardianName1").value;
-    var ParentLegalGuardianName2 = document.getElementById("ParentLegalGuardianName2").value;
-    var ChildName = document.getElementById("ChildName").value;
-    var ParticipantNamePrinted = document.getElementById("ParticipantNamePrinted").value;
-    var DateParticipant = document.getElementById("DateParticipant").value;
-    var ParentLegalGuardianSignature = document.getElementById("ParentLegalGuardianSignature").value;
-    var DateParentGuardian = document.getElementById("DateParentGuardian").value;
+    
 
+    var newNCWIT = new Parse.Object.extend("newNCWIT");
+    var LiabilityRelease = document.getElementById("LiabilityRelease").value;
+    var ParentSig = document.getElementById("ParentSig").value;
+    var Publicity =  document.getElementById("Publicity").value;
+    var Evaluation=  document.getElementById("Evaluation").value;
+    var ParticipSig =  document.getElementById("ParticipSig").value;
+    var ParticipDate =  document.getElementById("ParticipDate").value;
+    var ParticipName =  document.getElementById("ParticipName").value;
+    var ParticipDoB =  document.getElementById("ParticipDoB").value;
+    var ParticipAddress =  document.getElementById("ParticipAddress").value;
+    var ParentGuardianSig=  document.getElementById("ParentGuardianSig").value;
+    var ParentGuardianDate = document.getElementById("ParentGuardianDate").value;
+    var ParentGuardianName = document.getElementById("ParentGuardianName").value;
+    var ParentGuardianEmail =  document.getElementById("ParentGuardianEmail").value;
+    var ParentGuardianPhone =  document.getElementById("ParentGuardianPhone").value;
+    var ParentGuardianAddress =  document.getElementById("ParentGuardianAddress").value;
+   
 
     function create() {
-        ParentLegalGuardianName1 = document.getElementById("ParentLegalGuardianName1").value;
-        ParentLegalGuardianName2 = document.getElementById("ParentLegalGuardianName2").value;
-        ChildName = document.getElementById("ChildName").value;
-        ParticipantNamePrinted = document.getElementById("ParticipantNamePrinted").value;
-        DateParticipant = document.getElementById("DateParticipant").value;
-        ParentLegalGuardianSignature = document.getElementById("ParentLegalGuardianSignature").value;
-        DateParentGuardian = document.getElementById("DateParentGuardian").value;
+        LiabilityRelease = document.getElementById("LiabilityRelease").value;
+        ParentSig = document.getElementById("ParentSig").value;
+        Publicity =  document.getElementById("Publicity").value;
+        Evaluation=  document.getElementById("Evaluation").value;
+        ParticipSig =  document.getElementById("ParticipSig").value;
+        ParticipDate =  document.getElementById("ParticipDate").value;
+        ParticipName =  document.getElementById("ParticipName").value;
+        ParticipDoB =  document.getElementById("ParticipDoB").value;
+        ParticipAddress =  document.getElementById("ParticipAddress").value;
+        ParentGuardianSig=  document.getElementById("ParentGuardianSig").value;
+        ParentGuardianDate = document.getElementById("ParentGuardianDate").value;
+        ParentGuardianName = document.getElementById("ParentGuardianName").value;
+        ParentGuardianEmail =  document.getElementById("ParentGuardianEmail").value;
+        ParentGuardianPhone =  document.getElementById("ParentGuardianPhone").value;
+        ParentGuardianAddress =  document.getElementById("ParentGuardianAddress").value;
 
-        if (!(ParentLegalGuardianName1  == "" || ParentLegalGuardianName2 == "" || ChildName == "" || ParticipantNamePrinted == "" || DateParticipant == "" || ParentLegalGuardianSignature == "" || DateParentGuardian == ""))
-        {
-            myParticipantLiability = new participantLiability();
-            myParticipantLiability.set("ParentLegalGuardianName1", ParentLegalGuardianName1);
-            myParticipantLiability.set("ParentLegalGuardianName2", ParentLegalGuardianName2);
-            myParticipantLiability.set("ChildName", ChildName);
-            myParticipantLiability.set("ParticipantNamePrinted", ParticipantNamePrinted);
-            myParticipantLiability.set("DateParticipant", DateParticipant);
-            myParticipantLiability.set("ParentLegalGuardianSignature", ParentLegalGuardianSignature);
-            myParticipantLiability.set("DateParentGuardian", DateParentGuardian);
+        if (!(LiabilityRelease == "" || ParentSig == ""|| Publicity == "" || Evaluation == "" || ParticipSig == ""|| ParticipDate == "" || ParticipName == ""  || ParticipDoB == "" || ParticipAddress == "" || ParentGuardianSig == "" || ParentGuardianDate == "" || ParentGuardianName == "" || ParentGuardianEmail == "" || ParentGuardianPhone == "" || ParentGuardianAddress == "")) {
 
-            myParticipantLiability.save().then(function(ParticipantLiability){
-                
+            mynewNCWIT = new newNCWIT();
+            mynewNCWIT.set("LiabilityRelease", LiabilityRelease);
+            mynewNCWIT.set("ParentSig", ParentSig);
+            mynewNCWIT.set("Publicity", Publicity);
+            mynewNCWIT.set("Evaluation", Evaluation);
+            mynewNCWIT.set("ParticipSig", ParticipSig);
+            mynewNCWIT.set("ParticipDate", ParticipDate);
+            mynewNCWIT.set("ParticipName", ParticipName);
+            mynewNCWIT.set("ParticipDoB", ParticipDoB);
+            mynewNCWIT.set("ParticipAddress", ParticipAddress);
+            mynewNCWIT.set("ParentGuardianSig", ParentGuardianSig);
+            mynewNCWIT.set("ParentGuardianDate", ParentGuardianDate);
+            mynewNCWIT.set("ParentGuardianName", ParentGuardianName);
+            mynewNCWIT.set("ParentGuardianEmail", ParentGuardianEmail);
+            mynewNCWIT.set("ParentGuardialPhone", ParentGuardianPhone);
+            mynewNCWIT.set("ParentGuardianAddress", ParentGuardianAddress);
+
+            mynewNCWIT.save().then(function(newNCWIT){
+                console.log("Successful with name " + newNCWIT.get("LiabilityRelease") + " and Parent Sig: " + newNCWIT.get("ParentSig") + newNCWIT.get("Publicity") +  newNCWIT.get("Evaluation") +  newNCWIT.get("ParticipSig") +  newNCWIT.get("ParticipDate") +  newNCWIT.get("ParticipName") +  newNCWIT.get("ParticipDoB") +  newNCWIT.get("ParticipAddress"));
                 alert("Thank you! Your form has been submitted");
 
             }).catch(function(error){
                 console.log("Error: " + error.message);
             });
         }
+        
+
+        
     }
 
    
     
     
   </script>
+
+
 </head>
 <body>
-    <h3>MetroHacks EmpowHer Liability Waiver Form</h3>
-    <form id = "ParticipantLiablity" onsubmit="return false">
-    <p>In exchange for participation in the competition organized by MetroHacks from January 1st, 2021 to May 31st, 2021 and the services of MetroHacks:</p>
 
-    <p>I, 
-    <input type = "text" id = "ParentLegalGuardianName1" name = "ParentLegalGuardianName1">
-    [PARENT/LEGAL GUARDIAN NAME], agree for myself and my child, to the following: By signing this agreement, I agree for myself and my child, to hold MetroHacks entirely free from any liability, including financial responsibility for injuries incurred, regardless of whether injuries are caused by negligence. I recognize that there are certain inherent risks associated with the above described activity and I assume full responsibility for personal injury to myself and my child, and further release and discharge MetroHacks for injury, loss or damage arising out of my or my legal guardian use of or presence upon the facilities of MetroHacks, whether caused by the fault of myself, my child, MetroHacks or other third parties. I promise that I am participating voluntarily, and that all risks have been made clear to me in writing or verbally.</p>
-
-    <p>Additionally, I agree for myself and my legal guardian that MetroHacks and event photographers may use pictures of my child and may reproduce their name and/or quotations for promotional purposes related to my child’s participation in the MetroHacks EmpowHer competition. I understand that I have no right to receive compensation or benefit in connection with this release, and I have no claims against MetroHacks and its agents or the agents’ use as described above. By signing below I, and my child, forfeit all rights to bring a suit against MetroHacks for any reason. I agree to observe and obey all posted rules and warnings, and further agree to follow any oral instructions or directions given by MetroHacks or the employees, representatives or agents of MetroHacks.</p>
-    <p>I, <input type = "text" name = "ParentLegalGuardianName2" id = "ParentLegalGuardianName2"> [PARENT/LEGAL GUARDIAN NAME] and my child, <input type = "text" name = "ChildName" id = "ChildName"> [PARTICIPANT NAME], fully understand and agree to the aforementioned terms.</p>
-
-    <p>Participant Name Printed: <input type = "text" name = "ParticipantNamePrinted" id = "ParticipantNamePrinted"> </p>
-    <p>Date: <input type = "date" name = "DateParticipant" id = "DateParticipant"></p>
-
-    <p>Parent or Legal Guardian Signature: <input type = "text" name = "ParentLegalGuardianSignature" id = "ParentLegalGuardianSignature"></p>
-    <p>Date: <input type = "date" name = "DateParentGuardian" id = "DateParentGuardian"></p>
-
-    <input type = "submit" Value = "Submit" id = "SubmitButton" onclick="create()">
-</form>
+    <h3>Please fill out this waiver:</h3>
+            <p>The waiver allows us to participate in NCWIT's AspireIt program</p>
+            <iframe id="iframepdf" width = "800px" height = "1600px" src="https://www.aspirations.org/sites/default/files/document/aspireit_toolkit_-_participant_consent_and_release_english_2020.pdf"></iframe>
+            
 
 
+            <form id = "NCWIT Waiver" onsubmit="return false">
+
+                <h4>DISCLAIMER: Electronic Writing is equal to a paper signature.</h4>
+
+            <p></p>
+            <div>
+
+              <p>Release from Liability (Page 2):</p>
+              <label for= "LiabilityRelease"> Please type: "I agree" </label>
+              <input type = "text" name = "LiabilityRelease" id = "LiabilityRelease" >
+              <br></br>
+
+              <label for = "ParentSig">Parent/Guardian Signature</label>
+              <input type = "text" name = "ParentSig" id = "ParentSig" >
+              
+              
+              
+            </div>
+
+            <div>
+              <p>Consent To Optional Release (Page 4)</p>
+
+              <p>Do you consent to the section above to grant NCWIT the Optional Right to Publicity?*</p>
+              <label for = "Publicity"> Yes/No </label>
+              <input type = "text" name = "Publicity" id = "Publicity"required>
+    
+
+
+              <p>Do you consent to the optional section above to grant NCWIT Optional Permission to Evaluate?*</p>
+              <label for = "Evaluation"> Yes/No </label>
+              <input type = "text" name = "Evaluation" id = "Evaluation" required>
+              
+
+              <br></br>
+
+              <label for = "ParticipSig"> Participant Signature: </label>
+              <input type = "text" name = "ParticipSig" id = "ParticipSig" required>
+
+              <label for ="ParticipDate"> Date (in the form MM/DD/YY): </label>
+              <input type = "text" name = "ParticipDate" id = "ParticipDate" required>
+
+              <br></br>
+
+              <label for ="ParticipName"> Participant Name: </label>
+              <input type = "text" name = "ParticipName" id = "ParticipName" required>
+              <br></br>
+
+              <label for ="ParticipDoB"> Participant Date of Birth (in the form MM/DD/YY): </label>
+              <input type = "text" name = "ParticipDoB" id = "ParticipDoB" required>
+
+              <br></br>
+
+              <label for ="ParticipAddress"> Address: </label>
+              <input type = "text" name = "ParticipAddress" id = "ParticipAddress"  required>
+
+              
+
+              <div>
+                <p>Parent/Guardian</p>
+                <label for ="ParentGuardianSig"> Parent/Legal Guardian Signature: </label>
+                <input type = "text" name = "ParentGuardianSig" id = "ParentGuardianSig" required>
+
+                <br></br>
+
+                <label for ="ParentGuardianDate"> Date (in the form MM/DD/YY): </label>
+                <input type = "text" name = "ParentGuardianDate" id = "ParentGuardianDate" required>
+
+                <br></br>
+
+                <label for ="ParentGuardianName"> Printed Name of Parent/Legal Guardian: </label>
+                <input type = "text" name = "ParentGuardianName" id = "ParentGuardianName" required>
+
+                <br></br>
+
+                <label for ="ParentGuardianEmail"> Parent/Legal Guardian Email: </label>
+                <input type = "text" name = "ParentGuardianEmail" id = "ParentGuardianEmail"  required>
+
+                <br></br>
+
+                <label for ="ParentGuardianPhone"> Parent/Legal Guardian Mobile Phone: </label>
+                <input type = "text" name = "ParentGuardianPhone" id = "ParentGuardianPhone"  required>
+
+                <br></br>
+
+                <label for ="ParentGuardianAddress"> Address: </label>
+                <input type = "text" name = "ParentGuardianAddress" id = "ParentGuardianAddress"  required >
+
+
+                <br></br>
+                <input type = "submit" Value = "Submit" id = "SubmitButton" onclick="create()">
+
+            </form>
+
+
+                
+              </div>
+
+              
+
+            </div>
     
 </body>
 </html>
