@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="487.5pt" height="487.499999pt" viewBox="0 0 487.5 487.499999" version="1.2">
+<defs>
+<filter id="alpha" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+  <feColorMatrix type="matrix" in="SourceGraphic" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+</filter>
+<mask id="mask0">
+  <g filter="url(#alpha)">
+<rect x="0" y="0" width="487.5" height="487.499999" style="fill:rgb(0%,0%,0%);fill-opacity:0.8;stroke:none;"/>
+  </g>
+</mask>
+<clipPath id="clip2">
+  <path d="M 0.273438 0.0742188 L 478.105469 0.0742188 L 478.105469 478 L 0.273438 478 Z M 0.273438 0.0742188 "/>
+</clipPath>
+<clipPath id="clip1">
+  <rect x="0" y="0" width="479" height="483"/>
+</clipPath>
+<g id="surface5" clip-path="url(#clip1)">
+<g clip-path="url(#clip2)" clip-rule="nonzero">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(85.879517%,88.62915%,89.019775%);fill-opacity:1;" d="M 388.015625 477.789062 L 90.433594 477.789062 C 40.835938 477.789062 0.421875 437.585938 0.421875 388.246094 L 0.421875 89.765625 C 0.421875 40.425781 40.835938 0.21875 90.433594 0.21875 L 388.015625 0.21875 C 437.613281 0.21875 478.027344 40.425781 478.027344 89.765625 L 478.027344 388.246094 C 478.027344 437.585938 437.613281 477.789062 388.015625 477.789062 Z M 388.015625 477.789062 "/>
+</g>
+</g>
+<clipPath id="clip3">
+  <path d="M 200 108.40625 L 389.9375 108.40625 L 389.9375 388.175781 L 200 388.175781 Z M 200 108.40625 "/>
+</clipPath>
+<clipPath id="clip4">
+  <path d="M 128.820312 108.40625 L 319 108.40625 L 319 388.175781 L 128.820312 388.175781 Z M 128.820312 108.40625 "/>
+</clipPath>
+</defs>
+<g id="surface1">
+<use xlink:href="#surface5" transform="matrix(1,0,0,1,5,4)" mask="url(#mask0)"/>
+<g clip-path="url(#clip3)" clip-rule="nonzero">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(17.248535%,54.899597%,59.999084%);fill-opacity:1;" d="M 389.777344 248.292969 L 295.023438 318.234375 L 200.277344 388.175781 L 200.277344 108.40625 L 295.023438 178.347656 Z M 389.777344 248.292969 "/>
+</g>
+<g clip-path="url(#clip4)" clip-rule="nonzero">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(17.248535%,54.899597%,59.999084%);fill-opacity:1;" d="M 318.472656 248.292969 L 223.726562 318.234375 L 128.976562 388.175781 L 128.976562 108.40625 L 223.726562 178.347656 Z M 318.472656 248.292969 "/>
+</g>
+</g>
+</svg>
