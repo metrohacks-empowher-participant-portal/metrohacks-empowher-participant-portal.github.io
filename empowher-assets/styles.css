@@ -180,6 +180,12 @@ nav {
   margin-left: 2rem;
 }
 
+.header-ncwit {
+  font-family: 'glindifference';
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
 .step-img {
   width: 65px;
 }
@@ -253,7 +259,6 @@ footer p {
 }
 
 footer h2, h3 {
-  color: white;
   font-family: 'glindifference';
   text-transform: uppercase;
   font-size: 1.5rem;
@@ -415,7 +420,7 @@ footer h2, h3 {
 
 .mission {
   background-color: rgba(61, 60, 191, 1);
-  color: white;
+  color: black;
   padding: 2em;
 }
 
@@ -493,6 +498,24 @@ footer h2, h3 {
   color: white;
 }
 
+.center-block {
+  margin: auto;
+  width: 50%;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.center-button {
+    display: table;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+label input {
+   margin-right: 10px;
+}
+
 /* do not group these rules */
 *::-webkit-input-placeholder {
     color: white;
@@ -526,10 +549,9 @@ footer h2, h3 {
   }
   .head-title span {
   font-family: 'Lovelo';
-  color: transparent;
+  color: black;
   font-size: 100px;
   text-align: center;
-  -webkit-text-stroke: 5px white;
 }
 
 }
@@ -543,10 +565,9 @@ footer h2, h3 {
   }
   .head-title span {
   font-family: 'Lovelo';
-  color: transparent;
+  color: black;
   font-size: 50px;
   text-align: center;
-  -webkit-text-stroke: 3px white;
 }
 
   .team_pic {
