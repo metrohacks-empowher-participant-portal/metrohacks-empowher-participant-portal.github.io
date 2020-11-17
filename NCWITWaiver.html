@@ -6,7 +6,7 @@
     <title>NCWIT Waiver</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">  
-    <link rel="stylesheet" href="empowher-assets/Waiver.css">
+    <link rel="stylesheet" href="empowher-assets/styles.css">
 
     <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
     <script type="text/javascript" type="text/javascript">
@@ -33,7 +33,7 @@
     var ParentGuardianEmail =  document.getElementById("ParentGuardianEmail").value;
     var ParentGuardianPhone =  document.getElementById("ParentGuardianPhone").value;
     var ParentGuardianAddress =  document.getElementById("ParentGuardianAddress").value;
-   
+
 
     function create() {
         LiabilityRelease = document.getElementById("LiabilityRelease").value;
@@ -80,130 +80,508 @@
                 console.log("Error: " + error.message);
             });
         }
-        
-
-        
     }
-
-   
-    
-    
-  </script>
-
-
+</script>
 </head>
 <body>
 
-    <h3>Please fill out this waiver:</h3>
-    <p>Please fill out this waiver in order for MetroHacks EmpowHer to officially participate in the National Center for Women in Technology’s AspireIt program, where we’ll be receiving grant funding to put towards the winners’ scholarship prizes at the end of the program!</p>
-            
-            <iframe id="iframepdf" width = "800px" height = "1600px" src="https://www.aspirations.org/sites/default/files/document/aspireit_toolkit_-_participant_consent_and_release_english_2020.pdf"></iframe>
-            
+    <div class="container center-block">
+        <div class="row">
+          <h3>NCWIT Registration</h3>
+          <p>Please fill out the information below in order for MetroHacks EmpowHer to officially participate in the National Center for Women in Technology’s AspireIt program, where we’ll be receiving grant funding to put towards the winners’ scholarship prizes at the end of the program!</p>
+
+          <form class="node-registration-form node-form" data-drupal-selector="node-registration-form" action="/events/28633/roster" method="post" id="node-registration-form NCWIT Waiver" accept-charset="UTF-8" data-drupal-form-fields="edit-field-not-minor-value,edit-field-student-name-first-0-value,edit-field-student-name-last-0-value,edit-field-registrant-address-0-address-country-code--2,edit-field-registrant-address-0-address-address-line1,edit-field-registrant-address-0-address-address-line2,edit-field-registrant-address-0-address-locality,edit-field-registrant-address-0-address-administrative-area,edit-field-registrant-address-0-address-postal-code,edit-field-grade,edit-field-race-ethnicity-1,edit-field-race-ethnicity-2,edit-field-race-ethnicity-3,edit-field-race-ethnicity-4,edit-field-race-ethnicity-5,edit-field-race-ethnicity-6,edit-field-race-ethnicity-7,edit-field-race-ethnicity-8,edit-field-race-ethnicity-9,edit-field-race-ethnicity-other-0-value,edit-field-primary-name-first-0-value,edit-field-primary-name-last-0-value,edit-field-primary-email-0-value,edit-field-primary-phone-0-value,edit-field-primary-phone-has-sms-value,edit-field-secondary-name-first-0-value,edit-field-secondary-name-last-0-value,edit-field-secondary-email-0-value,edit-field-secondary-phone-0-value,edit-field-secondary-phone-has-sms-value,edit-field-waiver-email-suppress-value,edit-field-paid-none,edit-field-paid-0,edit-field-paid-1,edit-field-attended-none,edit-field-attended-0,edit-field-attended-1,edit-submit" onsubmit="return false">
+              <input data-drupal-selector="edit-changed" type="hidden" name="changed" value="1605644220"><div class="required-fields field-group-fieldset student-container form-item js-form-item form-wrapper js-form-wrapper panel panel-default" id="bootstrap-panel--2">
+
+                  <h4>Student Information</h4>
 
 
-            <form id = "NCWIT Waiver" onsubmit="return false">
 
-                <h4>DISCLAIMER: Electronic Writing is equal to a paper signature.</h4>
+                  <div class="panel-body">
 
-            <p></p>
-            <div>
-
-              <p>Release from Liability (Page 2):</p>
-              <p> <label for= "LiabilityRelease"> Please type: "I agree" </label>
-                <input type = "text" name = "LiabilityRelease" id = "LiabilityRelease" class ="input-text">
-                
-  
-                <label for = "ParentSig">Parent/Guardian Signature</label>
-                <input type = "text" name = "ParentSig" id = "ParentSig" class = "input-text"></p>
-              
-              
-              
-              
-            </div>
-
-            <div>
-              <p>Consent To Optional Release (Page 4)</p>
-
-              <p>Do you consent to the section above to grant NCWIT the Optional Right to Publicity?*</p>
-              <p><label for = "Publicity"> Yes/No </label>
-                <input type = "text" name = "Publicity" id = "Publicity"required class = "input-text"></p>
-    
+                      <div class="row">
+                        <div class = "col-md-3"><div class="field--type-string field--name-field-student-name-first field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-student-name-first-wrapper" id="edit-field-student-name-first-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
+                          <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">First Name</label>
 
 
-              <p>Do you consent to the optional section above to grant NCWIT Optional Permission to Evaluate?*</p>
-              <p><label for = "Evaluation"> Yes/No </label>
-                <input type = "text" name = "Evaluation" id = "Evaluation" required class = "input-text"></p>
-              
-
-              
-
-              <p><label for = "ParticipSig"> Participant Signature: </label>
-                <input type = "text" name = "ParticipSig" id = "ParticipSig" required class = "input-text">
-  
-                <label for ="ParticipDate"> Date: </label>
-                <input type = "date" name = "ParticipDate" id = "ParticipDate" required class = "input-text"></p>
-
-              
-
-              <p><label for ="ParticipName"> Participant Name: </label>
-                <input type = "text" name = "ParticipName" id = "ParticipName" required class = "input-text">
-                
-  
-                <label for ="ParticipDoB"> Participant Date of Birth: </label>
-                <input type = "date" name = "ParticipDoB" id = "ParticipDoB" required class = "input-text"></p>
-
-              
-
-              <p><label for ="ParticipAddress"> Address: </label>
-                <input type = "text" name = "ParticipAddress" id = "ParticipAddress"  required class = "input-text"></p>
-
-              
-
-              <div>
-                <p>Parent/Guardian</p>
-                <p><label for ="ParentGuardianSig"> Parent/Legal Guardian Signature: </label>
-                    <input type = "text" name = "ParentGuardianSig" id = "ParentGuardianSig" required class = "input-text">
-    
-                    
-    
-                    <label for ="ParentGuardianDate"> Date: </label>
-                    <input type = "date" name = "ParentGuardianDate" id = "ParentGuardianDate" required class = "input-text"></p>
-                
-
-                
-
-                <p><label for ="ParentGuardianName"> Printed Name of Parent/Legal Guardian: </label>
-                    <input type = "text" name = "ParentGuardianName" id = "ParentGuardianName" required class = "input-text">
-    
-                   
-    
-                    <label for ="ParentGuardianEmail"> Parent/Legal Guardian Email: </label>
-                    <input type = "text" name = "ParentGuardianEmail" id = "ParentGuardianEmail"  required class = "input-text"></p>
-
-                
-
-                <p><label for ="ParentGuardianPhone"> Parent/Legal Guardian Mobile Phone: </label>
-                    <input type = "text" name = "ParentGuardianPhone" id = "ParentGuardianPhone"  required class = "input-text">
-    
-                   
-    
-                    <label for ="ParentGuardianAddress"> Address: </label>
-                    <input type = "text" name = "ParentGuardianAddress" id = "ParentGuardianAddress"  required  class = "input-text"></p>
-                    
+                          <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="text" id="edit-field-student-name-first-0-value" name="field_student_name_first[0][value]" value="" size="60" maxlength="255" placeholder="" required="required" aria-required="true">
 
 
-                
-                <input type = "submit" class = "button" Value = "Submit" id = "SubmitButton" onclick="create()">
 
-            </form>
+                      </div>
+
+                  </div></div>
+                  <div class = "col-md-3"><div class="field--type-string field--name-field-student-name-last field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-student-name-last-wrapper" id="edit-field-student-name-last-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-last-0-value js-form-item-field-student-name-last-0-value form-group">
+                      <label for="edit-field-student-name-last-0-value" class="control-label js-form-required form-required header-ncwit">Last Name</label>
 
 
-                
-              </div>
+                      <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-last-0-value" type="text" id="edit-field-student-name-last-0-value" name="field_student_name_last[0][value]" value="" size="60" maxlength="255" placeholder="" required="required" aria-required="true">
 
-              
+
+
+                  </div>
+
+              </div></div>
+              <div class = "col-md-6"></div>
+
+
+
+          </div>
+
+
+          <div class="field--type-entity-reference field--name-field-grade field--widget-options-select form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-grade-wrapper" id="edit-field-grade-wrapper"><div class="form-item js-form-item form-type-select js-form-type-select form-item-field-grade js-form-item-field-grade form-group">
+              <label for="edit-field-grade" class="control-label js-form-required form-required header-ncwit">Grade</label>
+
+
+              <div class="select-wrapper"><select data-drupal-selector="edit-field-grade" class="form-select required form-control" id="edit-field-grade" name="field_grade" required="required" aria-required="true"><option value="_none">- Select a value -</option><option value="22">9th Grade</option><option value="23">10th Grade</option><option value="24">11th Grade</option><option value="25">12th Grade</option></select></div>
+
+
+
+          </div>
+      </div>
+      <div class="field--type-list-float field--name-field-race-ethnicity field--widget-options-buttons form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-race-ethnicity-wrapper" id="edit-field-race-ethnicity-wrapper"><fieldset data-drupal-selector="edit-field-race-ethnicity" class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper" id="edit-field-race-ethnicity--wrapper">
+        <p class="header-ncwit">Race/Ethnicity</p>
+        <div class="fieldset-wrapper">
+            <div id="edit-field-race-ethnicity" class="form-checkboxes"><div class="form-item js-form-item form-type-checkbox js-form-type-checkbox form-item-field-race-ethnicity-1 js-form-item-field-race-ethnicity-1 checkbox">
+
+
+
+
+                <label for="edit-field-race-ethnicity-1" class="control-label option"><input data-drupal-selector="edit-field-race-ethnicity-1" class="form-checkbox" type="checkbox" id="edit-field-race-ethnicity-1" name="field_race_ethnicity[1]" value="1">American Indian/Alaska Native (Original Peoples of the Americas)</label>
+
 
             </div>
-    
+            <div class="form-item js-form-item form-type-checkbox js-form-type-checkbox form-item-field-race-ethnicity-2 js-form-item-field-race-ethnicity-2 checkbox">
+
+
+
+
+              <label for="edit-field-race-ethnicity-2" class="control-label option"><input data-drupal-selector="edit-field-race-ethnicity-2" class="form-checkbox" type="checkbox" id="edit-field-race-ethnicity-2" name="field_race_ethnicity[2]" value="2">Asian (including Indian subcontinent and Philippines)</label>
+
+
+          </div>
+          <div class="form-item js-form-item form-type-checkbox js-form-type-checkbox form-item-field-race-ethnicity-3 js-form-item-field-race-ethnicity-3 checkbox">
+
+
+
+
+              <label for="edit-field-race-ethnicity-3" class="control-label option"><input data-drupal-selector="edit-field-race-ethnicity-3" class="form-checkbox" type="checkbox" id="edit-field-race-ethnicity-3" name="field_race_ethnicity[3]" value="3">Black or African American (including Africa and Caribbean)</label>
+
+
+          </div>
+          <div class="form-item js-form-item form-type-checkbox js-form-type-checkbox form-item-field-race-ethnicity-4 js-form-item-field-race-ethnicity-4 checkbox">
+
+
+
+
+              <label for="edit-field-race-ethnicity-4" class="control-label option"><input data-drupal-selector="edit-field-race-ethnicity-4" class="form-checkbox" type="checkbox" id="edit-field-race-ethnicity-4" name="field_race_ethnicity[4]" value="4">Hispanic/Latina</label>
+
+
+          </div>
+          <div class="form-item js-form-item form-type-checkbox js-form-type-checkbox form-item-field-race-ethnicity-5 js-form-item-field-race-ethnicity-5 checkbox">
+
+
+
+
+              <label for="edit-field-race-ethnicity-5" class="control-label option"><input data-drupal-selector="edit-field-race-ethnicity-5" class="form-checkbox" type="checkbox" id="edit-field-race-ethnicity-5" name="field_race_ethnicity[5]" value="5">Native Hawaiian/Other Pacific Islander (Original Peoples)</label>
+
+
+          </div>
+          <div class="form-item js-form-item form-type-checkbox js-form-type-checkbox form-item-field-race-ethnicity-6 js-form-item-field-race-ethnicity-6 checkbox">
+
+
+
+
+              <label for="edit-field-race-ethnicity-6" class="control-label option"><input data-drupal-selector="edit-field-race-ethnicity-6" class="form-checkbox" type="checkbox" id="edit-field-race-ethnicity-6" name="field_race_ethnicity[6]" value="6">White (including Middle Eastern)</label>
+
+
+          </div>
+          <div class="form-item js-form-item form-type-checkbox js-form-type-checkbox form-item-field-race-ethnicity-7 js-form-item-field-race-ethnicity-7 checkbox">
+
+
+
+
+              <label for="edit-field-race-ethnicity-7" class="control-label option"><input data-drupal-selector="edit-field-race-ethnicity-7" class="form-checkbox" type="checkbox" id="edit-field-race-ethnicity-7" name="field_race_ethnicity[7]" value="7">Person with Disability</label>
+
+
+          </div>
+          <div class="form-item js-form-item form-type-checkbox js-form-type-checkbox form-item-field-race-ethnicity-8 js-form-item-field-race-ethnicity-8 checkbox">
+
+
+
+
+              <label for="edit-field-race-ethnicity-8" class="control-label option"><input data-drupal-selector="edit-field-race-ethnicity-8" class="form-checkbox" type="checkbox" id="edit-field-race-ethnicity-8" name="field_race_ethnicity[8]" value="8">Other</label>
+
+
+          </div>
+          <div class="form-item js-form-item form-type-checkbox js-form-type-checkbox form-item-field-race-ethnicity-9 js-form-item-field-race-ethnicity-9 checkbox">
+
+
+
+
+              <label for="edit-field-race-ethnicity-9" class="control-label option"><input data-drupal-selector="edit-field-race-ethnicity-9" class="form-checkbox" type="checkbox" id="edit-field-race-ethnicity-9" name="field_race_ethnicity[9]" value="9">Prefer not to state</label>
+
+
+          </div>
+      </div>
+
+  </div>
+</fieldset>
+</div>
+<div class="field--type-string field--name-field-race-ethnicity-other field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-race-ethnicity-other-wrapper" id="edit-field-race-ethnicity-other-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-race-ethnicity-other-0-value js-form-item-field-race-ethnicity-other-0-value form-group">
+  <label for="edit-field-race-ethnicity-other-0-value" class="control-label header-ncwit">If Other above, please specify:</label>
+  
+  
+  <input class="js-text-full text-full form-text form-control" data-drupal-selector="edit-field-race-ethnicity-other-0-value" type="text" id="edit-field-race-ethnicity-other-0-value" name="field_race_ethnicity_other[0][value]" value="" size="60" maxlength="255" placeholder="">
+
+  
+  
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+<input autocomplete="off" data-drupal-selector="form-tsndjgqxhpe7dyoog7nconqoplzoeaq6iddvvx2cy8u" type="hidden" name="form_build_id" value="form-TsNDJGqXHpE7dyoog7ncONQoPlZOeaq6iDdvVX2cY8U"><input data-drupal-selector="edit-node-registration-form-form-token" class="form-control" type="hidden" name="form_token" value="F3FOTgn_ZInyu4ZVp6_qIn4K3krjemqQvGKo2QCXjRQ"><input data-drupal-selector="edit-node-registration-form" type="hidden" name="form_id" value="node_registration_form"><div class="required-fields field-group-fieldset parent-container form-item js-form-item form-wrapper js-form-wrapper panel panel-default" id="bootstrap-panel--3">
+
+  <h4>Parent/Guardian Information</h4>
+
+  <div class="row">
+    <div class = "col-md-3"><div class="field--type-string field--name-field-primary-name-first field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-primary-name-first-wrapper" data-drupal-states="{&quot;invisible&quot;:{&quot;:input[name=\u0022field_not_minor[value]\u0022]&quot;:{&quot;checked&quot;:true}},&quot;required&quot;:{&quot;:input[name=\u0022field_not_minor[value]\u0022]&quot;:{&quot;checked&quot;:true}}}" id="edit-field-primary-name-first-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-primary-name-first-0-value js-form-item-field-primary-name-first-0-value form-group">
+      <label for="edit-field-primary-name-first-0-value" class="control-label header-ncwit">First Name</label>
+
+
+      <input class="js-text-full text-full form-text form-control" data-drupal-selector="edit-field-primary-name-first-0-value" type="text" id="edit-field-primary-name-first-0-value" name="field_primary_name_first[0][value]" value="" size="60" maxlength="255" placeholder="">
+
+
+
+  </div>
+
+</div></div>
+<div class = "col-md-3"><div class="field--type-string field--name-field-primary-name-last field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-primary-name-last-wrapper" data-drupal-states="{&quot;invisible&quot;:{&quot;:input[name=\u0022field_not_minor[value]\u0022]&quot;:{&quot;checked&quot;:true}},&quot;required&quot;:{&quot;:input[name=\u0022field_not_minor[value]\u0022]&quot;:{&quot;checked&quot;:true}}}" id="edit-field-primary-name-last-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-primary-name-last-0-value js-form-item-field-primary-name-last-0-value form-group">
+  <label for="edit-field-primary-name-last-0-value" class="control-label header-ncwit">Last Name</label>
+  
+  
+  <input class="js-text-full text-full form-text form-control" data-drupal-selector="edit-field-primary-name-last-0-value" type="text" id="edit-field-primary-name-last-0-value" name="field_primary_name_last[0][value]" value="" size="60" maxlength="255" placeholder="">
+
+  
+  
+</div>
+
+</div></div>
+<div class = "col-md-6"></div>
+</div>
+
+
+<div class="field--type-email field--name-field-primary-email field--widget-email-default form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-primary-email-wrapper" id="edit-field-primary-email-wrapper">      <div class="form-item js-form-item form-type-email js-form-type-email form-item-field-primary-email-0-value js-form-item-field-primary-email-0-value form-group">
+  <label for="edit-field-primary-email-0-value" class="control-label js-form-required form-required header-ncwit">Email</label>
+  
+  
+  <input data-drupal-selector="edit-field-primary-email-0-value" class="form-email required form-control" type="email" id="edit-field-primary-email-0-value" name="field_primary_email[0][value]" value="" size="60" maxlength="254" placeholder="" required="required" aria-required="true">
+
+  
+  
+</div>
+
+</div>
+<div class="field--type-string field--name-field-primary-phone field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-primary-phone-wrapper" id="edit-field-primary-phone-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-primary-phone-0-value js-form-item-field-primary-phone-0-value form-group">
+  <label for="edit-field-primary-phone-0-value" class="control-label js-form-required form-required header-ncwit">Phone</label>
+  
+  
+  <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-primary-phone-0-value" type="text" id="edit-field-primary-phone-0-value" name="field_primary_phone[0][value]" value="" size="60" maxlength="255" placeholder="" required="required" aria-required="true">
+
+  
+  
+</div>
+
+</div>
+
+
+</div>
+<div class="field--type-language field--name-langcode field--widget-language-select form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-langcode-wrapper" id="edit-langcode-wrapper">      
+</div>
+
+<div class="field--type-boolean field--name-field-waiver-email-suppress field--widget-boolean-checkbox form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-waiver-email-suppress-wrapper" id="edit-field-waiver-email-suppress-wrapper"><div class="form-item js-form-item form-type-checkbox js-form-type-checkbox form-item-field-waiver-email-suppress-value js-form-item-field-waiver-email-suppress-value checkbox">
+
+</div>
+</div>
+
+    <h4>NCWIT Participation Consent and Release Form</h4>
+
+    <p><a href = "https://www.aspirations.org/sites/default/files/document/aspireit_toolkit_-_participant_consent_and_release_english_2020.pdf">Original Form</a></p>
+
+
+    <p>DISCLAIMER: Each party agrees that this Agreement and any other documents to be delivered in connection herewith may be electronically signed, and that any electronic signatures appearing on this Agreement or such other documents are the same as handwritten signatures for the purposes of validity, enforceability, and admissibility.</p>
+
+    <p></p>
+    <div>
+
+      <p class = "header-ncwit">Release from Liability (Page 2):</p>
+
+
+
+      <div class="field--type-string field--name-field-primary-phone field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-primary-phone-wrapper" id="edit-field-primary-phone-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-primary-phone-0-value js-form-item-field-primary-phone-0-value form-group">
+          <label for="edit-field-primary-phone-0-value" class="control-label js-form-required form-required">Please type: "I agree"</label>
+
+
+          <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-primary-phone-0-value" type="text" id="LiabilityRelease" name="field_primary_phone[0][value]" value="" size="60" maxlength="255" placeholder="" required="required" aria-required="true">
+
+
+
+      </div>
+
+  </div>
+
+  <div class="field--type-string field--name-field-primary-phone field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-primary-phone-wrapper" id="edit-field-primary-phone-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-primary-phone-0-value js-form-item-field-primary-phone-0-value form-group">
+      <label for="edit-field-primary-phone-0-value" class="control-label js-form-required form-required">Parent/Guardian Signature</label>
+
+
+      <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-primary-phone-0-value" type="text" id="ParentSig" name="ParentSig" value="" size="60" maxlength="255" placeholder="" required="required" aria-required="true">
+
+
+
+  </div>
+
+</div>
+
+
+
+
+</div>
+
+<div>
+  <p class = "header-ncwit">Consent To Optional Release (Page 4)</p>
+
+  <div class="field--type-string field--name-field-primary-phone field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-primary-phone-wrapper" id="edit-field-primary-phone-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-primary-phone-0-value js-form-item-field-primary-phone-0-value form-group">
+      <label for="edit-field-primary-phone-0-value" class="control-label js-form-required form-required">Do you consent to the section above to grant NCWIT the Optional Right to Publicity?</label>
+
+      <input type="radio" id="yes"
+      name="contact" value="email">
+      <label for="publicity_yes">Yes</label>
+
+      <input type="radio" id="no"
+      name="contact" value="phone">
+      <label for="publicity_no">No</label>
+
+
+
+  </div>
+
+</div>
+
+<div class="field--type-string field--name-field-primary-phone field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-primary-phone-wrapper" id="edit-field-primary-phone-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-primary-phone-0-value js-form-item-field-primary-phone-0-value form-group">
+  <label for="edit-field-primary-phone-0-value" class="control-label js-form-required form-required">Do you consent to the optional section above to grant NCWIT Optional Permission to Evaluate?</label>
+  
+  <input type="radio" id="yes"
+  name="contact" value="email">
+  <label for="evaluate_yes">Yes</label>
+
+  <input type="radio" id="no"
+  name="contact" value="phone">
+  <label for="evaluate_no">No</label>
+
+  
+  
+</div>
+
+</div>
+
+
+<div class="row">
+    <div class = "col-md-3">
+        <div class="field--type-string field--name-field-student-name-first field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-student-name-first-wrapper" id="edit-field-student-name-first-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
+          <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">Participant Signature</label>
+
+
+          <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="text" id="ParticipSig" name="field_student_name_first[0][value]" value="" size="60" maxlength="255" placeholder="" required="required" aria-required="true">
+
+
+
+      </div>
+
+  </div>
+</div>
+<div class = "col-md-3"><div class="field--type-string field--name-field-student-name-first field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-student-name-first-wrapper" id="edit-field-student-name-first-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
+  <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">Date</label>
+
+
+  <input type = "date" class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="text" id="ParticipDate" name="ParticipDate" value="" size="60" maxlength="255" placeholder="" required="required" aria-required="true">
+
+
+
+</div>
+
+</div>
+</div>
+<div class = "col-md-6"></div>
+
+
+
+</div>
+
+<div class="row">
+    <div class = "col-md-3">
+        <div class="field--type-string field--name-field-student-name-first field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-student-name-first-wrapper" id="edit-field-student-name-first-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
+          <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">Participant Name</label>
+
+
+          <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="text" id="ParticipName" name="ParticipName" value="" size="60" maxlength="255" placeholder="" required="required" aria-required="true">
+
+
+
+      </div>
+
+  </div>
+</div>
+<div class = "col-md-3"><div class="field--type-string field--name-field-student-name-first field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-student-name-first-wrapper" id="edit-field-student-name-first-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
+  <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">Participant Date of Birth</label>
+
+
+  <input type = "date" class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="text" id="ParticipDoB" name="ParticipDoB" value="" size="60" maxlength="255" placeholder="" required="required" aria-required="true">
+
+
+
+</div>
+
+</div>
+</div>
+<div class = "col-md-6"></div>
+
+
+
+</div>
+
+<div class="field--type-string field--name-field-student-name-first field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-student-name-first-wrapper" id="edit-field-student-name-first-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
+  <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">Address</label>
+
+
+  <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="text" id="ParticipAddress" name="ParticipAddress" value="" size="60" maxlength="255" placeholder="" required="required" aria-required="true">
+
+
+
+</div>
+
+</div>
+
+<div class="row">
+    <div class = "col-md-6">
+        <div class="field--type-string field--name-field-student-name-first field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-student-name-first-wrapper" id="edit-field-student-name-first-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
+          <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">Parent/Legal Guardian Signature</label>
+
+
+          <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="text" id="ParentGuardianSig" name="ParentGuardianSig" value="" size="60" maxlength="255" placeholder="" required="required" aria-required="true">
+
+
+
+      </div>
+
+  </div>
+</div>
+<div class = "col-md-3"><div class="field--type-string field--name-field-student-name-first field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-student-name-first-wrapper" id="edit-field-student-name-first-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
+  <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">Date</label>
+
+
+  <input type = "date" class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="text" id="ParentGuardianDate" name="ParentGuardianDate" value="" size="60" maxlength="255" placeholder="" required="required" aria-required="true">
+
+
+
+</div>
+
+</div>
+</div>
+<div class = "col-md-3"></div>
+
+
+
+</div>
+
+<div class="row">
+    <div class = "col-md-6">
+        <div class="field--type-string field--name-field-student-name-first field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-student-name-first-wrapper" id="edit-field-student-name-first-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
+          <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">Printed Name of Parent/Legal Guardian</label>
+
+
+          <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="text" id="ParentGuardianName" name="ParentGuardianSig" value="" size="60" maxlength="255" placeholder="" required="required" aria-required="true">
+
+
+
+      </div>
+
+  </div>
+</div>
+<div class = "col-md-3"><div class="field--type-string field--name-field-student-name-first field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-student-name-first-wrapper" id="edit-field-student-name-first-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
+  <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">Parent/Legal Guardian Email</label>
+
+
+  <input type = "email" class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="text" id="ParentGuardianEmail" name="ParentGuardianDate" value="" size="60" maxlength="255" placeholder="" required="required" aria-required="true">
+
+
+
+</div>
+
+</div>
+</div>
+<div class = "col-md-3"></div>
+
+
+
+</div>
+
+<div class="row">
+    <div class = "col-md-6">
+        <div class="field--type-string field--name-field-student-name-first field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-student-name-first-wrapper" id="edit-field-student-name-first-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
+          <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">Parent/Legal Guardian Mobile Phone</label>
+
+
+          <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="text" id="ParentGuardianPhone" name="ParentGuardianPhone" value="" size="60" maxlength="255" placeholder="" required="required" aria-required="true">
+
+
+
+      </div>
+
+  </div>
+</div>
+<div class = "col-md-3"><div class="field--type-string field--name-field-student-name-first field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-student-name-first-wrapper" id="edit-field-student-name-first-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
+  <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">Address</label>
+
+
+  <input type = "address" class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="text" id="ParentGuardianAddress" name="ParentGuardianAddress" value="" size="60" maxlength="255" placeholder="" required="required" aria-required="true">
+
+
+
+</div>
+
+</div>
+</div>
+<div class = "col-md-3"></div>
+
+
+
+</div>
+
+
+
+<div class = "center-block">
+    <input type = "submit" class = "button center-button" Value = "Submit" id = "SubmitButton" onclick="create()">
+</div>
+
+
+</form>
+
+
+
+</div>
+
+
+
+</div>
+</div>
+</div>
+
+
+
+
 </body>
 </html>
