@@ -21,42 +21,73 @@
       console.log(document.getElementById("EvalYes").checked);
       console.log(document.getElementById("EvalNo").checked);
       
-    }
+  }
 
 
-    
-
-    var newNCWIT = new Parse.Object.extend("newNCWIT");
-    var firstName =  document.getElementById("edit-field-student-name-first-0-value").value;
-    var lastName = document.getElementById("edit-field-student-name-last-0-value").value;
-    var grade = document.getElementById("edit-field-grade").options[document.getElementById("edit-field-grade").selectedIndex].text;
-    var race1 = (document.getElementById("edit-field-race-ethnicity-1").checked);
-    var race2 = (document.getElementById("edit-field-race-ethnicity-2").checked);
-    var race3 = (document.getElementById("edit-field-race-ethnicity-3").checked);
-    var race4 = (document.getElementById("edit-field-race-ethnicity-4").checked);
-    var race5 = (document.getElementById("edit-field-race-ethnicity-5").checked);
-    var race6 = (document.getElementById("edit-field-race-ethnicity-6").checked);
-    var race7 = (document.getElementById("edit-field-race-ethnicity-8").checked);
-    var race8 = (document.getElementById("edit-field-race-ethnicity-9").checked);
-    var otherRace = ("edit-field-race-ethnicity-other-0-value").value;
-    var LiabilityRelease = document.getElementById("LiabilityRelease").value;
-    var ParentSig = document.getElementById("ParentSig").value;
-    var Publicity =  document.getElementById("Publicity").value;
-    var Evaluation=  document.getElementById("Evaluation").value;
-    var ParticipSig =  document.getElementById("ParticipSig").value;
-    var ParticipDate =  document.getElementById("ParticipDate").value;
-    var ParticipName =  document.getElementById("ParticipName").value;
-    var ParticipDoB =  document.getElementById("ParticipDoB").value;
-    var ParticipAddress =  document.getElementById("ParticipAddress").value;
-    var ParentGuardianSig=  document.getElementById("ParentGuardianSig").value;
-    var ParentGuardianDate = document.getElementById("ParentGuardianDate").value;
-    var ParentGuardianName = document.getElementById("ParentGuardianName").value;
-    var ParentGuardianEmail =  document.getElementById("ParentGuardianEmail").value;
-    var ParentGuardianPhone =  document.getElementById("ParentGuardianPhone").value;
-    var ParentGuardianAddress =  document.getElementById("ParentGuardianAddress").value;
 
 
-    function create() {
+  var newNCWIT = new Parse.Object.extend("newNCWIT");
+  var firstName =  document.getElementById("edit-field-student-name-first-0-value").value;
+  var lastName = document.getElementById("edit-field-student-name-last-0-value").value;
+  var grade = document.getElementById("edit-field-grade").options[document.getElementById("edit-field-grade").selectedIndex].text;
+  var race1 = (document.getElementById("edit-field-race-ethnicity-1").checked);
+  var race2 = (document.getElementById("edit-field-race-ethnicity-2").checked);
+  var race3 = (document.getElementById("edit-field-race-ethnicity-3").checked);
+  var race4 = (document.getElementById("edit-field-race-ethnicity-4").checked);
+  var race5 = (document.getElementById("edit-field-race-ethnicity-5").checked);
+  var race6 = (document.getElementById("edit-field-race-ethnicity-6").checked);
+  var race7 = (document.getElementById("edit-field-race-ethnicity-8").checked);
+  var race8 = (document.getElementById("edit-field-race-ethnicity-9").checked);
+  var otherRace = ("edit-field-race-ethnicity-other-0-value").value;
+  var LiabilityRelease = document.getElementById("LiabilityRelease").value;
+  var ParentSig = document.getElementById("ParentSig").value;
+  var Publicity =  document.getElementById("Publicity").value;
+  var Evaluation=  document.getElementById("Evaluation").value;
+  var ParticipSig =  document.getElementById("ParticipSig").value;
+  var ParticipDate =  document.getElementById("ParticipDate").value;
+  var ParticipName =  document.getElementById("ParticipName").value;
+  var ParticipDoB =  document.getElementById("ParticipDoB").value;
+  var ParticipAddress =  document.getElementById("ParticipAddress").value;
+  var ParentGuardianSig=  document.getElementById("ParentGuardianSig").value;
+  var ParentGuardianDate = document.getElementById("ParentGuardianDate").value;
+  var ParentGuardianName = document.getElementById("ParentGuardianName").value;
+  var ParentGuardianEmail =  document.getElementById("ParentGuardianEmail").value;
+  var ParentGuardianPhone =  document.getElementById("ParentGuardianPhone").value;
+  var ParentGuardianAddress =  document.getElementById("ParentGuardianAddress").value;
+
+
+  function create() {
+    firstName =  document.getElementById("edit-field-student-name-first-0-value").value;
+    lastName = document.getElementById("edit-field-student-name-last-0-value").value;
+    grade = document.getElementById("edit-field-grade").options[document.getElementById("edit-field-grade").selectedIndex].text;
+    race1 = (document.getElementById("edit-field-race-ethnicity-1").checked);
+    race2 = (document.getElementById("edit-field-race-ethnicity-2").checked);
+    race3 = (document.getElementById("edit-field-race-ethnicity-3").checked);
+    race4 = (document.getElementById("edit-field-race-ethnicity-4").checked);
+    race5 = (document.getElementById("edit-field-race-ethnicity-5").checked);
+    race6 = (document.getElementById("edit-field-race-ethnicity-6").checked);
+    race7 = (document.getElementById("edit-field-race-ethnicity-8").checked);
+    race8 = (document.getElementById("edit-field-race-ethnicity-9").checked);
+    otherRace = ("edit-field-race-ethnicity-other-0-value").value;
+    LiabilityRelease = document.getElementById("LiabilityRelease").value;
+    ParentSig = document.getElementById("ParentSig").value;
+    Publicity =  document.getElementById("Publicity").value;
+    Evaluation=  document.getElementById("Evaluation").value;
+    ParticipSig =  document.getElementById("ParticipSig").value;
+    ParticipDate =  document.getElementById("ParticipDate").value;
+    ParticipName =  document.getElementById("ParticipName").value;
+    ParticipDoB =  document.getElementById("ParticipDoB").value;
+    ParticipAddress =  document.getElementById("ParticipAddress").value;
+    ParentGuardianSig=  document.getElementById("ParentGuardianSig").value;
+    ParentGuardianDate = document.getElementById("ParentGuardianDate").value;
+    ParentGuardianName = document.getElementById("ParentGuardianName").value;
+    ParentGuardianEmail =  document.getElementById("ParentGuardianEmail").value;
+    ParentGuardianPhone =  document.getElementById("ParentGuardianPhone").value;
+    ParentGuardianAddress =  document.getElementById("ParentGuardianAddress").value;
+
+    if (!(firstName != "" || lastName != "" || grade != "" || LiabilityRelease == "" || ParentSig == ""|| Publicity == "" || Evaluation == "" || ParticipSig == ""|| ParticipDate == "" || ParticipName == ""  || ParticipDoB == "" || ParticipAddress == "" || ParentGuardianSig == "" || ParentGuardianDate == "" || ParentGuardianName == "" || ParentGuardianEmail == "" || ParentGuardianPhone == "" || ParentGuardianAddress == "")) {
+
+        mynewNCWIT = new newNCWIT();
         firstName =  document.getElementById("edit-field-student-name-first-0-value").value;
         lastName = document.getElementById("edit-field-student-name-last-0-value").value;
         grade = document.getElementById("edit-field-grade").options[document.getElementById("edit-field-grade").selectedIndex].text;
@@ -69,76 +100,45 @@
         race7 = (document.getElementById("edit-field-race-ethnicity-8").checked);
         race8 = (document.getElementById("edit-field-race-ethnicity-9").checked);
         otherRace = ("edit-field-race-ethnicity-other-0-value").value;
-        LiabilityRelease = document.getElementById("LiabilityRelease").value;
-        ParentSig = document.getElementById("ParentSig").value;
-        Publicity =  document.getElementById("Publicity").value;
-        Evaluation=  document.getElementById("Evaluation").value;
-        ParticipSig =  document.getElementById("ParticipSig").value;
-        ParticipDate =  document.getElementById("ParticipDate").value;
-        ParticipName =  document.getElementById("ParticipName").value;
-        ParticipDoB =  document.getElementById("ParticipDoB").value;
-        ParticipAddress =  document.getElementById("ParticipAddress").value;
-        ParentGuardianSig=  document.getElementById("ParentGuardianSig").value;
-        ParentGuardianDate = document.getElementById("ParentGuardianDate").value;
-        ParentGuardianName = document.getElementById("ParentGuardianName").value;
-        ParentGuardianEmail =  document.getElementById("ParentGuardianEmail").value;
-        ParentGuardianPhone =  document.getElementById("ParentGuardianPhone").value;
-        ParentGuardianAddress =  document.getElementById("ParentGuardianAddress").value;
 
-        if (!(firstName != "" || lastName != "" || grade != "" || LiabilityRelease == "" || ParentSig == ""|| Publicity == "" || Evaluation == "" || ParticipSig == ""|| ParticipDate == "" || ParticipName == ""  || ParticipDoB == "" || ParticipAddress == "" || ParentGuardianSig == "" || ParentGuardianDate == "" || ParentGuardianName == "" || ParentGuardianEmail == "" || ParentGuardianPhone == "" || ParentGuardianAddress == "")) {
+        mynewNCWIT.set("FirstName", firstName);
+        mynewNCWIT.set("LastName", lastName);
+        mynewNCWIT.set("Grade", grade);
+        mynewNCWIT.set("Race1", race1);
+        mynewNCWIT.set("Race2", race2);
+        mynewNCWIT.set("Race3", race3);
+        mynewNCWIT.set("Race4", race4);
+        mynewNCWIT.set("Race5", race5);
+        mynewNCWIT.set("Race6", race6);
+        mynewNCWIT.set("Race7", race7);
+        mynewNCWIT.set("Race8", race8);
+        mynewNCWIT.set("OtherRace", otherRace);
+        mynewNCWIT.set("LiabilityRelease", LiabilityRelease);
+        mynewNCWIT.set("ParentSig", ParentSig);
+        mynewNCWIT.set("Publicity", Publicity);
+        mynewNCWIT.set("Evaluation", Evaluation);
+        mynewNCWIT.set("ParticipSig", ParticipSig);
+        mynewNCWIT.set("ParticipDate", ParticipDate);
+        mynewNCWIT.set("ParticipName", ParticipName);
+        mynewNCWIT.set("ParticipDoB", ParticipDoB);
+        mynewNCWIT.set("ParticipAddress", ParticipAddress);
+        mynewNCWIT.set("ParentGuardianSig", ParentGuardianSig);
+        mynewNCWIT.set("ParentGuardianDate", ParentGuardianDate);
+        mynewNCWIT.set("ParentGuardianName", ParentGuardianName);
+        mynewNCWIT.set("ParentGuardianEmail", ParentGuardianEmail);
+        mynewNCWIT.set("ParentGuardialPhone", ParentGuardianPhone);
+        mynewNCWIT.set("ParentGuardianAddress", ParentGuardianAddress);
 
-            mynewNCWIT = new newNCWIT();
-            firstName =  document.getElementById("edit-field-student-name-first-0-value").value;
-        lastName = document.getElementById("edit-field-student-name-last-0-value").value;
-        grade = document.getElementById("edit-field-grade").options[document.getElementById("edit-field-grade").selectedIndex].text;
-        race1 = (document.getElementById("edit-field-race-ethnicity-1").checked);
-        race2 = (document.getElementById("edit-field-race-ethnicity-2").checked);
-        race3 = (document.getElementById("edit-field-race-ethnicity-3").checked);
-        race4 = (document.getElementById("edit-field-race-ethnicity-4").checked);
-        race5 = (document.getElementById("edit-field-race-ethnicity-5").checked);
-        race6 = (document.getElementById("edit-field-race-ethnicity-6").checked);
-        race7 = (document.getElementById("edit-field-race-ethnicity-8").checked);
-        race8 = (document.getElementById("edit-field-race-ethnicity-9").checked);
-        otherRace = ("edit-field-race-ethnicity-other-0-value").value;
+        mynewNCWIT.save().then(function(newNCWIT){
+            console.log("Successful with name " + newNCWIT.get("LiabilityRelease") + " and Parent Sig: " + newNCWIT.get("ParentSig") + newNCWIT.get("Publicity") +  newNCWIT.get("Evaluation") +  newNCWIT.get("ParticipSig") +  newNCWIT.get("ParticipDate") +  newNCWIT.get("ParticipName") +  newNCWIT.get("ParticipDoB") +  newNCWIT.get("ParticipAddress"));
+            alert("Thank you! Your form has been submitted");
 
-            mynewNCWIT.set("FirstName", firstName);
-            mynewNCWIT.set("LastName", lastName);
-            mynewNCWIT.set("Grade", grade);
-            mynewNCWIT.set("Race1", race1);
-            mynewNCWIT.set("Race2", race2);
-            mynewNCWIT.set("Race3", race3);
-            mynewNCWIT.set("Race4", race4);
-            mynewNCWIT.set("Race5", race5);
-            mynewNCWIT.set("Race6", race6);
-            mynewNCWIT.set("Race7", race7);
-            mynewNCWIT.set("Race8", race8);
-            mynewNCWIT.set("OtherRace", otherRace);
-            mynewNCWIT.set("LiabilityRelease", LiabilityRelease);
-            mynewNCWIT.set("ParentSig", ParentSig);
-            mynewNCWIT.set("Publicity", Publicity);
-            mynewNCWIT.set("Evaluation", Evaluation);
-            mynewNCWIT.set("ParticipSig", ParticipSig);
-            mynewNCWIT.set("ParticipDate", ParticipDate);
-            mynewNCWIT.set("ParticipName", ParticipName);
-            mynewNCWIT.set("ParticipDoB", ParticipDoB);
-            mynewNCWIT.set("ParticipAddress", ParticipAddress);
-            mynewNCWIT.set("ParentGuardianSig", ParentGuardianSig);
-            mynewNCWIT.set("ParentGuardianDate", ParentGuardianDate);
-            mynewNCWIT.set("ParentGuardianName", ParentGuardianName);
-            mynewNCWIT.set("ParentGuardianEmail", ParentGuardianEmail);
-            mynewNCWIT.set("ParentGuardialPhone", ParentGuardianPhone);
-            mynewNCWIT.set("ParentGuardianAddress", ParentGuardianAddress);
 
-            mynewNCWIT.save().then(function(newNCWIT){
-                console.log("Successful with name " + newNCWIT.get("LiabilityRelease") + " and Parent Sig: " + newNCWIT.get("ParentSig") + newNCWIT.get("Publicity") +  newNCWIT.get("Evaluation") +  newNCWIT.get("ParticipSig") +  newNCWIT.get("ParticipDate") +  newNCWIT.get("ParticipName") +  newNCWIT.get("ParticipDoB") +  newNCWIT.get("ParticipAddress"));
-                alert("Thank you! Your form has been submitted");
-                
-
-            }).catch(function(error){
-                console.log("Error: " + error.message);
-            });
-        }
+        }).catch(function(error){
+            console.log("Error: " + error.message);
+        });
     }
+}
 </script>
 </head>
 <body>
@@ -358,41 +358,41 @@
 </div>
 </div>
 
-    <h4>NCWIT Participation Consent and Release Form</h4>
+<h4>NCWIT Participation Consent and Release Form</h4>
 
-    <p><a href = "https://www.aspirations.org/sites/default/files/document/aspireit_toolkit_-_participant_consent_and_release_english_2020.pdf">Original Form</a></p>
-
-
-    <p>DISCLAIMER: Each party agrees that this Agreement and any other documents to be delivered in connection herewith may be electronically signed, and that any electronic signatures appearing on this Agreement or such other documents are the same as handwritten signatures for the purposes of validity, enforceability, and admissibility.</p>
-
-    <p></p>
-    <div>
-
-      <p class = "header-ncwit">Release from Liability (Page 2):</p>
+<p><a href = "https://www.aspirations.org/sites/default/files/document/aspireit_toolkit_-_participant_consent_and_release_english_2020.pdf">Original Form</a></p>
 
 
+<p>DISCLAIMER: Each party agrees that this Agreement and any other documents to be delivered in connection herewith may be electronically signed, and that any electronic signatures appearing on this Agreement or such other documents are the same as handwritten signatures for the purposes of validity, enforceability, and admissibility.</p>
 
-      <div class="field--type-string field--name-field-primary-phone field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-primary-phone-wrapper" id="edit-field-primary-phone-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-primary-phone-0-value js-form-item-field-primary-phone-0-value form-group">
-          <label for="edit-field-primary-phone-0-value" class="control-label js-form-required form-required">Please type: "I agree"</label>
+<p></p>
+<div>
+
+  <p class = "header-ncwit">Release from Liability (Page 2):</p>
 
 
-          <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-primary-phone-0-value" type="text" id="LiabilityRelease" name="field_primary_phone[0][value]" value="" size="60" maxlength="255" placeholder="" required="required" aria-required="true">
-
-
-
-      </div>
-
-  </div>
 
   <div class="field--type-string field--name-field-primary-phone field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-primary-phone-wrapper" id="edit-field-primary-phone-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-primary-phone-0-value js-form-item-field-primary-phone-0-value form-group">
-      <label for="edit-field-primary-phone-0-value" class="control-label js-form-required form-required">Parent/Guardian Signature</label>
+      <label for="edit-field-primary-phone-0-value" class="control-label js-form-required form-required">Please type: "I agree"</label>
 
 
-      <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-primary-phone-0-value" type="text" id="ParentSig" name="ParentSig" value="" size="60" maxlength="255" placeholder="" required="required" aria-required="true">
+      <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-primary-phone-0-value" type="text" id="LiabilityRelease" name="field_primary_phone[0][value]" value="" size="60" maxlength="255" placeholder="" required="required" aria-required="true">
 
 
 
   </div>
+
+</div>
+
+<div class="field--type-string field--name-field-primary-phone field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-primary-phone-wrapper" id="edit-field-primary-phone-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-primary-phone-0-value js-form-item-field-primary-phone-0-value form-group">
+  <label for="edit-field-primary-phone-0-value" class="control-label js-form-required form-required">Parent/Guardian Signature</label>
+
+
+  <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-primary-phone-0-value" type="text" id="ParentSig" name="ParentSig" value="" size="60" maxlength="255" placeholder="" required="required" aria-required="true">
+
+
+
+</div>
 
 </div>
 
@@ -404,37 +404,36 @@
 <div>
   <p class = "header-ncwit">Consent To Optional Release (Page 4)</p>
 
-  <div class="field--type-string field--name-field-primary-phone field--widget-string-textfield form-group js-form-wrapper form-wrapper1" data-drupal-selector="edit-field-primary-phone-wrapper1" id="edit-field-primary-phone-wrapper1">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-primary-phone-0-value js-form-item-field-primary-phone-0-value form-group1">
+  <div class="field--type-string field--name-field-primary-phone field--widget-string-textfield form-group js-form-wrapper form-wrapper1" data-drupal-selector="edit-field-primary-phone-wrapper1" id="edit-field-primary-phone-wrapper1">
+    <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-primary-phone-0-value js-form-item-field-primary-phone-0-value form-group1">
       <label for="edit-field-primary-phone-0-value1" class="control-label js-form-required form-required1">Do you consent to the section above to grant NCWIT the Optional Right to Publicity?</label>
 
-      <input type="radio" id="ReleaseYes"
-      name="contact" value="email">
+<fieldset id="group1">
+      <input type="radio" id="ReleaseYes" value="email" name="group1">
       <label for="publicity_yes">Yes</label>
 
-      <input type="radio" id="ReleaseNo"
-      name="contact" value="phone">
+      <input type="radio" id="ReleaseNo" value="phone" name="group1">
       <label for="publicity_no">No</label>
-
+</fieldset>
 
 
   </div>
 
 </div>
 
-<div class="field--type-string field--name-field-primary-phone field--widget-string-textfield form-group js-form-wrapper form-wrapper2" data-drupal-selector="edit-field-primary-phone-wrapper2" id="edit-field-primary-phone-wrapper2">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-primary-phone-0-value js-form-item-field-primary-phone-0-value form-group2">
-  <label for="edit-field-primary-phone-0-value2" class="control-label js-form-required form-required2">Do you consent to the optional section above to grant NCWIT Optional Permission to Evaluate?</label>
-  
-  <input type="radio" id="EvalYes"
-  name="contact" value="email">
-  <label for="evaluate_yes">Yes</label>
+<div class="field--type-string field--name-field-primary-phone field--widget-string-textfield form-group js-form-wrapper form-wrapper2" data-drupal-selector="edit-field-primary-phone-wrapper2" id="edit-field-primary-phone-wrapper2">
+    <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-primary-phone-0-value js-form-item-field-primary-phone-0-value form-group2">
+        <label for="edit-field-primary-phone-0-value2" class="control-label js-form-required form-required2">Do you consent to the optional section above to grant NCWIT Optional Permission to Evaluate?</label>
+<fieldset id="group2">
+        <input type="radio" id="EvalYes" value="email" name="group2">
+        <label for="evaluate_yes">Yes</label>
 
-  <input type="radio" id="EvalNo"
-  name="contact" value="phone">
-  <label for="evaluate_no">No</label>
+        <input type="radio" id="EvalNo" value="phone" name="group2">
+        <label for="evaluate_no">No</label>
+</fieldset>
 
-  
-  
-</div>
+
+    </div>
 
 </div>
 
