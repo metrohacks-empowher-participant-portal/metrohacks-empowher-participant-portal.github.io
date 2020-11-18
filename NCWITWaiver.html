@@ -15,9 +15,30 @@
     Parse.initialize("2bLSypMifZwtcnA82P5M9LonZAiZX84xAz8E93mg","bqYQwNlW9g6dGEF3BDprzySZ2UXFjWJXXSUXu6ct"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
     Parse.serverURL = 'https://parseapi.back4app.com/'
 
+    function myFunction() {
+      console.log(document.getElementById("ReleaseYes").checked);
+      console.log(document.getElementById("ReleaseNo").checked);
+      console.log(document.getElementById("EvalYes").checked);
+      console.log(document.getElementById("EvalNo").checked);
+      
+    }
+
+
     
 
     var newNCWIT = new Parse.Object.extend("newNCWIT");
+    var firstName =  document.getElementById("edit-field-student-name-first-0-value").value;
+    var lastName = document.getElementById("edit-field-student-name-last-0-value").value;
+    var grade = document.getElementById("edit-field-grade").options[document.getElementById("edit-field-grade").selectedIndex].text;
+    var race1 = (document.getElementById("edit-field-race-ethnicity-1").checked);
+    var race2 = (document.getElementById("edit-field-race-ethnicity-2").checked);
+    var race3 = (document.getElementById("edit-field-race-ethnicity-3").checked);
+    var race4 = (document.getElementById("edit-field-race-ethnicity-4").checked);
+    var race5 = (document.getElementById("edit-field-race-ethnicity-5").checked);
+    var race6 = (document.getElementById("edit-field-race-ethnicity-6").checked);
+    var race7 = (document.getElementById("edit-field-race-ethnicity-8").checked);
+    var race8 = (document.getElementById("edit-field-race-ethnicity-9").checked);
+    var otherRace = ("edit-field-race-ethnicity-other-0-value").value;
     var LiabilityRelease = document.getElementById("LiabilityRelease").value;
     var ParentSig = document.getElementById("ParentSig").value;
     var Publicity =  document.getElementById("Publicity").value;
@@ -36,6 +57,18 @@
 
 
     function create() {
+        firstName =  document.getElementById("edit-field-student-name-first-0-value").value;
+        lastName = document.getElementById("edit-field-student-name-last-0-value").value;
+        grade = document.getElementById("edit-field-grade").options[document.getElementById("edit-field-grade").selectedIndex].text;
+        race1 = (document.getElementById("edit-field-race-ethnicity-1").checked);
+        race2 = (document.getElementById("edit-field-race-ethnicity-2").checked);
+        race3 = (document.getElementById("edit-field-race-ethnicity-3").checked);
+        race4 = (document.getElementById("edit-field-race-ethnicity-4").checked);
+        race5 = (document.getElementById("edit-field-race-ethnicity-5").checked);
+        race6 = (document.getElementById("edit-field-race-ethnicity-6").checked);
+        race7 = (document.getElementById("edit-field-race-ethnicity-8").checked);
+        race8 = (document.getElementById("edit-field-race-ethnicity-9").checked);
+        otherRace = ("edit-field-race-ethnicity-other-0-value").value;
         LiabilityRelease = document.getElementById("LiabilityRelease").value;
         ParentSig = document.getElementById("ParentSig").value;
         Publicity =  document.getElementById("Publicity").value;
@@ -52,9 +85,34 @@
         ParentGuardianPhone =  document.getElementById("ParentGuardianPhone").value;
         ParentGuardianAddress =  document.getElementById("ParentGuardianAddress").value;
 
-        if (!(LiabilityRelease == "" || ParentSig == ""|| Publicity == "" || Evaluation == "" || ParticipSig == ""|| ParticipDate == "" || ParticipName == ""  || ParticipDoB == "" || ParticipAddress == "" || ParentGuardianSig == "" || ParentGuardianDate == "" || ParentGuardianName == "" || ParentGuardianEmail == "" || ParentGuardianPhone == "" || ParentGuardianAddress == "")) {
+        if (!(firstName != "" || lastName != "" || grade != "" || LiabilityRelease == "" || ParentSig == ""|| Publicity == "" || Evaluation == "" || ParticipSig == ""|| ParticipDate == "" || ParticipName == ""  || ParticipDoB == "" || ParticipAddress == "" || ParentGuardianSig == "" || ParentGuardianDate == "" || ParentGuardianName == "" || ParentGuardianEmail == "" || ParentGuardianPhone == "" || ParentGuardianAddress == "")) {
 
             mynewNCWIT = new newNCWIT();
+            firstName =  document.getElementById("edit-field-student-name-first-0-value").value;
+        lastName = document.getElementById("edit-field-student-name-last-0-value").value;
+        grade = document.getElementById("edit-field-grade").options[document.getElementById("edit-field-grade").selectedIndex].text;
+        race1 = (document.getElementById("edit-field-race-ethnicity-1").checked);
+        race2 = (document.getElementById("edit-field-race-ethnicity-2").checked);
+        race3 = (document.getElementById("edit-field-race-ethnicity-3").checked);
+        race4 = (document.getElementById("edit-field-race-ethnicity-4").checked);
+        race5 = (document.getElementById("edit-field-race-ethnicity-5").checked);
+        race6 = (document.getElementById("edit-field-race-ethnicity-6").checked);
+        race7 = (document.getElementById("edit-field-race-ethnicity-8").checked);
+        race8 = (document.getElementById("edit-field-race-ethnicity-9").checked);
+        otherRace = ("edit-field-race-ethnicity-other-0-value").value;
+
+            mynewNCWIT.set("FirstName", firstName);
+            mynewNCWIT.set("LastName", lastName);
+            mynewNCWIT.set("Grade", grade);
+            mynewNCWIT.set("Race1", race1);
+            mynewNCWIT.set("Race2", race2);
+            mynewNCWIT.set("Race3", race3);
+            mynewNCWIT.set("Race4", race4);
+            mynewNCWIT.set("Race5", race5);
+            mynewNCWIT.set("Race6", race6);
+            mynewNCWIT.set("Race7", race7);
+            mynewNCWIT.set("Race8", race8);
+            mynewNCWIT.set("OtherRace", otherRace);
             mynewNCWIT.set("LiabilityRelease", LiabilityRelease);
             mynewNCWIT.set("ParentSig", ParentSig);
             mynewNCWIT.set("Publicity", Publicity);
@@ -196,15 +254,7 @@
 
 
           </div>
-          <div class="form-item js-form-item form-type-checkbox js-form-type-checkbox form-item-field-race-ethnicity-7 js-form-item-field-race-ethnicity-7 checkbox">
-
-
-
-
-              <label for="edit-field-race-ethnicity-7" class="control-label option"><input data-drupal-selector="edit-field-race-ethnicity-7" class="form-checkbox" type="checkbox" id="edit-field-race-ethnicity-7" name="field_race_ethnicity[7]" value="7">Person with Disability</label>
-
-
-          </div>
+          
           <div class="form-item js-form-item form-type-checkbox js-form-type-checkbox form-item-field-race-ethnicity-8 js-form-item-field-race-ethnicity-8 checkbox">
 
 
@@ -354,14 +404,14 @@
 <div>
   <p class = "header-ncwit">Consent To Optional Release (Page 4)</p>
 
-  <div class="field--type-string field--name-field-primary-phone field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-primary-phone-wrapper" id="edit-field-primary-phone-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-primary-phone-0-value js-form-item-field-primary-phone-0-value form-group">
-      <label for="edit-field-primary-phone-0-value" class="control-label js-form-required form-required">Do you consent to the section above to grant NCWIT the Optional Right to Publicity?</label>
+  <div class="field--type-string field--name-field-primary-phone field--widget-string-textfield form-group js-form-wrapper form-wrapper1" data-drupal-selector="edit-field-primary-phone-wrapper1" id="edit-field-primary-phone-wrapper1">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-primary-phone-0-value js-form-item-field-primary-phone-0-value form-group1">
+      <label for="edit-field-primary-phone-0-value1" class="control-label js-form-required form-required1">Do you consent to the section above to grant NCWIT the Optional Right to Publicity?</label>
 
-      <input type="radio" id="yes"
+      <input type="radio" id="ReleaseYes"
       name="contact" value="email">
       <label for="publicity_yes">Yes</label>
 
-      <input type="radio" id="no"
+      <input type="radio" id="ReleaseNo"
       name="contact" value="phone">
       <label for="publicity_no">No</label>
 
@@ -371,14 +421,14 @@
 
 </div>
 
-<div class="field--type-string field--name-field-primary-phone field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-primary-phone-wrapper" id="edit-field-primary-phone-wrapper">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-primary-phone-0-value js-form-item-field-primary-phone-0-value form-group">
-  <label for="edit-field-primary-phone-0-value" class="control-label js-form-required form-required">Do you consent to the optional section above to grant NCWIT Optional Permission to Evaluate?</label>
+<div class="field--type-string field--name-field-primary-phone field--widget-string-textfield form-group js-form-wrapper form-wrapper2" data-drupal-selector="edit-field-primary-phone-wrapper2" id="edit-field-primary-phone-wrapper2">      <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-primary-phone-0-value js-form-item-field-primary-phone-0-value form-group2">
+  <label for="edit-field-primary-phone-0-value2" class="control-label js-form-required form-required2">Do you consent to the optional section above to grant NCWIT Optional Permission to Evaluate?</label>
   
-  <input type="radio" id="yes"
+  <input type="radio" id="EvalYes"
   name="contact" value="email">
   <label for="evaluate_yes">Yes</label>
 
-  <input type="radio" id="no"
+  <input type="radio" id="EvalNo"
   name="contact" value="phone">
   <label for="evaluate_no">No</label>
 
@@ -566,6 +616,8 @@
 <div class = "center-block">
     <input type = "submit" class = "button center-button" Value = "Submit" id = "SubmitButton" onclick="create()">
 </div>
+<input type = "submit" onclick = "myFunction()">
+
 
 
 </form>
