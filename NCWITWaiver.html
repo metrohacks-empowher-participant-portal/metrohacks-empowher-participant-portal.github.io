@@ -41,8 +41,8 @@
   var otherRace = ("edit-field-race-ethnicity-other-0-value").value;
   var LiabilityRelease = document.getElementById("LiabilityRelease").value;
   var ParentSig = document.getElementById("ParentSig").value;
-  var Publicity =  document.getElementById("Publicity").value;
-  var Evaluation=  document.getElementById("Evaluation").value;
+  var Publicity =  document.getElementById("ReleaseYes").checked;
+  var Evaluation=  document.getElementById("EvalYes").checked;
   var ParticipSig =  document.getElementById("ParticipSig").value;
   var ParticipDate =  document.getElementById("ParticipDate").value;
   var ParticipName =  document.getElementById("ParticipName").value;
@@ -71,8 +71,8 @@
     otherRace = ("edit-field-race-ethnicity-other-0-value").value;
     LiabilityRelease = document.getElementById("LiabilityRelease").value;
     ParentSig = document.getElementById("ParentSig").value;
-    Publicity =  document.getElementById("Publicity").value;
-    Evaluation=  document.getElementById("Evaluation").value;
+    Publicity =  document.getElementById("ReleaseYes").checked;
+    Evaluation=  document.getElementById("EvalYes").checked;
     ParticipSig =  document.getElementById("ParticipSig").value;
     ParticipDate =  document.getElementById("ParticipDate").value;
     ParticipName =  document.getElementById("ParticipName").value;
@@ -85,7 +85,7 @@
     ParentGuardianPhone =  document.getElementById("ParentGuardianPhone").value;
     ParentGuardianAddress =  document.getElementById("ParentGuardianAddress").value;
 
-    if (!(firstName != "" || lastName != "" || grade != "" || LiabilityRelease == "" || ParentSig == ""|| Publicity == "" || Evaluation == "" || ParticipSig == ""|| ParticipDate == "" || ParticipName == ""  || ParticipDoB == "" || ParticipAddress == "" || ParentGuardianSig == "" || ParentGuardianDate == "" || ParentGuardianName == "" || ParentGuardianEmail == "" || ParentGuardianPhone == "" || ParentGuardianAddress == "")) {
+    if (!(LiabilityRelease == "" || ParentSig == ""|| ParticipSig == ""|| ParticipDate == "" || ParticipName == ""  || ParticipDoB == "" || ParticipAddress == "" || ParentGuardianSig == "" || ParentGuardianDate == "" || ParentGuardianName == "" || ParentGuardianEmail == "" || ParentGuardianPhone == "" || ParentGuardianAddress == "")) {
 
         mynewNCWIT = new newNCWIT();
         firstName =  document.getElementById("edit-field-student-name-first-0-value").value;
@@ -115,8 +115,8 @@
         mynewNCWIT.set("OtherRace", otherRace);
         mynewNCWIT.set("LiabilityRelease", LiabilityRelease);
         mynewNCWIT.set("ParentSig", ParentSig);
-        mynewNCWIT.set("Publicity", Publicity);
-        mynewNCWIT.set("Evaluation", Evaluation);
+        mynewNCWIT.set("PublicityConsent", Publicity);
+        mynewNCWIT.set("EvaluationConsent", Evaluation);
         mynewNCWIT.set("ParticipSig", ParticipSig);
         mynewNCWIT.set("ParticipDate", ParticipDate);
         mynewNCWIT.set("ParticipName", ParticipName);
@@ -137,6 +137,9 @@
         }).catch(function(error){
             console.log("Error: " + error.message);
         });
+    }
+    else {
+      console.log("Something went wrong with the function");
     }
 }
 </script>
