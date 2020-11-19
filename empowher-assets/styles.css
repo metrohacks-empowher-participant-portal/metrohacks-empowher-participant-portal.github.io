@@ -477,6 +477,9 @@ footer h2, h3 {
 
 .profile-img {
   border-radius: 50%;
+  margin: 30px;
+  width: 200px;
+  height: 200px;
 }
 
 .button {
