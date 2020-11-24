@@ -51,12 +51,17 @@
 
             myParticipantLiability.save().then(function(ParticipantLiability){
                 
-                alert("Thank you! Your form has been submitted");
+                alert("Your form has been submitted. You can now close this tab. If you want to refer back to your answers, please screenshot or save this page. Thank you!");
             
 
             }).catch(function(error){
                 console.log("Error: " + error.message);
             });
+        
+        }
+        else 
+        {
+            alert("Please make sure that you have filled all form fields.");
         }
     }
 
