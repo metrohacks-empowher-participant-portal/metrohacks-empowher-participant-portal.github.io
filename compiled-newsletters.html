@@ -1,0 +1,650 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Compiled Newsletters</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="32691aab-c557-46b0-9398-35835c114bc6" class="page sans"><header><h1 class="page-title">Compiled Newsletters</h1></header><div class="page-body"><h1 id="a9506ec9-3dd1-4a8d-baa5-c07c7bc1fd56" class=""><strong>October 25th: </strong></h1><p id="25b8ede2-5a43-4ccf-a811-bea0b38dcf34" class=""><strong>We are excited to announce that we are starting a weekly newsletter sent every Sunday at 9 AM EST to share EmpowHer updates!</strong></p><h2 id="351c81a0-1956-4604-81ff-62cd48d0e463" class="">☀️ Updates for the Next Week</h2><ul id="7833c39b-6eb2-4d44-9dff-f254cdf14e42" class="bulleted-list"><li><mark class="highlight-blue_background">Our Mentor-Matching process begins today!</mark><ul id="ce0b4b43-6458-43a0-925f-7849b66e154f" class="bulleted-list"><li>Today (October 25), we released our Mentor-Request Form to all participants. We will be using this information to personally match each of your teams to a mentor with expertise in your team&#x27;s project area! <strong>Only one participant per team</strong> should fill out the form on behalf of the entire team. <strong>Once you finish the form, we&#x27;ll match you with a mentor within a week and notify you of your match through Slack!</strong> <a href="https://www.notion.so/Students-EmpowHer-172dd17bfd54402bb20e6275acb21600">Please go here for the form →</a></li></ul></li></ul><ul id="74741ad5-618a-4e1e-ae8e-91f56b8c8c3b" class="bulleted-list"><li><mark class="highlight-blue_background">Web Development Class # 2 - CSS</mark><ul id="47eba7c6-e7e3-43bd-87c9-6cfab3e0eaf8" class="bulleted-list"><li>Next Saturday, October 31, at 2 PM EST - Bekah Rice will present the second workshop in the web development series: CSS! Please add our workshop calendar events with the link in the <a href="https://www.notion.so/Workshops-f52a0ede6cdc44be8ddf4ec35d995432">Workshop Event Details</a>.</li></ul><p id="af6eac86-8dac-418a-ab83-bef5454c6f30" class="">
+</p></li></ul><h2 id="cd717a72-5d7b-4710-9ba0-585e9455277a" class="">✨ Special Events Coming Up</h2><ul id="4916e1bb-4b46-4b2a-b924-bc12563954e9" class="bulleted-list"><li>Design Workshop with Amanda Horne on Friday, November 6</li></ul><ul id="074cb50c-a3af-437c-83be-78d9c8aa4842" class="bulleted-list"><li>Keynote with Lydia Smyers on Sunday, November 15</li></ul><h2 id="8c7fb33c-d301-423d-b536-761ceee56ecb" class="">🌥 Summary of the Past Week</h2><p id="be345a97-6ebf-494e-9f6c-a41d50fb7726" class="">We held a successful week of office hours and our first Web Development Workshop! </p><ul id="25341fd4-05f5-469b-9453-d449674cbc81" class="bulleted-list"><li>Participants and Mentors who took part in our office hours, please fill out <a href="https://metrohacks1.typeform.com/to/VApzrdkZ">this</a> feedback form. <strong>Additionally, if you are a mentor please log your hours with your workplace </strong><strong><a href="https://www.notion.so/Mentors-EmpowHer-41f31315e3ef44e2a7139c3fe5c91926">here</a></strong><strong>.</strong></li></ul><ul id="86758d40-a20c-48e1-8afe-4807bbfba56b" class="bulleted-list"><li>On October 24, we hosted our very first Workshop Class for Workshop Series 1: Web Development! This was an exciting intro to HTML/CSS with UX Designer/Developer Bekah Rice. Students followed along with Bekah as they created their own webpage with HTML! If you weren&#x27;t able to join, click <a href="https://youtu.be/iHkrgSK_us8">here</a> to watch the workshop. The video description includes a lot of important material along with the video.</li></ul><ul id="b75e3800-cdf3-4874-aaef-42086f05fcb6" class="bulleted-list"><li><strong>We are excited to share that we have built the EmpowHer community to over 150 participants and 75 mentors! Thank you for joining us on our mission to promote STEM education for high school women!</strong></li></ul><p id="e5d80c63-cee8-4359-af75-05d16b9ea92d" class="">
+</p><p id="0fd85d63-b76d-426e-9598-0578ff7802b3" class="">If you have not yet formed a team, reach out to friends to join EmpowHer - Registration for the competition is open until January 1, 2021. Register <a href="https://metrohacks.org/empowher/">here</a>.</p><p id="33a6d5be-a1bf-4cce-9cd1-32f8eca084a3" class="">
+</p><h1 id="48858d8a-7b06-4dcd-953d-9fff3762c683" class="">November 1st:</h1><h2 id="e58ba887-c136-440d-bdab-dd178241e1f5" class="">☀️ Updates for the Next Week</h2><ul id="009902f5-00b5-406a-820d-fa3d2a045528" class="bulleted-list"><li><mark class="highlight-blue_background">Mentor-Matching!</mark><ul id="e0d58ad9-09df-4035-adae-c04108145eef" class="bulleted-list"><li>We will be using the mentor request form to personally match each of your teams to a mentor with expertise in your team&#x27;s project area! <strong>One participant per team</strong> should fill out the form on behalf of the team. <strong>Once you finish the form, we&#x27;ll match you with a mentor within a week and notify you of your match through email!</strong> <a href="https://www.notion.so/Students-EmpowHer-172dd17bfd54402bb20e6275acb21600">Please go here for the form →</a></li></ul><ul id="00f6dc22-5cb6-4cd2-a3e9-d521945d0c11" class="bulleted-list"><li><strong>If you are a mentor please log all hours volunteered with your workplace </strong><strong><a href="https://www.notion.so/Mentors-EmpowHer-41f31315e3ef44e2a7139c3fe5c91926">here</a></strong><strong>.</strong></li></ul></li></ul><ul id="e62a4eb6-ca8d-41c1-a110-3d7f331ecc8d" class="bulleted-list"><li><mark class="highlight-blue_background">Please add our workshops to your calendar → </mark><a href="https://calendar.google.com/calendar/u/0/embed?src=c_hssmbbljae812orudt335fepvg@group.calendar.google.com&amp;ctz=America/New_York"><mark class="highlight-blue_background">Workshop Event Details</mark></a><mark class="highlight-blue_background">.</mark></li></ul><ul id="b98398c0-34ae-4ccf-ba45-028c1824cb21" class="bulleted-list"><li><a href="https://www.notion.so/Workshops-f52a0ede6cdc44be8ddf4ec35d995432"><mark class="highlight-blue_background">Idea Design Workshop</mark></a><mark class="highlight-blue_background"> with Amanda Horne on Friday, November 6 @ 7 PM EST</mark><ul id="0a432196-a3fb-4975-92f7-c41f6baf8d94" class="bulleted-list"><li>Amanda is a graduate student at MIT in the cybersecurity department. She will teach you how to turn your project idea into a solution with an interactive session on the 10-step design process! <mark class="highlight-yellow_background">We would </mark><strong><mark class="highlight-yellow_background">highly</mark></strong><mark class="highlight-yellow_background"> encourage all participants to come to this workshop as it is crucial to developing your EmpowHer project!</mark></li></ul></li></ul><ul id="e3adb59d-251a-4e0c-b2df-9a53ce955b68" class="bulleted-list"><li><a href="https://www.notion.so/metrohacks/Workshops-f52a0ede6cdc44be8ddf4ec35d995432#06143f7fcdfd418aad8296e9a126890a"><mark class="highlight-blue_background">Web Development Class # 3</mark></a><mark class="highlight-blue_background"> - Design on Saturday, November 7 @ 2 PM EST</mark><ul id="631ba848-cce8-4392-ac2b-4bd63d9d2e12" class="bulleted-list"><li>Shell Zhu, a design team lead at IBM, is hosting our third class for our Web Development Series! This workshop is independent from the first two, please join us even if you did not attend the HTML/CSS classes. She will delve into the importance of designing your website with user experience in mind.</li></ul><ul id="735959dd-b03a-4820-ae59-e64b343b3ea7" class="bulleted-list"><li>Our workshops are open to everyone even if you are not submitting a project to EmpowHer, encourage your friends to attend!</li></ul></li></ul><ul id="32055440-3b7b-4c45-8829-e4da99b9f937" class="bulleted-list"><li><mark class="highlight-blue_background">Background Checking Mentors</mark><ul id="4e71da6b-5bf6-4510-af3d-0ecaf55f674e" class="bulleted-list"><li>For mentors to be matched with a team, we require a Massachusetts CORI background check. To see the instructions, check out this <a href="https://www.notion.so/Mentors-EmpowHer-41f31315e3ef44e2a7139c3fe5c91926">page</a>!</li></ul></li></ul><h2 id="e72b3af4-23b4-4025-8538-1dd3edce9cd6" class="">✨ Special Events Coming Up</h2><ul id="d74f11da-812c-425c-9a96-660349fd7bb4" class="bulleted-list"><li>Keynote with Lydia Smyers on Sunday, November 15<ul id="9a4be728-9cc9-4b23-b943-99c49f4cf1ec" class="bulleted-list"><li>Lydia is a General Manager at Microsoft leading United States Education. She will speak about her career journey and the various STEM opportunities for young women! <mark class="highlight-yellow_background">All students interested in STEM </mark><strong><mark class="highlight-yellow_background">should</mark></strong><mark class="highlight-yellow_background"> attend!</mark></li></ul></li></ul><h2 id="0c8c3f8e-a42a-468e-b585-57b763a412e2" class="">🌥 Summary of the Past Week</h2><ul id="d9ad3437-da13-4b5e-a300-c0ea4a57f014" class="bulleted-list"><li>On October 31, we hosted our second Workshop Class for Workshop Series 1: Web Development! This was a continuation of last week&#x27;s exciting intro to HTML with UX Designer/Developer Bekah Rice. Students followed along with Bekah as they modified their own HTML-based webpage with CSS! If you weren&#x27;t able to join, click <a href="https://www.youtube.com/watch?v=g7-1Uglyqso&amp;feature=youtu.be">here</a> to watch the workshop. We want to give a huge thank you to her, she led two very informative classes on HTML and CSS!</li></ul><ul id="cd164577-0d25-4539-b999-696fdbf1b1a3" class="bulleted-list"><li><strong>We have matched 20 students and 15 mentors so far </strong>🎊<strong>! We can&#x27;t wait for you to meet your mentors and get started on your projects! </strong><mark class="highlight-yellow_background"><strong>We hope to see more mentor requests this next week</strong></mark><strong> 😄</strong></li></ul><p id="26a56d7e-a1f2-4b8c-a748-39c97be788e4" class="">
+</p><p id="15bd24b3-24d5-4021-8ba5-ee1e99963c27" class="">If you have not yet formed a team, reach out to friends to join EmpowHer - Registration for the competition is open until January 1, 2021. Register <a href="https://metrohacks.org/empowher/">here</a>.</p><p id="9f01e0f2-df48-4fd9-80f8-7a2af8dbdf3c" class="">
+</p><h1 id="fb713333-15ed-4724-96df-a44868833c9b" class="">November 8th:</h1><h2 id="f52b9673-c397-4233-a7d3-63f459818f16" class="">☀️ Updates for the Next Week</h2><ul id="fb1b5f65-0c7c-43d9-ad63-b7f66c38cbbc" class="bulleted-list"><li><a href="https://www.notion.so/Workshops-f52a0ede6cdc44be8ddf4ec35d995432"><mark class="highlight-blue_background">Keynote with Lydia Smyers</mark></a><mark class="highlight-blue_background"> on Sunday, November 15 at 2 PM EST</mark><ul id="4ced9fa9-3092-4f22-aea4-9c8b4b706571" class="bulleted-list"><li>Lydia is a General Manager at Microsoft leading US Education. She will speak about her career journey and various STEM opportunities for young women! <mark class="highlight-yellow_background">All students interested in STEM </mark><strong><mark class="highlight-yellow_background">should</mark></strong><mark class="highlight-yellow_background"> attend!</mark></li></ul></li></ul><ul id="bd2a1d74-4b3c-4aaf-bc62-e6906e884158" class="bulleted-list"><li><mark class="highlight-blue_background">Mentor-Matching!</mark><ul id="14620ce8-0780-473a-88a1-fbdea52f6477" class="bulleted-list"><li><a href="https://www.notion.so/Students-EmpowHer-172dd17bfd54402bb20e6275acb21600">Details Here →</a></li></ul><ul id="8b9f0252-57ac-4bbc-910b-d87dea2e44da" class="bulleted-list"><li><strong>Mentors please log all hours with your workplace </strong><strong><a href="https://www.notion.so/Mentors-EmpowHer-41f31315e3ef44e2a7139c3fe5c91926">here</a></strong><strong>.</strong></li></ul></li></ul><ul id="257fa42c-a308-4879-9ca1-e4d5be5a728e" class="bulleted-list"><li><a href="https://www.notion.so/metrohacks/Workshops-f52a0ede6cdc44be8ddf4ec35d995432#00ef21449e304dee9051b773aa919220"><mark class="highlight-blue_background">Live Q&amp;A</mark></a><mark class="highlight-blue_background"> on Saturday, November 14 at 8 PM EST</mark><ul id="e1075fe4-065f-411a-92de-8022777481ce" class="bulleted-list"><li>Submit questions <a href="https://metrohacks1.typeform.com/to/pDsHiZaw">here</a>!</li></ul><ul id="59b91a35-271d-4e6f-b751-7236fc378361" class="bulleted-list"><li>There will be trivia with some fun prizes 😉</li></ul></li></ul><ul id="f4a649f8-7eca-450d-8094-4ee28281b8aa" class="bulleted-list"><li><mark class="highlight-blue_background">Please add our workshops to your calendar → </mark><a href="https://calendar.google.com/calendar/u/0/embed?src=c_hssmbbljae812orudt335fepvg@group.calendar.google.com&amp;ctz=America/New_York"><mark class="highlight-blue_background">Workshop Event Details</mark></a><mark class="highlight-blue_background">.</mark></li></ul><ul id="61f65624-30a6-43b8-80a1-71ed088ee6e5" class="bulleted-list"><li><mark class="highlight-blue_background">Mentor Background Check</mark><ul id="aceceef5-2a10-44c4-8e77-797a6f7f69f1" class="bulleted-list"><li>We require mentors to have a Massachusetts CORI background check: instructions <a href="https://www.notion.so/Mentors-EmpowHer-41f31315e3ef44e2a7139c3fe5c91926">here</a>.</li></ul></li></ul><h2 id="c574abe7-8e0c-4f81-ba17-d81df5749f9d" class="">🌥 Summary of the Past Week</h2><ul id="e74fe133-712b-4bec-ae2f-dcaa9ec8ae60" class="bulleted-list"><li>On November 6, we hosted the <a href="https://www.notion.so/metrohacks/Workshops-f52a0ede6cdc44be8ddf4ec35d995432#86d37934685b4ed983fed248544a687c">Idea Design Workshop</a> with Amanda Horne</li></ul><ul id="10121a82-5916-4eea-bcc7-ff4831856f7b" class="bulleted-list"><li>On November 7, we hosted the <a href="https://www.notion.so/metrohacks/Workshops-f52a0ede6cdc44be8ddf4ec35d995432#7cf0d55631ea4b299bc5c8ac71dd52d3">Web Development Class # 3</a> - Design with Shell Zhu</li></ul><ul id="b671fbca-ef07-434d-a23e-4b668e111f50" class="bulleted-list"><li><strong>We have matched 40 students and 20 mentors so far </strong>🎊<strong>!</strong></li></ul><p id="93956b54-b27e-421f-b1ca-4a9c27bd0a6e" class="">
+</p><p id="32ac4ce4-5017-4156-b884-d7429f6ee91e" class="">If you have not yet formed a team, reach out to friends to join EmpowHer - Registration for the competition is open until January 1, 2021. Register <a href="https://metrohacks.org/empowher/">here</a>.</p><p id="881460bd-6de0-4ac3-9cc2-78e2054d3f48" class="">Make sure you have joined our <a href="https://join.slack.com/t/empowher2020/shared_invite/zt-ipg8fkyt-OM_yZ1JnSSwOW1Feg0R8HA">Slack</a> and that your @channel and @mention notifications are on!</p><p id="70a3f20a-a377-49f2-bd17-205a4fae76bf" class="">
+</p><h1 id="31fc0e6a-21fe-495e-b377-f69e3537b09c" class="">November 15th:</h1><h2 id="1e755e6a-8358-4cc1-8a52-d60f5665e871" class="">☀️ Updates for the Next Week</h2><ul id="c646e7cb-4b11-4cf8-b43b-118462cac46d" class="bulleted-list"><li><a href="https://metrohacks.org/empowher/">Account System on our Website</a><p id="8301f007-908d-4f31-bd27-779741cf5382" class="">Please create an account on our website — click participate and then log in. If you had created an account before, please create another one, we deleted all old accounts. Once you login, you will see two waiver forms: one for EmpowHer and one for NCWIT. <mark class="highlight-yellow_background"><strong>These completed forms are due by Sunday, November 22nd. </strong></mark></p></li></ul><ul id="82bb29c0-fdb7-4487-af39-a54bb037f015" class="bulleted-list"><li><a href="https://www.notion.so/Students-EmpowHer-172dd17bfd54402bb20e6275acb21600">Mentor-Matching</a>!<p id="cb58b1dc-a10b-4390-9230-493b6bb6d24e" class=""><strong>Students do not need to be completely set on an idea before requesting a mentor! Our experienced mentors will be able to help you pick one 😄</strong></p></li></ul><ul id="1136cf13-e60d-46ff-b07c-81399ea34db4" class="bulleted-list"><li><a href="https://www.notion.so/Workshops-f52a0ede6cdc44be8ddf4ec35d995432">Web Development Class #4</a> - Introduction to Javascript<p id="52a674b6-9d55-4966-9784-7b61dcc65dfa" class="">On Saturday at 2 PM EST, November 21st, <strong>Amanda Sopkin, </strong>a software engineering manager at BuildingConnected, will give an introduction into JavaScript and the language fundamentals!</p></li></ul><h2 id="93856c3e-684c-4a73-bf3b-d8084ab3c967" class="">✨ Special Events Coming Up</h2><ul id="b2052368-2237-4801-a3bb-80eb2a5f123b" class="bulleted-list"><li><a href="https://www.notion.so/Workshops-f52a0ede6cdc44be8ddf4ec35d995432">Keynote with Natalia Guerrero</a> on Friday, December 4th at 6 PM EST<ul id="9ba0c8b1-ce5b-41d8-b0a1-3ab99282d29c" class="bulleted-list"><li>We saw that many of you were interested in astronomy, and we are excited to announce that Natalia Guerrero will speak about her work with NASA! </li></ul><ul id="a29132da-6770-4d81-91fd-0c6e662b2d90" class="bulleted-list"><li>Natalia works at the MIT Kavli Institute for Astrophysics and Space Research. </li></ul></li></ul><h2 id="3986618f-afda-406b-ae67-23490b85955b" class="">🌥 Summary of the Past Week</h2><ul id="c1e192a3-db57-44c9-bfac-205679418ab5" class="bulleted-list"><li>On November 14, we hosted a live Q&amp;A with some trivia. Stay tuned, there will be more fun events like this soon!</li></ul><ul id="842440e2-4c6c-4be7-89bb-732aec18886c" class="bulleted-list"><li>On November 15, Lydia, a GM at Microsoft leading US Education, spoke about her career journey and various STEM opportunities for young women!</li></ul><ul id="063d2ee9-0fd1-4d1a-84de-9452ce68ff95" class="bulleted-list"><li><strong>We have matched 50 students and 30 mentors so far </strong>🎊<strong>!</strong></li></ul><p id="d5cf51cd-de06-45bb-8f75-6abbcdb43a72" class="">
+</p><p id="b0882e54-ec65-4155-ac98-a74146c191a3" class="">If you have not yet formed a team, reach out to friends to join EmpowHer - Registration for the competition is open until January 1, 2021. Register <a href="https://metrohacks.org/empowher/">here</a>.</p><p id="18d270c8-f182-4015-b5be-0308eec590f0" class="">Make sure you have joined our <a href="https://join.slack.com/t/empowher2020/shared_invite/zt-ipg8fkyt-OM_yZ1JnSSwOW1Feg0R8HA">Slack</a> and that your @channel and @mention notifications are on!</p><p id="8b2bf575-98e9-4b15-846e-380e4d109a6e" class="">
+</p><h1 id="172d8d7c-ab51-4adb-bc42-1019afc671be" class="">November 23rd:</h1><figure id="526ccbcd-3167-4b4b-a5b6-ad21821d0497" class="image"><a href="Compiled%20Newsletters%20526ccbcd31674b4ba5b6ad21821d0497/email_top.png"><img style="width:4098px" src="Compiled%20Newsletters%20526ccbcd31674b4ba5b6ad21821d0497/email_top.png"/></a></figure><h2 id="6f0508d3-4e2f-4956-be00-3c05363e12c6" class="">☀️ Updates for the Next Week</h2><ul id="be9d7c54-abc1-466f-906d-5d365b551296" class="bulleted-list"><li>🚨<strong>URGENT ANNOUNCEMENT (STUDENTS ONLY)!!!</strong>🚨<p id="8e13408c-e0e4-4323-87ba-6684053532a8" class="">Please create an account on our <a href="https://metrohacks-empowher-participant-portal.github.io/">participant portal</a>. Once you login, you will see two waiver forms: one for EmpowHer and one for NCWIT. These completed forms are <mark class="highlight-yellow_background">due by Monday, November 23rd at 11:59 PM EST / 8:59 PM PST</mark>.</p><p id="e8b75cf6-8efb-419e-8917-19558145ce5c" class="">⚠️<strong> If both waivers are not completed by Monday, November 23rd, you will be ineligible for the winning team’s scholarship prizes and disqualified from the competition</strong></p></li></ul><ul id="ac774ffb-91c4-430f-a24f-e7896f0dfc4c" class="bulleted-list"><li><a href="https://www.notion.so/Students-EmpowHer-172dd17bfd54402bb20e6275acb21600">Mentor-Matching</a>!<p id="40eecd0e-a98e-4d42-af67-b72848108498" class="">Students <strong>do not need to be completely set</strong> on an idea before requesting a mentor! Our experienced mentors will be able to help you pick one<strong> 😄</strong></p><p id="64b232be-06e9-40e4-90cb-a3919acf4b6a" class="">We have mentors experienced in many technical areas including Data Science, IoT, Web Development, etc. We highly encourage you to work closely with a mentor to have the most fulfilling EmpowHer experience!</p></li></ul><ul id="2658b823-808a-4414-8538-4e989b3fa3c0" class="bulleted-list"><li>🦃 As this week is Thanksgiving break, we will not hold any workshops. <strong>Enjoy time with your families!</strong> </li></ul><h2 id="c81dcbed-0402-4e05-b624-8bcc6f660428" class="">✨ Special Events Coming Up</h2><figure id="a65ada91-6bed-40c1-94a0-496c14320c60" class="image"><a href="Compiled%20Newsletters%20526ccbcd31674b4ba5b6ad21821d0497/Untitled.png"><img style="width:240px" src="Compiled%20Newsletters%20526ccbcd31674b4ba5b6ad21821d0497/Untitled.png"/></a></figure><ul id="99d252fd-931a-47c9-8ca3-b5d35877d52f" class="bulleted-list"><li><a href="https://www.notion.so/Workshops-f52a0ede6cdc44be8ddf4ec35d995432">Keynote with Natalia Guerrero</a> on Friday, December 4th at 6 PM EST<ul id="d3ea4f46-2c30-4eaa-b614-067d07cc1cce" class="bulleted-list"><li>We saw that many of you were interested in astronomy, and we are excited to announce that Natalia Guerrero will speak about her work with <strong>NASA</strong>! </li></ul></li></ul><ul id="916ca224-0cc3-484b-a657-05e5bf007671" class="bulleted-list"><li><a href="https://www.notion.so/Workshops-f52a0ede6cdc44be8ddf4ec35d995432">Web Development Class #5</a> on Saturday, December 5th at 3 PM EST<ul id="fc6bf9d0-d75d-4801-8eed-3d6e3f14f8e2" class="bulleted-list"><li><strong>Ayana Griffin</strong>, a computer science student at Stanford, will be teaching intermediate JavaScript!</li></ul><p id="f466e983-9935-4f8f-80a1-24d0e210197b" class="">
+</p></li></ul><figure id="c1fdb535-0df7-42db-a67c-0a6d3af8bfd8" class="image"><a href="Compiled%20Newsletters%20526ccbcd31674b4ba5b6ad21821d0497/Untitled%201.png"><img style="width:240px" src="Compiled%20Newsletters%20526ccbcd31674b4ba5b6ad21821d0497/Untitled%201.png"/></a></figure><h2 id="67932441-acda-4840-95c3-6b2e55d70fab" class="">🌥 Summary of the Past Week</h2><ul id="4bb647b9-ce90-4ba7-85a4-21bfdf8cda08" class="bulleted-list"><li>On November 21, Amanda Sopkin hosted the fourth class of our web development series! She gave an introduction to JavaScript. </li></ul><p id="7ed8ee3c-bcdd-40d9-a3e3-8734a2504b98" class="">
+</p><p id="86f53e5f-61d5-4be9-932d-95e710911517" class="">If you have not yet formed a team, reach out to friends to join EmpowHer - Registration for the competition is open until January 1, 2021. Register <a href="https://metrohacks-empowher-participant-portal.github.io">here</a>.</p><p id="05d88311-5394-40a4-acb0-68cd4d074518" class="">Make sure you have joined our <a href="https://join.slack.com/t/empowher2020/shared_invite/zt-ipg8fkyt-OM_yZ1JnSSwOW1Feg0R8HA">Slack</a> on desktop and mobile and that your @channel and @mention notifications are on!</p><h1 id="8fc9dc01-9b36-49e2-9d5a-7e5b9d7515b3" class="">November 30th:</h1><p id="956feaf0-48cd-431c-9267-005db2b75da4" class="">⏰ Incredible Opportunity- Register for NASA Keynote! </p><figure id="b3edcdab-3178-41e4-9365-6cc6a97487e9" class="image"><a href="Compiled%20Newsletters%20526ccbcd31674b4ba5b6ad21821d0497/email_top.png"><img style="width:4098px" src="Compiled%20Newsletters%20526ccbcd31674b4ba5b6ad21821d0497/email_top.png"/></a></figure><h2 id="f03f3d6b-9f46-48f0-a71a-387e3819e2b5" class="">☀️ Updates for the Next Week</h2><figure id="d5dd0745-5b82-43dc-9f32-18cdb83e9678" class="image"><a href="Compiled%20Newsletters%20526ccbcd31674b4ba5b6ad21821d0497/Untitled.png"><img style="width:240px" src="Compiled%20Newsletters%20526ccbcd31674b4ba5b6ad21821d0497/Untitled.png"/></a></figure><ul id="d8c6b5ec-11c4-4c9a-bc51-0b16845e41c2" class="bulleted-list"><li><a href="https://www.notion.so/Workshops-f52a0ede6cdc44be8ddf4ec35d995432">NASA Keynote with Natalia Guerrero</a> on Friday, December 4th at 6 PM EST<ul id="1d8ff033-731b-46d7-b4c9-fb8117b6e7f3" class="bulleted-list"><li>Natalia Guerrero will speak about her work with <strong>NASA</strong>! We saw that many of you were interested in astronomy and we are excited to offer such an amazing opportunity!</li></ul></li></ul><ul id="a61f8e87-cf2c-441e-aa4d-46c14084f9de" class="bulleted-list"><li><a href="https://www.notion.so/Workshops-f52a0ede6cdc44be8ddf4ec35d995432">Web Development Class #5</a> on Saturday, December 5th at 3 PM EST<ul id="7d4d21bd-4f4a-4e92-8554-f1c6e3f13635" class="bulleted-list"><li>This class will cover intermediate JavaScript!</li></ul></li></ul><ul id="235c2ae9-94f7-4c32-8366-f62ad783d583" class="bulleted-list"><li><a href="https://www.notion.so/Students-EmpowHer-172dd17bfd54402bb20e6275acb21600">Mentor-Matching</a>!<p id="43a7babc-0b9e-4644-a9c7-15e5906b7482" class="">We have both technical and business focused mentors who can guide you to take your project to the next level.</p><p id="b777c573-50c1-4dc0-8317-09cd41b589fd" class="">We highly encourage you to work closely with a mentor to have the most fulfilling EmpowHer experience!</p><p id="983f5efa-873c-44ee-9409-385240b5072c" class="">
+</p></li></ul><p id="02d697a7-17d3-4be6-9405-efc3a08aff16" class="">
+</p><p id="2d008d87-ca72-4a54-8579-33d8975a43c4" class="">Whether you have an idea or not, make sure to request a mentor!</p><p id="244a7767-81ed-4d73-b18e-59426251ba79" class=""><strong>&quot;My mentor was wonderful and helped me and my team settle on a topic. She gave us tips for starting to code, suggestions for libraries and code editors, and answered all our questions thoughtfully...I&#x27;m glad I had such a sweet mentor to help me out.&quot;</strong></p><p id="c3162f12-d4fc-46f4-b6cf-3d8026d98933" class="">-An EmpowHer participant</p><p id="9543c64c-46d6-4820-aa64-f8c9785c4b68" class="">
+</p><p id="c04ffef0-2a22-44b4-9baf-061e39aad1ec" class="">If you have not yet formed a team, reach out to friends to join EmpowHer - Registration for the competition is open until January 1, 2021. Register <a href="https://metrohacks-empowher-participant-portal.github.io">here</a>.</p><p id="0b442006-99a8-4557-ac13-f8ca69a281d3" class="">Make sure you have joined our <a href="https://join.slack.com/t/empowher2020/shared_invite/zt-ipg8fkyt-OM_yZ1JnSSwOW1Feg0R8HA">Slack</a> on desktop and mobile and that your @channel and @mention notifications are on!</p><p id="04f7ab34-90df-4e33-b7a7-6b94a6fd0bc7" class="">
+</p><h1 id="70df3676-94b3-4fd7-a30f-b0f76c2ec6f8" class="">December 7th: </h1><p id="c3b349a3-9ff6-41cb-85e3-9594c621223a" class="">⏰ Data Science Workshop Series Begins! 🎉</p><p id="dc415d6d-9595-4505-a257-552e1d715ad2" class="">
+</p><figure id="03a47bb0-ecf8-40e0-b0a6-b54904fcd66a" class="image"><a href="Compiled%20Newsletters%20526ccbcd31674b4ba5b6ad21821d0497/email_top.png"><img style="width:4098px" src="Compiled%20Newsletters%20526ccbcd31674b4ba5b6ad21821d0497/email_top.png"/></a></figure><h2 id="ffba5e7f-264f-445a-b7ae-7e63a060aaf7" class="">☀️ Updates for the Next Week</h2><figure id="7d12afb8-ca6e-4c30-8a22-4e10aa1601ea" class="image"><a href="Compiled%20Newsletters%20526ccbcd31674b4ba5b6ad21821d0497/fullsizeoutput_3.jpeg"><img style="width:1334px" src="Compiled%20Newsletters%20526ccbcd31674b4ba5b6ad21821d0497/fullsizeoutput_3.jpeg"/></a></figure><ul id="5ab5a2f5-1b3c-4a6d-a2e3-1d1ba28fe759" class="bulleted-list"><li><a href="https://www.notion.so/Workshops-f52a0ede6cdc44be8ddf4ec35d995432">&#x27;What is Data Science?&#x27; with Er Li Peng on Sunday, December 13th at 2 PM EST!</a><ul id="32a92183-d108-42b8-b381-01ddc23b9cd4" class="bulleted-list"><li><strong>Er Li Peng</strong> will be walking us through an introduction to Data Science!<p id="5b918b7a-49ce-4d09-a68f-9bcdb4fb53b9" class="">She is<strong> </strong>a senior consultant and data scientist at IBM, working primarily with federal government clients on analytics and data science projects. </p><p id="b2a649f2-1a0e-4a6e-8147-0700e6c944ef" class="">
+</p><p id="991b4c10-7c0f-4a8e-a60b-01bbf02e0e15" class="">
+</p></li></ul></li></ul><ul id="891797d1-abe2-4a73-ad47-0c3474d7d37a" class="bulleted-list"><li><a href="https://www.notion.so/Workshops-f52a0ede6cdc44be8ddf4ec35d995432">Web Development Class #5</a> on Saturday, December 12th at 2 PM EST<ul id="89607832-8f2f-4efb-b5d7-936777a68ffd" class="bulleted-list"><li><strong>Apurva Ramavarapu </strong>will be teaching Intermediate JavaScript. <p id="dbf6d8a9-19f9-40c7-a587-b8e0e9b2ce0c" class="">She is a Computer Science graduate with a total of 6 years of experience and is currently working as a Software Development Engineer at Audible. </p></li></ul></li></ul><figure id="7973ed10-91a1-4892-8672-b486e34f5ddf" class="image"><a href="Compiled%20Newsletters%20526ccbcd31674b4ba5b6ad21821d0497/apurva.jpg"><img style="width:144px" src="Compiled%20Newsletters%20526ccbcd31674b4ba5b6ad21821d0497/apurva.jpg"/></a></figure><p id="19c6e824-aa40-4478-a296-5f9e134a4930" class="">
+</p><p id="a017facc-0447-4664-a160-51c049dacb4c" class="">
+</p><ul id="5eeba11b-f4db-4a90-82ec-ed6f0c5d2862" class="bulleted-list"><li><a href="https://www.notion.so/Students-EmpowHer-172dd17bfd54402bb20e6275acb21600">Mentor-Matching</a>!<p id="6b3437aa-4204-44fc-b250-0e4fd33e659b" class="">We highly encourage you to work closely with a mentor to have the most fulfilling EmpowHer experience!</p><p id="57afc837-381b-4952-b023-f1fa0a97d8b8" class="">We have both technical and business focused mentors who can guide you to take your project to the next level.</p><p id="59e7c353-a479-4e79-804f-4797b5c7636a" class="">
+</p></li></ul><p id="fa07d0e5-814c-4f6d-8930-a28b84b0659e" class="">Whether you have an idea or not, make sure to request a mentor!</p><p id="94e66e35-25f5-4049-93dd-dc769e4723b9" class=""><strong>&quot;...our mentor was very informative on how each idea would be created, how difficult it would be, and how it would be marketed, etc. It was super wonderful and informative and my team was able to choose an idea!&quot;</strong></p><p id="4d6fe2d2-aff7-46e7-96d2-8b129604e756" class="">-An EmpowHer participant</p><p id="06477c37-9a4a-4ea3-b849-b0ead0e3fedb" class="">
+</p><p id="09d4b92d-4149-4108-9b9e-90e4180a1bc8" class="">If you have not yet formed a team, reach out to friends to join EmpowHer - Registration for the competition is open until January 1, 2021. Register <a href="https://metrohacks-empowher-participant-portal.github.io">here</a>.</p><p id="e4fc039a-86cc-4282-9bba-b74f3b2a09eb" class="">Make sure you have joined our <a href="https://join.slack.com/t/empowher2020/shared_invite/zt-ipg8fkyt-OM_yZ1JnSSwOW1Feg0R8HA">Slack</a> on desktop and mobile and that your @channel and @mention notifications are on!</p><p id="4304dfc9-9e59-4537-89b8-9e41cb7408a5" class="">
+</p></div></article></body></html>
