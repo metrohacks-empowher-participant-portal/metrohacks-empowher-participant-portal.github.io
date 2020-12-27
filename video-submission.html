@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmpowHer Video Submission</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">  
+    <link rel="stylesheet" href="empowher-assets/styles.css">
+
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <script type="text/javascript" type="text/javascript">
+        Parse.initialize("2bLSypMifZwtcnA82P5M9LonZAiZX84xAz8E93mg","bqYQwNlW9g6dGEF3BDprzySZ2UXFjWJXXSUXu6ct"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
+        Parse.serverURL = 'https://parseapi.back4app.com/'
+        
+
+        
+        var videoSubmission = new Parse.Object.extend("videoSubmission");
+        
+        var video = document.getElementById("video-link").value;
+        var leader = document.getElementById("team-leader-name").value;
+        var members = document.getElementById("team-members").value;
+        
+
+
+        function create() {
+            video = document.getElementById("video-link").value;
+            leader = document.getElementById("team-leader-name").value;
+            members = document.getElementById("team-members").value;
+            
+            
+
+            if (!(video == "" || leader == "" || members == "")) {
+
+                myVideo = new videoSubmission();
+                video = document.getElementById("video-link").value;
+                leader = document.getElementById("team-leader-name").value;
+                members = document.getElementById("team-members").value;
+
+                myVideo.set("videoLink", video);
+                myVideo.set("team-leader", leader);
+                myVideo.set("team-members", members);
+
+                
+
+                myVideo.save().then(function(videoSubmission){
+                    
+                    alert("Your form has been submitted. You can now close this tab. If you want to refer back to your submission, please screenshot or save this page. Thank you!");
+
+
+                }).catch(function(error){
+                    alert("Error: " + error.message);
+                });
+            }
+            else {
+            alert("Please make sure you have filled all form fields");
+            }
+        }
+</script>
+</head>
+<body>
+
+    <div class="container center-block">
+        <div class="row">
+            <h1> </h1>
+            <br>
+            <h1>EmpowHer Video Submission</h1>
+            <p>Please upload a link to your YouTube Video. Please make sure your video is either <strong>public</strong> or <strong>unlisted</strong>! Please double check that your linlk works and can be accessed before submitting!</p>
+            <p>Each team should only submit <strong>ONE </strong> video. If another member of your team has already submitted your video, please do not submit it again. Thank you!</p>
+
+          <form id = "videoSubmission" onsubmit="return false">
+              
+
+                  
+
+
+
+                  <div class="panel-body">
+
+                    <div class="row">
+                        <div class = "col-md-3">
+                            <div class="field--type-string field--name-field-student-name-first field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-student-name-first-wrapper" id="edit-field-student-name-first-wrapper">      
+                                <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
+                                    <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">Team Leader Name: </label>
+
+
+                                    <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="text" id="team-leader-name" name="field_student_name_first[0][value]" value="" size="300" maxlength="900" placeholder="" required="required" aria-required="true">
+
+
+
+                                </div>
+                                <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
+                                    <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">Other team members: (Please separate each member with a comma)</label>
+
+
+                                    <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="text" id="team-members" name="field_student_name_first[0][value]" value="" size="300" maxlength="900" placeholder="" required="required" aria-required="true">
+
+
+
+                                </div>
+
+
+                                <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
+                                    <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">Video Link:</label>
+
+
+                                    <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="text" id="video-link" name="field_student_name_first[0][value]" value="" size="300" maxlength="900" placeholder="" required="required" aria-required="true">
+
+
+
+                                </div>
+                                
+
+                  
+
+
+                                <div class = "center-block">
+                                    <input type = "submit" class = "button center-button" Value = "Submit" id = "SubmitButton" onclick="create()">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        
+
+
+
+            </form>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+</body>
+</html>
