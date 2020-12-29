@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmpowHer Short Essay Submission</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">  
+    <link rel="stylesheet" href="empowher-assets/styles.css">
+
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <script type="text/javascript" type="text/javascript">
+        Parse.initialize("2bLSypMifZwtcnA82P5M9LonZAiZX84xAz8E93mg","bqYQwNlW9g6dGEF3BDprzySZ2UXFjWJXXSUXu6ct"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
+        Parse.serverURL = 'https://parseapi.back4app.com/'
+        
+
+        
+        var shortEssay = new Parse.Object.extend("shortEssay");
+        
+        
+        var leader = document.getElementById("team-leader-name").value;
+        var members = document.getElementById("team-members").value;
+        var questionA = document.getElementById("question-a").value;
+        var questionB = document.getElementById("question-b").value;
+        var questionC = document.getElementById("question-c").value;
+        var questionD = document.getElementById("question-d").value;
+        
+
+
+        function create() {
+            
+            leader = document.getElementById("team-leader-name").value;
+            members = document.getElementById("team-members").value;
+            questionA = document.getElementById("question-a").value;
+            questionB = document.getElementById("question-b").value;
+            questionC = document.getElementById("question-c").value;
+            questionD = document.getElementById("question-d").value;
+            
+            
+
+            if (!(leader == "" || members == "" || questionA == "" || questionB == " " || questionC == " ") || questionD == " ") {
+
+                myEssay = new shortEssay();
+               
+                leader = document.getElementById("team-leader-name").value;
+                members = document.getElementById("team-members").value;
+                questionA = document.getElementById("question-a").value;
+                questionB = document.getElementById("question-b").value;
+                questionC = document.getElementById("question-c").value;
+                questionD = document.getElementById("question-d").value;
+
+               
+                myEssay.set("teamLeader", leader);
+                myEssay.set("teamMembers", members);
+                myEssay.set("questionA", questionA);
+                myEssay.set("questionB", questionB);
+                myEssay.set("questionC", questionC);
+                myEssay.set("questionD", questionD);
+
+                console.log(questionA);
+                console.log(questionB);
+                console.log(questionC);
+
+                console.log(questionD);
+                
+
+                myEssay.save().then(function(shortEssay){
+                    
+                    alert("Your form has been submitted. You can now close this tab. If you want to refer back to your submission, please screenshot or save this page. Thank you!");
+
+
+                }).catch(function(error){
+                    alert("Error: " + error.message);
+                });
+            }
+            else {
+            alert("Please make sure you have filled all form fields");
+            }
+        }
+
+        
+</script>
+</head>
+<body>
+    <div class="container center-block">
+        <div class="row">
+            <h1> </h1>
+            <br>
+            <h1>EmpowHer Short Essay Submission</h1>
+            
+            <p>Write your answers to for following questions in the corresponding textboxes. Each question has a word limit of 500 words. For more infomration, see the <a href = "https://metrohacks.org/empowher/empowher-assets/files/submission-guidelines.pdf" target= "blank"> EmpowHer Submission Guidelines.</a>  </p> 
+            <p>Each team should only submit <strong>ONE </strong> copy of your responses. If another member of your team has already submitted this form, please do not submit it again. Thank you!</p>
+
+          <form id = "essaySubmission" onsubmit="return false">
+              
+
+                  
+
+
+
+                  <div class="panel-body">
+
+                    <div class="row">
+                        <div class = "col-md-3">
+                            <div class="field--type-string field--name-field-student-name-first field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-student-name-first-wrapper" id="edit-field-student-name-first-wrapper">      
+                                <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
+                                    <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">Team Leader Name: </label>
+
+
+                                    <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="text" id="team-leader-name" name="field_student_name_first[0][value]" value="" size="300" maxlength="900" placeholder="" required="required" aria-required="true">
+
+
+
+                                </div>
+                                <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
+                                    <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">Other team members: (Please separate each member with a comma. If you worked individually, please write "individual" here. )</label>
+
+
+                                    <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="text" id="team-members" name="field_student_name_first[0][value]" value="" size="300" maxlength="900" placeholder="" required="required" aria-required="true">
+
+
+
+                                </div>
+
+
+                                <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
+                                    <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">A)</label>
+                                    <p>Explain the problem you are aiming to solve and discuss the deficits of existing solutions on the market. </p>
+
+
+                                    <textarea cols = "50" rows = "10"class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="textarea" id="question-a" name="field_student_name_first[0][value]" value="" size="300"  placeholder= "" required="required" aria-required="true" > </textarea>
+
+
+
+
+                                </div>
+
+                                <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
+                                    <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">B)</label>
+                                    <p>Discuss your final prototype and how its feature set separates it from other solutions on the market. Include a description of the technologies you utilized to create each part of the prototype. </p>
+
+
+                                    <textarea rows = "10" colls = "50" class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="textarea" id="question-b" name="field_student_name_first[0][value]" value="" size="300"  placeholder="" required="required" aria-required="true"> </textarea>
+
+
+
+                                </div>
+                                <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
+                                    <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">C)</label>
+                                    <p>What are the key skillsets you learned during the design process? How did you collaborate with your mentor and team to strengthen the project over the past months? </p>
+
+
+                                    <textarea cols = "50" rows = "10"class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="textarea" id="question-c" name="field_student_name_first[0][value]" value="" size="300" placeholder="text" required="required" aria-required="true"> </textarea>
+
+
+
+                                </div>
+
+                                <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
+                                    <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">D)</label>
+                                    <p>Include any other supplemental infomration that will help the judges understand your project. </p>
+
+
+                                    <textarea cols = "50" rows = "10" class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="text" id="question-d" name="field_student_name_first[0][value]" value="" size="300" placeholder="" required="required" aria-required="true"> </textarea>
+
+
+
+                                </div>
+
+                                
+                                
+
+                  
+
+
+                                <div class = "center-block">
+                                    <input type = "submit" class = "button center-button" Value = "Submit" id = "SubmitButton" onclick="create()">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        
+
+
+
+            </form>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+</body>
+</html>
