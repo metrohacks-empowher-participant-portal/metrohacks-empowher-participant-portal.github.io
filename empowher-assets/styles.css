@@ -578,3 +578,10 @@ label input {
     margin-top: 15px;
   }
 }
+
+
+.column {
+  flex: 0 0 90%;
+  max-width: 50%;
+}
+}
