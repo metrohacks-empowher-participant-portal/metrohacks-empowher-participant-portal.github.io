@@ -581,7 +581,7 @@ label input {
 
 
 .column {
-  flex: 0 0 90%;
-  max-width: 50%;
+      flex: 0 0 90%;
+    max-width: 50%;
 }
 }
