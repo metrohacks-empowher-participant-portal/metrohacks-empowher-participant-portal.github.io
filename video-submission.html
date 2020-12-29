@@ -18,14 +18,12 @@
         var videoSubmission = new Parse.Object.extend("videoSubmission");
         
         var video = document.getElementById("video-link").value;
-        var leader = document.getElementById("team-leader-name").value;
         var members = document.getElementById("team-members").value;
         
 
 
         function create() {
             video = document.getElementById("video-link").value;
-            leader = document.getElementById("team-leader-name").value;
             members = document.getElementById("team-members").value;
             
             
@@ -34,11 +32,9 @@
 
                 myVideo = new videoSubmission();
                 video = document.getElementById("video-link").value;
-                leader = document.getElementById("team-leader-name").value;
                 members = document.getElementById("team-members").value;
 
                 myVideo.set("videoLink", video);
-                myVideo.set("teamLeader", leader);
                 myVideo.set("teamMembers", members);
 
                 
@@ -80,17 +76,9 @@
                     <div class="row">
                         <div class = "column">
                             <div class="field--type-string field--name-field-student-name-first field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-student-name-first-wrapper" id="edit-field-student-name-first-wrapper">      
+                                
                                 <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
-                                    <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">Team Leader Name: </label>
-
-
-                                    <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="text" id="team-leader-name" name="field_student_name_first[0][value]" value="" size="300" maxlength="900" placeholder="" required="required" aria-required="true">
-
-
-
-                                </div>
-                                <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-student-name-first-0-value js-form-item-field-student-name-first-0-value form-group">
-                                    <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">Other team members: (Please separate each member with a comma)</label>
+                                    <label for="edit-field-student-name-first-0-value" class="control-label js-form-required form-required header-ncwit">Team Members: (Please separate each member with a comma)</label>
 
 
                                     <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-student-name-first-0-value" type="text" id="team-members" name="field_student_name_first[0][value]" value="" size="300" maxlength="900" placeholder="" required="required" aria-required="true">
