@@ -584,4 +584,10 @@ label input {
       flex: 0 0 90%;
     max-width: 50%;
 }
-}
+
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0px;
+    margin-left: 0px;
