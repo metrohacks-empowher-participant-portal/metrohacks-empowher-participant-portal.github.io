@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">  
     <link rel="stylesheet" href="empowher-assets/styles.css">
+    <link rel = "stylesheet" href = "empowher-assets/judgeform.css">
     
     <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
     <script type="text/javascript" type="text/javascript">
+
     
     Parse.initialize("2bLSypMifZwtcnA82P5M9LonZAiZX84xAz8E93mg","bqYQwNlW9g6dGEF3BDprzySZ2UXFjWJXXSUXu6ct"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
     Parse.serverURL = 'https://parseapi.back4app.com/'
@@ -608,6 +610,15 @@
         console.log(sat10001020);
         console.log(fri140200);
 
+        form.save().then(function(judgeForm){
+            console.log("Successful");
+            alert("Your form has been submitted. You can now close this tab. If you want to refer back to your answers, please screenshot or save this page. Thank you!");
+
+
+        }).catch(function(error){
+            console.log("Error: " + error.message);
+        });
+
 
         
 
@@ -615,18 +626,28 @@
     </script>
 </head>
 <body>
-    <div class="container center-block">
-        <div class = "row">
+    <div class = "judges">
+    
    
         <h1>Judging Form</h1>
-        <h3>Judges, please fill out this form.</h3>
+        
+        <div>
+            <br>
+            <h3>Judges, please fill out this form.</h3>
+        </div>
+        
     </div>
+    <div class = "judges">
+    
     <form onsubmit="return false">
 
         
-        
-            <h2><label for="judge-name">Name (First and Last): </label></h2>
-            <input type = "text" id ="judge-name" name = "judge-name" required>
+        <div class = "judges">
+            <div id = "name">
+                <h2><label for="judge-name">Name (First and Last): </label></h2>
+                <input type = "text" id ="judge-name" name = "judge-name" required>
+            </div>
+            
         </div>
         <h2>Which types of projects do you want to judge? </h2>
 
@@ -657,7 +678,7 @@
         
         <div id = "grid">
                 <h2>What times are you available to meet with students?</h2>
-                <h3>Please select times after 4:00 PM whenever possible so that participants do not have to miss class</h3>
+                <h4>Please select times after 4:00 PM whenever possible so that participants do not have to miss class</h4>
                 <table>
                     <tr>
                         <th></th>
@@ -1677,9 +1698,10 @@
     
 
     <br>
+    
     <label for = "num-projects"><h2>How many projects are you willing to judge? (Each project ~ 1 hour) </h2></label>
     <input type = "text" id = "num-projects" name = "num-projects" required>
-
+    <div id = "professional-info">
         <div class = "col-md-4">
         
             <label for="job-description"><h2>Job Description:</h2></label> <br>
@@ -1693,6 +1715,7 @@
             <input type = "url" id = "linkedin" name = "linkedin" required></input>
         
         </div>
+    </div>
         
 
 
@@ -1700,7 +1723,7 @@
 
         <input type = "submit" class = "button center-button"  Value = "Submit" id = "SubmitButton" onclick="create()">
     </form>
-</div>
+    </div>
 </div>
 
 
