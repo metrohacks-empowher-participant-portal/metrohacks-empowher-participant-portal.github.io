@@ -18,23 +18,24 @@
         Parse.serverURL = 'https://parseapi.back4app.com/'
 
         var Rubric = new Parse.Object.extend("Rubric");
+        var judge;
         var team;
 
-        var research;
-        var impact;
-        var market;
-        var innovation;
-        var effectiveness;
-        var outreach;
-        var difficulty;
-        var userinterface;
-        var experience;
-        var github;
-        var references;
-        var progression;
-        var writing;
-        var video;
-        var creativity;
+        var research =-1;
+        var impact =-1;
+        var market =-1;
+        var innovation =-1;
+        var effectiveness =-1;
+        var outreach =-1;
+        var difficulty =-1;
+        var userinterface =-1;
+        var experience =-1;
+        var github =-1;
+        var references =-1;
+        var progression =-1;
+        var writing =-1;
+        var video =-1;
+        var creativity =-1;
         
 
         var totalScore;
@@ -42,6 +43,7 @@
 
         function setScores()
         {
+            judge = document.getElementById("judge").value;
             team = document.getElementById("team-code").value;
             getResearch();
             getImpact();
@@ -58,7 +60,7 @@
             getWriting();
             getVideo();
             getCreativity();
-            getEngagement();
+            
 
             totalScore = research + impact+ market+ innovation + effectiveness + outreach + difficulty + userinterface + experience + github + references + progression + writing + video + creativity;
 
@@ -73,6 +75,7 @@
 
 
             score = new Rubric();
+            score.set("Judge", judge);
 
             score.set("TeamCode", team);
 
@@ -95,14 +98,19 @@
             score.set("TotalScore", totalScore); 
 
         
-            score.save().then(function(Rubric){
-            console.log("Successful");
-            alert("Your form has been submitted. You can now close this tab. If you want to refer back to your answers, please screenshot or save this page. Thank you!");
-
-
-        }).catch(function(error){
+            if (judge != "" && team != "" && research != -1 && impact != -1 && market != -1 && innovation != -1 && effectiveness != -1 && outreach != -1 && difficulty != -1 && userinterface != -1 && github!= -1 && references != -1 && progression != -1 && writing != -1 && video != -1 && creativity != -1)
+            
+            {
+                score.save().then(function(Rubric){
+                console.log("Successful");
+                alert("Your form has been submitted. You can now close this tab. If you want to refer back to your answers, please screenshot or save this page. Thank you!");
+            }).catch(function(error){
             console.log("Error: " + error.message);
         });
+            }
+
+
+        
 
 
             
@@ -321,9 +329,12 @@
     
     <div id = "form">
     <form onsubmit="return false">
+
+        <label for = "judge">Judge Name:</label>
+        <input type = "text" name = "judge" id = "judge" required>
         
         <label for = "team-code">Team Code: </label>
-        <input type = "text" id = "team-code" name = "team-code" ><br><br>
+        <input type = "text" id = "team-code" name = "team-code" required ><br><br>
 
         <h4>Please select one score per row:</h4>
         
@@ -351,7 +362,7 @@
         <th table-border = "1"  class = "cat1">Evidence of research of the issue</th>
         <th class = "cat1">
             
-            <input type = "radio" id = "research0" name = "research" value = 0>
+            <input type = "radio" id = "research0" name = "research" value = 0 required>
             
             <label for = "research0">Not present or irrelevant to the issue</label>
             
@@ -377,7 +388,7 @@
         </tr>
         <tr>
             <th class = "cat1">Impact of issue</th>
-            <th class = "cat1"><input type = "radio" id = "impact0" name = "impact" value = 0>
+            <th class = "cat1"><input type = "radio" id = "impact0" name = "impact" value = 0 required>
                 <label for = "impact0">Not Present</label>
                 </th>
             <th class = "cat1"><input type = "radio" id = "impact1" name = "impact" value = 1>
@@ -406,7 +417,7 @@
     
         <tr>
             <th class = "cat2">Evidence of market research of solution</th>
-            <th class = "cat2"><input type = "radio" id = "market0" name = "market" value = 0>
+            <th class = "cat2"><input type = "radio" id = "market0" name = "market" value = 0 required>
                 <label for = "market0">Not present or irrelevant to the solution</label>
                 </th>
             <th class = "cat2"><input type = "radio" id = "market1" name = "market" value = 1>
@@ -424,7 +435,7 @@
         </tr>
         <tr>
             <th class = "cat2">Innovation and value of the solution</th>
-            <th class = "cat2"><input type = "radio" id = "innovation0" name = "innovation" value = 0>
+            <th class = "cat2"><input type = "radio" id = "innovation0" name = "innovation" value = 0 required>
                 <label for = "innovation0">Not Present</label>
                 </th>
             <th class = "cat2"><input type = "radio" id = "innovation1" name = "innovation" value = 1>
@@ -443,7 +454,7 @@
         </tr>
         <tr>
             <th class = "cat2">Effectiveness of solution</th>
-            <th class = "cat2"><input type = "radio" id = "effectiveness0" name = "effectiveness" value = 0>
+            <th class = "cat2"><input type = "radio" id = "effectiveness0" name = "effectiveness" value = 0 required>
                 <label for = "effectiveness0">Not Present</label>
                 </th>
             <th class = "cat2"><input type = "radio" id = "effectiveness1" name = "effectiveness" value = 1>
@@ -457,7 +468,7 @@
         </tr>
         <tr>
             <th class = "cat2">Societal Outreach</th>
-            <th class = "cat2"><input type = "radio" id = "outreach0" name = "outreach" value = 0>
+            <th class = "cat2"><input type = "radio" id = "outreach0" name = "outreach" value = 0 required>
                 <label for = "outreach0">Not Present</label></th>
             <th class = "cat2"><input type = "radio" id = "outreach1" name = "outreach" value = 1>
                 <label for = "outreach1">Low engagement with the community with no plans to implement in the community</label>
@@ -479,7 +490,7 @@
         </tr>
         <tr>
             <th class = "cat3">Technical Difficulty</th>
-            <th class = "cat3"><input type = "radio" id = "difficulty0" name = "difficulty" value = 0>
+            <th class = "cat3"><input type = "radio" id = "difficulty0" name = "difficulty" value = 0 required>
                 <label for = "difficulty0">Not Present</label></th>
             <th class = "cat3"> <input type = "radio" id = "difficulty1" name = "difficulty" value = 1>
                 <label for = "difficulty1">The solution uses premade code or drag-and-drop builders</label></th>
@@ -492,7 +503,7 @@
         </tr>
         <tr>
             <th class = "cat3">User Interface</th>
-            <th class = "cat3"><input type = "radio" id = "userinterface0" name = "userinterface" value = 0>
+            <th class = "cat3"><input type = "radio" id = "userinterface0" name = "userinterface" value = 0 required>
                 <label for = "userinterface0">Not Present / Unusable</label></th>
             <th class = "cat3"><input type = "radio" id = "userinterface1" name = "userinterface" value = 1>
                 <label for = "userinterface1">Bare minimum effort</label></th>
@@ -507,7 +518,7 @@
             <th class = "cat3">User Experience</th>
             
             <th class = "cat3">
-                <input type = "radio" id = "experience0" name = "experience" value = 0>
+                <input type = "radio" id = "experience0" name = "experience" value = 0 required>
                 <label for = "experience0">Unusable, Bug-riddled</label>
             </th>
             <th class = "cat3">
@@ -529,7 +540,7 @@
         </tr>
         <tr>
             <th class = "cat3">GitHub Documentation</th>
-            <th class = "cat3"><input type = "radio" id = "github0" name = "github" value = 0>
+            <th class = "cat3"><input type = "radio" id = "github0" name = "github" value = 0 required>
                 <label for = "github0">Not Present</label></th>
             <th class = "cat3"><input type = "radio" id = "github1" name = "github" value = 1>
                 <label for = "github1">The purpose of all files is unclear</label></th></th>
@@ -543,7 +554,7 @@
         </tr>
         <tr>
             <th class = "cat3">External References</th>
-            <th class = "cat3"><input type = "radio" id = "references0" name = "references" value = 0>
+            <th class = "cat3"><input type = "radio" id = "references0" name = "references" value = 0 required>
                 <label for = "references0">Not Present</label></th>
             <th class = "cat3"><input type = "radio" id = "references1" name = "references" value = 1>
                 <label for = "references1">Unclear what was used</label></th>
@@ -556,7 +567,7 @@
         </tr>
         <tr>
             <th class = "cat3">Project Progression</th>
-            <th class = "cat3"><input type = "radio" id = "progression0" name = "progression" value = 0>
+            <th class = "cat3"><input type = "radio" id = "progression0" name = "progression" value = 0 required>
                 <label for = "progression0">Not Present</label></th>
             <th class = "cat3"><input type = "radio" id = "progression1" name = "progression" value = 1>
                 <label for = "progression1">Barely any progress made</label></th>
@@ -577,7 +588,7 @@
         </tr>
         <tr>
             <th class = "cat4">Clarity and Quality of Essays</th>
-            <th class = "cat4"><input type = "radio" id = "writing0" name = "writing" value = 0>
+            <th class = "cat4"><input type = "radio" id = "writing0" name = "writing" value = 0 required>
                 <label for = "writing0">Not Present</label></th>
             <th class = "cat4"><input type = "radio" id = "writing1" name = "writing" value = 1>
                 <label for = "writing1">Questions are not fully addressed</label></th>
@@ -598,7 +609,7 @@
         </tr>
         <tr>
             <th class = "cat5">Clarity and Quality of Video Demonstration</th>
-            <th class = "cat5"><input type = "radio" id = "video0" name = "video" value = 0>
+            <th class = "cat5"><input type = "radio" id = "video0" name = "video" value = 0 required>
                 <label for = "video0">Not Present</label></th>
             <th class = "cat5"><input type = "radio" id = "video1" name = "video" value = 1>
                 <label for = "video1">Unclear; product not explained, poorly edited, rushed, low energy</label></th>
@@ -611,7 +622,7 @@
         </tr>
         <tr>
             <th class = "cat5">Creativity and Imagination</th>
-            <th class = "cat5"><input type = "radio" id = "creativity0" name = "creativity" value = 0>
+            <th class = "cat5"><input type = "radio" id = "creativity0" name = "creativity" value = 0 required>
                 <label for = "creativity0">Not Present</label></th>
             <th class = "cat5"><input type = "radio" id = "creativity1" name = "creativity" value = 1>
                 <label for = "creativity1">Minimally engaging OR Unimaginative</label></th>
