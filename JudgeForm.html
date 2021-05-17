@@ -27,6 +27,9 @@
         var name = document.getElementById("judge-name").value;
         form.set("Name", name);
 
+        var email = document.getElementById("judge-email").value;
+        form.set("Email", email);
+
         var webdev = document.getElementById("web-dev").checked;
         var mobapp = document.getElementById("mobile-app").checked;
         var deskapp = document.getElementById("desktop-app").checked;
@@ -38,349 +41,35 @@
         var ui = document.getElementById("ui-ux").checked;
         var vr = document.getElementById("vr").checked;
 
-        form.set("Web Development", webdev);
-        form.set("Mobile App Developemtn", mobapp);
-        form.set("Desktop App", deskapp);
+        form.set("WebDevelopment", webdev);
+        form.set("MobileAppDevelopemtn", mobapp);
+        form.set("DesktopApp", deskapp);
         form.set("Databases", db);
         form.set("AI/ML", ai);
         form.set("Blockchain", blockchain);
         form.set("IoT", iot);
         form.set("CAD", cad);
         form.set("UI/UX", ui);
-        form.set("Virtual Reality",vr);
+        form.set("VirtualReality",vr);
 
         var jobdesc = document.getElementById("job-description").value;
 
         var linkedin = document.getElementById("linkedin").value;
 
-        form.set("Job Description", jobdesc);
+        var bluejeans = document.getElementById("bluejeans").value;
+
+
+        form.set("JobDescription", jobdesc);
         form.set("LinkedIn", linkedin);
+        form.set("BlueJeans", bluejeans);
 
         var numProjects = document.getElementById("num-projects").value; 
-        form.set("Number of Projects", numProjects);
+        form.set("NumberProjects", numProjects);
 
         console.log(numProjects);
         console.log(name);
         console.log(jobdesc);
 
-        
-
-
-        var mon800820am = document.getElementById("mon-8-820-am").checked; 
-        var tues800820am = document.getElementById("tues-8-820-am").checked; 
-        var wed800820am = document.getElementById("wed-8-820-am").checked; 
-        var thurs800820am = document.getElementById("thurs-8-820-am").checked; 
-        var fri800820am = document.getElementById("fri-8-820-am").checked; 
-        var sat800820am = document.getElementById("sat-8-820-am").checked; 
-
-        form.set("Monday 8:00-8:20 AM", mon800820am);
-        form.set("Tuesday 8:00-8:20 AM", tues800820am);
-        form.set("Wednesday 8:00-8:20 AM", wed800820am);
-        form.set("Thursday 8:00-8:20 AM", thurs800820am);
-        form.set("Friday 8:00-8:20 AM", fri800820am);
-        form.set("Saturday 8:00-8:20 AM", sat800820am);
-
-        var mon820840 = document.getElementById("mon-820-840-am").checked;
-        var tues820840 = document.getElementById("tues-820-840-am").checked;
-        var wed820840 = document.getElementById("wed-820-840-am").checked;
-        var thurs820840 = document.getElementById("thurs-820-840-am").checked;
-        var fri820840 = document.getElementById("fri-820-840-am").checked;
-        var sat820840 = document.getElementById("sat-820-840-am").checked;
-
-        form.set("Monday 8:20-8:40 AM", mon820840);
-        form.set("Tuesday 8:20-8:40 AM", tues820840);
-        form.set("Wednesday 8:20-8:40 AM", wed820840);
-        form.set("Thursday 8:20-8:40 AM", thurs820840);
-        form.set("Friday 8:20-8:40 AM", fri820840);
-        form.set("saturday 8:20-8:40 AM", sat820840);
-
-        var mon840900 = document.getElementById("mon-840-900-am").checked;
-        var tues840900 = document.getElementById("tues-840-900-am").checked;
-        var wed840900 = document.getElementById("wed-840-900-am").checked;
-        var thurs840900 = document.getElementById("thurs-840-900-am").checked;
-        var fri840900 = document.getElementById("fri-840-900-am").checked;
-        var sat840900 = document.getElementById("sat-840-900-am").checked;
-
-        form.set("Monday 8:40-9:00 AM", mon840900);
-        form.set("Tuesday 8:40-9:00 AM", tues840900);
-        form.set("Wednesday 8:40-9:00 AM", wed840900);
-        form.set("Thursday 8:40-9:00 AM", thurs840900);
-        form.set("Friday 8:40-9:00 AM", fri840900);
-        form.set("Saturday 8:40-9:00 AM", sat840900);
-
-        var mon900920 = document.getElementById("mon-900-920-am").checked;
-        var tues900920 = document.getElementById("tues-900-920-am").checked;
-        var wed900920 = document.getElementById("wed-900-920-am").checked;
-        var thurs900920 = document.getElementById("thurs-900-920-am").checked;
-        var fri900920 = document.getElementById("fri-900-920-am").checked;
-        var sat900920 = document.getElementById("sat-900-920-am").checked;
-
-        form.set("Monday 9:00-9:20 AM", mon900920);
-        form.set("Tuesday 9:00-9:20 AM", tues900920);
-        form.set("Wednesday 9:00-9:20 AM", wed900920);
-        form.set("Thursday 9:00-9:20 AM", thurs900920);
-        form.set("Friday 9:00-9:20 AM", fri900920);
-        form.set("saturday 9:00-9:20 AM", sat900920);
-
-        var mon920940 = document.getElementById("mon-920-940-am").checked;
-        var tues920940 = document.getElementById("tues-920-940-am").checked;
-        var wed920940 = document.getElementById("wed-920-940-am").checked;
-        var thurs920940 = document.getElementById("thurs-920-940-am").checked;
-        var fri920940 = document.getElementById("fri-920-940-am").checked;
-        var sat920940 = document.getElementById("sat-920-940-am").checked;
-
-        form.set("Monday 9:20-9:40 AM", mon920940);
-        form.set("Tuesday 9:20-9:40 AM", tues920940);
-        form.set("Wednesday 9:20-9:40 AM", wed920940);
-        form.set("Thursday 9:20-9:40 AM", thurs920940);
-        form.set("Friday 9:20-9:40 AM", fri920940);
-        form.set("Saturday 9:20-9:40 AM", sat920940);
-
-
-        var mon9401000 = document.getElementById("mon-940-1000-am").checked;
-        var tues9401000 = document.getElementById("tues-940-1000-am").checked;
-        var wed9401000 = document.getElementById("wed-940-1000-am").checked;
-        var thurs9401000 = document.getElementById("thurs-940-1000-am").checked;
-        var fri9401000 = document.getElementById("fri-940-1000-am").checked;
-        var sat9401000 = document.getElementById("sat-940-1000-am").checked;
-
-        form.set("Monday 9:40-10:00 AM", mon9401000);
-        form.set("Tuesday 9:40-10:00 AM", tues9401000);
-        form.set("Wednesday 9:40-10:00 AM", wed9401000);
-        form.set("Thursday 9:40-10:00 AM", thurs9401000);
-        form.set("Friday 9:40-10:00 AM", fri9401000);
-        form.set("Saturday 9:40-10:00 AM", sat9401000);
-
-
-        var mon10001020 = document.getElementById("mon-1000-1020-am").checked;
-        var tues10001020 = document.getElementById("tues-1000-1020-am").checked;
-        var wed10001020 = document.getElementById("wed-1000-1020-am").checked;
-        var thurs10001020 = document.getElementById("thurs-1000-1020-am").checked;
-        var fri10001020 = document.getElementById("fri-1000-1020-am").checked;
-        var sat10001020 = document.getElementById("sat-1000-1020-am").checked;
-
-        form.set("Monday 10:00-10:20 AM", mon10001020);
-        form.set("Tuesday 10:00-10:20 AM", tues10001020);
-        form.set("Wednesday 10:00-10:20 AM", wed10001020);
-        form.set("Thursday 10:00-10:20 AM", thurs10001020);
-        form.set("Friday 10:00-10:20 AM", fri10001020);
-        form.set("Saturday 10:00-10:20 AM", sat10001020);
-
-
-        var mon10201040 = document.getElementById("mon-1020-1040-am").checked;
-        var tues10201040 = document.getElementById("tues-1020-1040-am").checked;
-        var wed10201040 = document.getElementById("wed-1020-1040-am").checked;
-        var thurs10201040 = document.getElementById("thurs-1020-1040-am").checked;
-        var fri10201040 = document.getElementById("fri-1020-1040-am").checked;
-        var sat10201040 = document.getElementById("sat-1020-1040-am").checked;
-
-        form.set("Monday 10:20-10:40 AM", mon10201040);
-        form.set("Tuesday 10:20-10:40 AM", tues10201040);
-        form.set("Wednesday 10:20-10:40 AM", wed10201040);
-        form.set("Thursday 10:20-10:40 AM", thurs10201040);
-        form.set("Friday 10:20-10:40 AM", fri10201040);
-        form.set("Saturday 10:20-10:40 AM", sat10201040);
-        
-
-        var mon10401100 = document.getElementById("mon-1040-1100-am").checked;
-        var tues10401100 = document.getElementById("tues-1040-1100-am").checked;
-        var wed10401100 = document.getElementById("wed-1040-1100-am").checked;
-        var thurs10401100 = document.getElementById("thurs-1040-1100-am").checked;
-        var fri10401100 = document.getElementById("fri-1040-1100-am").checked;
-        var sat10401100 = document.getElementById("sat-1040-1100-am").checked;
-
-        form.set("Monday 10:10-11:00 AM", mon10401100);
-        form.set("Tuesday 10:10-11:00 AM", tues10401100);
-        form.set("Wednesday 10:10-11:00 AM", wed10401100);
-        form.set("Thursday 10:10-11:00 AM", thurs10401100);
-        form.set("Friday 10:10-11:00 AM", fri10401100);
-        form.set("Saturday 10:10-11:00 AM", sat10401100);
-
-
-        var mon11001120 = document.getElementById("mon-1100-1120-am").checked;
-        var tues11001120 = document.getElementById("tues-1100-1120-am").checked;
-        var wed11001120 = document.getElementById("wed-1100-1120-am").checked;
-        var thurs11001120 = document.getElementById("thurs-1100-1120-am").checked;
-        var fri11001120 = document.getElementById("fri-1100-1120-am").checked;
-        var sat11001120 = document.getElementById("sat-1100-1120-am").checked;
-
-        form.set("Monday 11:00-11:20 AM", mon11001120);
-        form.set("Tuesday 11:00-11:20 AM", tues11001120);
-        form.set("Wednesday 11:00-11:20 AM", wed11001120);
-        form.set("Thursday 11:00-11:20 AM", thurs11001120);
-        form.set("Friday 11:00-11:20 AM", thurs11001120);
-        form.set("Saturday 11:00-11:20 AM", fri11001120);
-
-        var mon11201140 = document.getElementById("mon-1120-1140-am").checked;
-        var tues11201140 = document.getElementById("tues-1120-1140-am").checked;
-        var wed11201140 = document.getElementById("wed-1120-1140-am").checked;
-        var thurs11201140 = document.getElementById("thurs-1120-1140-am").checked;
-        var fri11201140 = document.getElementById("fri-1120-1140-am").checked;
-        var sat11201140 = document.getElementById("sat-1120-1140-am").checked;
-
-        form.set("Monday 11:20-11:40 AM", mon11201140);
-        form.set("Tuesday 11:20-11:40 AM", tues11201140);
-        form.set("Wednesday 11:20-11:40 AM", tues11201140);
-        form.set("Thursday 11:20-11:40 AM", wed11201140);
-        form.set("Friday 11:20-11:40 AM", thurs11201140);
-        form.set("Saturday 11:20-11:40 AM", fri11201140);
-
-        var mon11401200 = document.getElementById("mon-1140-1200-pm").checked;
-        var tues11401200 = document.getElementById("tues-1140-1200-pm").checked;
-        var wed11401200 = document.getElementById("wed-1140-1200-pm").checked;
-        var thurs11401200 = document.getElementById("thurs-1140-1200-pm").checked;
-        var fri11401200 = document.getElementById("fri-1140-1200-pm").checked;
-        var sat11401200 = document.getElementById("sat-1140-1200-pm").checked;
-
-        form.set("Monday 11:40-12:00 PM", mon11401200);
-        form.set("Tuesday 11:40-12:00 PM", tues11401200);
-        form.set("Wednesday 11:40-12:00 PM", wed11401200);
-        form.set("Thursday 11:40-12:00 PM", thurs11401200);
-        form.set("Friday 11:40-12:00 PM", fri11401200);
-        form.set("Saturday 11:40-12:00 PM", sat11401200);
-
-        var mon12001220 = document.getElementById("mon-1200-1220-pm").checked;
-        var tues12001220 = document.getElementById("tues-1200-1220-pm").checked;
-        var wed12001220 = document.getElementById("wed-1200-1220-pm").checked;
-        var thurs12001220 = document.getElementById("thurs-1200-1220-pm").checked;
-        var fri12001220 = document.getElementById("fri-1200-1220-pm").checked;
-        var sat12001220 = document.getElementById("sat-1200-1220-pm").checked;
-
-        form.set("Monday 11:40-12:00 PM", mon11401200);
-        form.set("Tuesday 11:40-12:00 PM", tues11401200);
-        form.set("Wednesday 11:40-12:00 PM", wed11401200);
-        form.set("Thursday 11:40-12:00 PM", thurs11401200);
-        form.set("Friday 11:40-12:00 PM", fri11401200);
-        form.set("Saturday 11:40-12:00 PM", sat11401200);
-
-        var mon12201240 = document.getElementById("mon-1220-1240-pm").checked;
-        var tues12201240 = document.getElementById("tues-1220-1240-pm").checked;
-        var wed12201240 = document.getElementById("wed-1220-1240-pm").checked;
-        var thurs12201240 = document.getElementById("thurs-1220-1240-pm").checked;
-        var fri12201240 = document.getElementById("fri-1220-1240-pm").checked;
-        var sat12201240 = document.getElementById("sat-1220-1240-pm").checked;
-
-        form.set("Monday 12:00-12:20 PM", mon12001220);
-        form.set("Tuesday 12:00-12:20 PM", tues12001220);
-        form.set("Wednesday 12:00-12:20 PM", wed12001220);
-        form.set("Thursday 12:00-12:20 PM", thurs12001220);
-        form.set("Friday 12:00-12:20 PM", fri12001220);
-        form.set("Saturday 12:00-12:20 PM", sat12001220);
-
-        var mon1240100 = document.getElementById("mon-1240-100-pm").checked;
-        var tues1240100 = document.getElementById("tues-1240-100-pm").checked;
-        var wed1240100 = document.getElementById("wed-1240-100-pm").checked;
-        var thurs1240100 = document.getElementById("thurs-1240-100-pm").checked;
-        var fri1240100 = document.getElementById("fri-1240-100-pm").checked;
-        var sat1240100 = document.getElementById("sat-1240-100-pm").checked;
-
-        form.set("Monday 12:20-12:40 PM", mon12201240);
-        form.set("Tuesday 12:20-12:40 PM", tues12201240);
-        form.set("Wednesday 12:20-12:40 PM", wed12201240);
-        form.set("Thursday 12:20-12:40 PM", thurs12201240);
-        form.set("Friday 12:20-12:40 PM", fri12201240);
-        form.set("Saturday 12:20-12:40 PM", sat12201240);
-
-
-        var mon100120 = document.getElementById("mon-100-120-pm").checked;
-        var tues100120 = document.getElementById("tues-100-120-pm").checked;
-        var wed100120 = document.getElementById("wed-100-120-pm").checked;
-        var thurs100120 = document.getElementById("thurs-100-120-pm").checked;
-        var fri100120 = document.getElementById("fri-100-120-pm").checked;
-        var sat100120 = document.getElementById("sat-100-120-pm").checked;
-
-        form.set("Monday 12:40-1:00 PM", mon1240100);
-        form.set("Tuesday 12:40-1:00 PM", tues1240100);
-        form.set("Wednesday 12:40-1:00 PM", wed1240100);
-        form.set("Thursday 12:40-1:00 PM", thurs1240100);
-        form.set("Friday 12:40-1:00 PM", fri1240100);
-        form.set("Saturday 12:40-1:00 PM", sat1240100);
-
-
-        var mon100120 = document.getElementById("mon-100-120-pm").checked;
-        var tues100120 = document.getElementById("tues-100-120-pm").checked;
-        var wed100220 = document.getElementById("wed-100-120-pm").checked;
-        var thurs100120 = document.getElementById("thurs-100-120-pm").checked;
-        var fri100120 = document.getElementById("fri-100-120-pm").checked;
-        var sat100120 = document.getElementById("sat-100-120-pm").checked;
-
-        form.set("Monday 1:00-1:20 PM", mon100120);
-        form.set("Tuesday 1:00-1:20 PM", tues100120);
-        form.set("Wednesday 1:00-1:20 PM", wed100120);
-        form.set("Thursday 1:00-1:20 PM", thurs100120);
-        form.set("Friday 1:00-1:20 PM", fri100120);
-        form.set("Saturday 1:00-1:20 PM", sat100120);
-
-        var mon120140 = document.getElementById("mon-120-140-pm").checked;
-        var tues120140 = document.getElementById("tues-120-140-pm").checked;
-        var wed120140 = document.getElementById("wed-120-140-pm").checked;
-        var thurs120140 = document.getElementById("thurs-120-140-pm").checked;
-        var fri120140 = document.getElementById("fri-120-140-pm").checked;
-        var sat120140 = document.getElementById("sat-120-140-pm").checked;
-
-        form.set("Monday 1:20-1:40 PM", mon120140);
-        form.set("Tuesday 1:20-1:40 PM", tues120140);
-        form.set("Wednesday 1:20-1:40 PM", wed120140);
-        form.set("Thursday 1:20-1:40 PM", thurs120140);
-        form.set("Friday 1:20-1:40 PM", fri120140);
-        form.set("Saturday 1:20-1:40 PM", sat120140);
-
-        var mon140200 = document.getElementById("mon-140-200-pm").checked;
-        var tues140200 = document.getElementById("tues-140-200-pm").checked;
-        var wed140200 = document.getElementById("wed-140-200-pm").checked;
-        var thurs140200 = document.getElementById("thurs-140-200-pm").checked;
-        var fri140200 = document.getElementById("fri-140-200-pm").checked;
-        var sat140200 = document.getElementById("sat-140-200-pm").checked;
-
-        form.set("Monday 1:40-2:00 PM", mon140200);
-        form.set("Tuesday 1:40-2:00 PM", tues140200);
-        form.set("Wednesday 1:40-2:00 PM", wed140200);
-        form.set("Thursday 1:40-2:00 PM", thurs140200);
-        form.set("Friday 1:40-2:00 PM", fri140200);
-        form.set("Saturday 1:40-2:00 PM", sat140200);
-
-
-        var mon200220 = document.getElementById("mon-200-220-pm").checked;
-        var tues200220 = document.getElementById("tues-200-220-pm").checked;
-        var wed200220 = document.getElementById("wed-200-220-pm").checked;
-        var thurs200220 = document.getElementById("thurs-200-220-pm").checked;
-        var fri200220 = document.getElementById("fri-200-220-pm").checked;
-        var sat200220 = document.getElementById("sat-200-220-pm").checked;
-
-        form.set("Monday 2:00-2:20 PM", mon200220);
-        form.set("Tuesday 2:00-2:20 PM", tues200220);
-        form.set("Wednesday 2:00-2:20 PM", wed200220);
-        form.set("Thursday 2:00-2:20 PM", thurs200220);
-        form.set("Friday 2:00-2:20 PM", fri200220);
-        form.set("Saturday 2:00-2:20 PM", sat200220);
-
-        var mon220240 = document.getElementById("mon-220-240-pm").checked;
-        var tues220240 = document.getElementById("tues-220-240-pm").checked;
-        var wed220240 = document.getElementById("wed-220-240-pm").checked;
-        var thurs220240 = document.getElementById("thurs-220-240-pm").checked;
-        var fri220240 = document.getElementById("fri-220-240-pm").checked;
-        var sat220240 = document.getElementById("sat-220-240-pm").checked;
-
-        form.set("Monday 2:20-2:40 PM", mon220240);
-        form.set("Tuesday 2:20-2:40 PM", tues220240);
-        form.set("Wednesday 2:20-2:40 PM", wed220240);
-        form.set("Thursday 2:20-2:40 PM", thurs220240);
-        form.set("Friday 2:20-2:40 PM", fri220240);
-        form.set("Saturday 2:20-2:40 PM", sat220240);
-
-        var mon240300 = document.getElementById("mon-240-300-pm").checked;
-        var tues240300 = document.getElementById("tues-240-300-pm").checked;
-        var wed240300 = document.getElementById("wed-240-300-pm").checked;
-        var thurs240300 = document.getElementById("thurs-240-300-pm").checked;
-        var fri240300 = document.getElementById("fri-240-300-pm").checked;
-        var sat240300 = document.getElementById("sat-240-300-pm").checked;
-
-        form.set("Monday 2:40-3:00 PM", mon240300);
-        form.set("Tuesday 2:40-3:00 PM", tues240300);
-        form.set("Wednesday 2:40-3:00 PM", wed240300);
-        form.set("Thursday 2:40-3:00 PM", thurs240300);
-        form.set("Friday 2:40-3:00 PM", fri240300);
-        form.set("Saturday 2:40-3:00 PM", sat240300);
 
         var mon300320 = document.getElementById("mon-300-320-pm").checked;
         var tues300320 = document.getElementById("tues-300-320-pm").checked;
@@ -389,12 +78,12 @@
         var fri300320 = document.getElementById("fri-300-320-pm").checked;
         var sat300320 = document.getElementById("sat-300-320-pm").checked;
 
-        form.set("Monday 3:00-3:20 PM", mon300320);
-        form.set("Tuesday 3:00-3:20 PM", tues300320);
-        form.set("Wednesday 3:00-3:20 PM", wed300320);
-        form.set("Thursday 3:00-3:20 PM", thurs300320);
-        form.set("Friday 3:00-3:20 PM", fri300320);
-        form.set("Saturday 3:00-3:20 PM", sat300320);
+        form.set("Monday300320PM", mon300320);
+        form.set("Tuesday300320PM", tues300320);
+        form.set("Wednesday300320PM", wed300320);
+        form.set("Thursday300320PM", thurs300320);
+        form.set("Friday300320PM", fri300320);
+        form.set("Saturday300320PM", sat300320);
 
 
         var mon320340 = document.getElementById("mon-320-340-pm").checked;
@@ -404,12 +93,12 @@
         var fri320340 = document.getElementById("fri-320-340-pm").checked;
         var sat320340 = document.getElementById("sat-320-340-pm").checked;
 
-        form.set("Monday 3:20-3:40 PM", mon320340);
-        form.set("Tuesday 3:20-3:40 PM", tues320340);
-        form.set("Wednesday 3:20-3:40 PM", wed320340);
-        form.set("Thursday 3:20-3:40 PM", thurs320340);
-        form.set("Friday 3:20-3:40 PM", fri320340);
-        form.set("Saturday 3:20-3:40 PM", sat320340);
+        form.set("Monday320340PM", mon320340);
+        form.set("Tuesday320340PM", tues320340);
+        form.set("Wednesday320340PM", wed320340);
+        form.set("Thursday320340PM", thurs320340);
+        form.set("Friday320340PM", fri320340);
+        form.set("Saturday320340PM", sat320340);
 
 
         var mon340400 = document.getElementById("mon-340-400-pm").checked;
@@ -419,12 +108,12 @@
         var fri340400 = document.getElementById("fri-340-400-pm").checked;
         var sat340400 = document.getElementById("sat-340-400-pm").checked;
 
-        form.set("Monday 3:40-4:00 PM", mon340400);
-        form.set("Tuesday 3:40-4:00 PM", tues340400);
-        form.set("Wednesday 3:40-4:00 PM", wed340400);
-        form.set("Thursday 3:40-4:00 PM", thurs340400);
-        form.set("Friday 3:40-4:00 PM", fri340400);
-        form.set("Saturday 3:40-4:00 PM", sat340400);
+        form.set("Monday340400PM", mon340400);
+        form.set("Tuesday340400PM", tues340400);
+        form.set("Wednesday340400PM", wed340400);
+        form.set("Thursday340400PM", thurs340400);
+        form.set("Friday340400PM", fri340400);
+        form.set("Saturday340400PM", sat340400);
 
 
         var mon400420 = document.getElementById("mon-400-420-pm").checked;
@@ -434,12 +123,12 @@
         var fri400420 = document.getElementById("fri-400-420-pm").checked;
         var sat400420 = document.getElementById("sat-400-420-pm").checked;
 
-        form.set("Monday 4:00-4:20 PM", mon400420);
-        form.set("Tuesday 4:00-4:20 PM", tues400420);
-        form.set("Wednesday 4:00-4:20 PM", wed400420);
-        form.set("Thursday 4:00-4:20 PM", thurs400420);
-        form.set("Friday 4:00-4:20 PM", fri400420);
-        form.set("Saturday 4:00-4:20 PM", sat400420);
+        form.set("Monday400420PM", mon400420);
+        form.set("Tuesday400420PM", tues400420);
+        form.set("Wednesday400420PM", wed400420);
+        form.set("Thursday400420PM", thurs400420);
+        form.set("Friday400420PM", fri400420);
+        form.set("Saturday400420PM", sat400420);
 
 
         var mon420440 = document.getElementById("mon-420-440-pm").checked;
@@ -449,12 +138,12 @@
         var fri420440 = document.getElementById("fri-420-440-pm").checked;
         var sat420440 = document.getElementById("sat-420-440-pm").checked;
 
-        form.set("Monday 4:20-4:40 PM", mon420440);
-        form.set("Tuesday 4:20-4:40 PM", tues420440);
-        form.set("Wednesday 4:20-4:40 PM", wed420440);
-        form.set("Thursday 4:20-4:40 PM", thurs420440);
-        form.set("Friday 4:20-4:40 PM", fri420440);
-        form.set("Saturday 4:20-4:40 PM", sat420440);
+        form.set("Monday420440PM", mon420440);
+        form.set("Tuesday420440PM", tues420440);
+        form.set("Wednesday420440PM", wed420440);
+        form.set("Thursday420440PM", thurs420440);
+        form.set("Friday420440PM", fri420440);
+        form.set("Saturday420440PM", sat420440);
         
 
         var mon440500 = document.getElementById("mon-440-500-pm").checked;
@@ -464,12 +153,12 @@
         var fri440500 = document.getElementById("fri-440-500-pm").checked;
         var sat440500 = document.getElementById("sat-440-500-pm").checked;
 
-        form.set("Monday 4:40-5:00 PM", mon440500);
-        form.set("Tuesday 4:40-5:00 PM", tues440500);
-        form.set("Wednesday 4:40-5:00 PM", wed440500);
-        form.set("Thursday 4:40-5:00 PM", thurs440500);
-        form.set("Friday 4:40-5:00 PM", fri440500);
-        form.set("Saturday 4:40-5:00 PM", sat440500);
+        form.set("Monday440500PM", mon440500);
+        form.set("Tuesday440500PM", tues440500);
+        form.set("Wednesday440500PM", wed440500);
+        form.set("Thursday440500PM", thurs440500);
+        form.set("Friday440500PM", fri440500);
+        form.set("Saturday440500PM", sat440500);
 
 
         var mon500520 = document.getElementById("mon-500-520-pm").checked;
@@ -479,12 +168,12 @@
         var fri500520 = document.getElementById("fri-500-520-pm").checked;
         var sat500520 = document.getElementById("sat-500-520-pm").checked;
 
-        form.set("Monday 5:00-5:20 PM", mon500520);
-        form.set("Tuesday 5:00-5:20 PM", tues500520);
-        form.set("Wednesday 5:00-5:20 PM", wed500520);
-        form.set("Thursday 5:00-5:20 PM", thurs500520);
-        form.set("Friday 5:00-5:20 PM", fri500520);
-        form.set("Saturday 5:00-5:20 PM", sat500520);
+        form.set("Monday500520PM", mon500520);
+        form.set("Tuesday500520PM", tues500520);
+        form.set("Wednesday500520PM", wed500520);
+        form.set("Thursday500520PM", thurs500520);
+        form.set("Friday500520PM", fri500520);
+        form.set("Saturday500520PM", sat500520);
 
         var mon520540 = document.getElementById("mon-520-540-pm").checked;
         var tues520540 = document.getElementById("tues-520-540-pm").checked;
@@ -493,12 +182,12 @@
         var fri520540 = document.getElementById("fri-520-540-pm").checked;
         var sat520540 = document.getElementById("sat-520-540-pm").checked;
 
-        form.set("Monday 5:20-5:40 PM", mon520540);
-        form.set("Tuesday 5:20-5:40 PM", tues520540);
-        form.set("Wednesday 5:20-5:40 PM", wed520540);
-        form.set("Thursday 5:20-5:40 PM", thurs520540);
-        form.set("Friday 5:20-5:40 PM", fri520540);
-        form.set("Saturday 5:20-5:40 PM", sat520540);
+        form.set("Monday520540PM", mon520540);
+        form.set("Tuesday520540PM", tues520540);
+        form.set("Wednesday520540PM", wed520540);
+        form.set("Thursday520540PM", thurs520540);
+        form.set("Friday520540PM", fri520540);
+        form.set("Saturday520540PM", sat520540);
         
 
         var mon540600 = document.getElementById("mon-540-600-pm").checked;
@@ -508,12 +197,12 @@
         var fri540600 = document.getElementById("fri-540-600-pm").checked;
         var sat540600 = document.getElementById("sat-540-600-pm").checked;
 
-        form.set("Monday 5:40-6:00 PM", mon540600);
-        form.set("Tuesday 5:40-6:00 PM", tues540600);
-        form.set("Wednesday 5:40-6:00 PM", wed540600);
-        form.set("Thursday 5:40-6:00 PM", thurs540600);
-        form.set("Friday 5:40-6:00 PM", fri540600);
-        form.set("Saturday 5:40-6:00 PM", sat540600);
+        form.set("Monday540600PM", mon540600);
+        form.set("Tuesday540600PM", tues540600);
+        form.set("Wednesday540600PM", wed540600);
+        form.set("Thursday540600PM", thurs540600);
+        form.set("Friday540600PM", fri540600);
+        form.set("Saturday540600PM", sat540600);
 
         var mon600620 = document.getElementById("mon-600-620-pm").checked;
         var tues600620 = document.getElementById("tues-600-620-pm").checked;
@@ -522,12 +211,12 @@
         var fri600620 = document.getElementById("fri-600-620-pm").checked;
         var sat600620 = document.getElementById("sat-600-620-pm").checked;
 
-        form.set("Monday 6:00-6:20 PM", mon600620);
-        form.set("Tuesday 6:00-6:20 PM", tues600620);
-        form.set("Wednesday 6:00-6:20 PM", wed600620);
-        form.set("Thursday 6:00-6:20 PM", thurs600620);
-        form.set("Friday 6:00-6:20 PM", fri600620);
-        form.set("Saturday 6:00-6:20 PM", sat600620);
+        form.set("Monday600620PM", mon600620);
+        form.set("Tuesday600620PM", tues600620);
+        form.set("Wednesday600620PM", wed600620);
+        form.set("Thursday600620PM", thurs600620);
+        form.set("Friday600620PM", fri600620);
+        form.set("Saturday600620PM", sat600620);
 
 
         var mon620640 = document.getElementById("mon-620-640-pm").checked;
@@ -537,12 +226,12 @@
         var fri620640 = document.getElementById("fri-620-640-pm").checked;
         var sat620640 = document.getElementById("sat-620-640-pm").checked;
 
-        form.set("Monday 6:20-6:40 PM", mon620640);
-        form.set("Tuesday 6:20-6:40 PM", tues620640);
-        form.set("Wednesday 6:20-6:40 PM", wed620640);
-        form.set("Thursday 6:20-6:40 PM", thurs620640);
-        form.set("Friday 6:20-6:40 PM", fri620640);
-        form.set("Saturday 6:20-6:40 PM", sat620640);
+        form.set("Monday620640PM", mon620640);
+        form.set("Tuesday620640PM", tues620640);
+        form.set("Wednesday620640PM", wed620640);
+        form.set("Thursday620640PM", thurs620640);
+        form.set("Friday620640PM", fri620640);
+        form.set("Saturday620640PM", sat620640);
 
 
 
@@ -553,12 +242,12 @@
         var fri640700 = document.getElementById("fri-640-700-pm").checked;
         var sat640700 = document.getElementById("sat-640-700-pm").checked;
 
-        form.set("Monday 6:40-7:00 PM", mon640700);
-        form.set("Tuesday 6:40-7:00 PM", tues640700);
-        form.set("Wednesday 6:40-7:00 PM", wed640700);
-        form.set("Thursday 6:40-7:00 PM", thurs640700);
-        form.set("Friday 6:40-7:00 PM", fri640700);
-        form.set("Saturday 6:40-7:00 PM", sat640700);
+        form.set("Monday640700PM", mon640700);
+        form.set("Tuesday640700PM", tues640700);
+        form.set("Wednesday640700PM", wed640700);
+        form.set("Thursday640700PM", thurs640700);
+        form.set("Friday640700PM", fri640700);
+        form.set("Saturday640700PM", sat640700);
 
         
 
@@ -570,12 +259,12 @@
         var fri700720 = document.getElementById("fri-700-720-pm").checked;
         var sat700720 = document.getElementById("sat-700-720-pm").checked;
 
-        form.set("Monday 7:00-7:20 PM", mon700720);
-        form.set("Tuesday 7:00-7:20 PM", tues700720);
-        form.set("Wednesday 7:00-7:20 PM", wed700720);
-        form.set("Thursday 7:00-7:20 PM", thurs700720);
-        form.set("Friday 7:00-7:20 PM", fri700720);
-        form.set("Saturday 7:00-7:20 PM", sat700720);
+        form.set("Monday700720PM", mon700720);
+        form.set("Tuesday700720PM", tues700720);
+        form.set("Wednesday700720PM", wed700720);
+        form.set("Thursday700720PM", thurs700720);
+        form.set("Friday700720PM", fri700720);
+        form.set("Saturday700720PM", sat700720);
         
 
         var mon720740 = document.getElementById("mon-720-740-pm").checked;
@@ -585,12 +274,12 @@
         var fri720740 = document.getElementById("fri-720-740-pm").checked;
         var sat720740 = document.getElementById("sat-720-740-pm").checked;
 
-        form.set("Monday 7:20-7:40 PM", mon720740);
-        form.set("Tuesday 7:20-7:40 PM", tues720740);
-        form.set("Wednesday 7:20-7:40 PM", wed720740);
-        form.set("Thursday 7:20-7:40 PM", thurs720740);
-        form.set("Friday 7:20-7:40 PM", fri720740);
-        form.set("Saturday 7:20-7:40 PM", sat720740);
+        form.set("Monday720740PM", mon720740);
+        form.set("Tuesday720740PM", tues720740);
+        form.set("Wednesday720740PM", wed720740);
+        form.set("Thursday720740PM", thurs720740);
+        form.set("Friday720740PM", fri720740);
+        form.set("Saturday720740PM", sat720740);
 
         var mon740800 = document.getElementById("mon-740-800-pm").checked;
         var tues740800 = document.getElementById("tues-740-800-pm").checked;
@@ -600,19 +289,18 @@
         var sat740800 = document.getElementById("sat-740-800-pm").checked;
 
 
-        form.set("Monday 7:40-8:00 PM", mon740800);
-        form.set("Tuesday 7:40-8:00 PM", tues740800);
-        form.set("Wednesday 7:40-8:00 PM", wed740800);
-        form.set("Thursday 7:40-8:00 PM", thurs740800);
-        form.set("Friday 7:40-8:00 PM", fri740800);
-        form.set("Saturday 7:40-8:00 PM", sat740800);
+        form.set("Monday740800PM", mon740800);
+        form.set("Tuesday740800PM", tues740800);
+        form.set("Wednesday740800PM", wed740800);
+        form.set("Thursday740800PM", thurs740800);
+        form.set("Friday740800PM", fri740800);
+        form.set("Saturday740800PM", sat740800);
 
-        console.log(sat10001020);
-        console.log(fri140200);
+        
 
         form.save().then(function(judgeForm){
             console.log("Successful");
-            alert("Your form has been submitted. You can now close this tab. If you want to refer back to your answers, please screenshot or save this page. Thank you!");
+            alert("Your form has been submitted. You can now close this tab. Thank you!");
 
 
         }).catch(function(error){
@@ -627,13 +315,14 @@
 </head>
 <body>
     <div class = "judges">
+        
     
-   
-        <h1>Judging Form</h1>
+        <br>
+        <h1><pre><img src = "empowher-assets/img/logo.png" width = "50px"> EmpowHer Judge Form</pre></h1>
         
         <div>
             <br>
-            <h3>Judges, please fill out this form.</h3>
+            <h3>Thank you for judging EmpowHer projects, we truly appreciate your time. In order to match you to student projects, we ask that you fill out this form:</h3>
         </div>
         
     </div>
@@ -644,11 +333,21 @@
         
         <div class = "judges">
             <div id = "name">
-                <h2><label for="judge-name">Name (First and Last): </label></h2>
-                <input type = "text" id ="judge-name" name = "judge-name" required>
+            <h2><label for="judge-name">Name (First and Last): </label></h2>
+            <input type = "text" id ="judge-name" name = "judge-name" required>
+            <h2><label for = "judge-email">Email:</label></h2>
+            <input type = "email" id = "judge-email" name = "judge-name" required>
+            <br>
+            <label for = "num-projects"><h2>How many projects are you willing to judge? (Each project ~ 1 hour) </h2></label>
+            <br>
+            <input type = "number" id = "num-projects" name = "num-projects" required min = "1">
+            
             </div>
             
+            
+            
         </div>
+        <br>
         <h2>Which types of projects do you want to judge? </h2>
 
         <div class = "col-md-4"></div>
@@ -677,602 +376,17 @@
 
         
         <div id = "grid">
-                <h2>What times are you available to meet with students?</h2>
-                <h4>Please select times after 4:00 PM whenever possible so that participants do not have to miss class</h4>
+                <h2>What times are you available to meet with the student project teams?</h2>
+                
                 <table>
                     <tr>
                         <th></th>
-                        <th>Monday</th>
-                        <th>Tuesday</th>
-                        <th>Wednesday</th>
-                        <th>Thursday</th>
-                        <th>Friday</th>
-                        <th>Saturday</th>
-                    </tr>
-                    <tr>
-                        
-                        <th>8:00-8:20 AM EST</th>
-                        <th>
-                            <input type = "checkbox" id ="mon-8-820-am" name = "mon-8-820-am">
-                            <label for = "mon-8-820-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="tues-8-820-am" name = "tues-8-820-am">
-                            <label for = "tues-8-820-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="wed-8-820-am" name = "wed-8-820-am">
-                            <label for = "wed-8-820-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="thurs-8-820-am" name = "thurs-8-820-am">
-                            <label for = "thurs-8-820-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="fri-8-820-am" name = "fri-8-820-am">
-                            <label for = "fri-8-820-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="sat-8-820-am" name = "sat-8-820-am">
-                            <label for = "sat-8-820-am"></label> <br>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>8:20-8:40 AM EST</th>
-                        <th>
-                            <input type = "checkbox" id ="mon-820-840-am" name = "mon-820-840-am">
-                            <label for = "mon-820-840-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="tues-820-840-am" name = "tues-820-840-am">
-                            <label for = "tues-820-840-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="wed-820-840-am" name = "wed-820-840-am">
-                            <label for = "wed-820-840-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="thurs-820-840-am" name = "thurs-820-840-am">
-                            <label for = "thurs-820-840-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="fri-820-840-am" name = "fri-820-840-am">
-                            <label for = "fri-820-840-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="sat-820-840-am" name = "sat-820-840-am">
-                            <label for = "sat-820-840-am"></label> <br>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>8:40-9:00 AM EST</th>
-                        <th>
-                            <input type = "checkbox" id ="mon-840-900-am" name = "mon-840-900-am">
-                            <label for = "mon-840-900-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="tues-840-900-am" name = "tues-840-900-am">
-                            <label for = "tues-840-900-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="wed-840-900-am" name = "wed-840-900-am">
-                            <label for = "wed-840-900-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="thurs-840-900-am" name = "thurs-840-900-am">
-                            <label for = "thurs-840-900-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="fri-840-900-am" name = "fri-840-900-am">
-                            <label for = "fri-840-900-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="sat-840-900-am" name = "sat-840-900-am">
-                            <label for = "sat-840-900-am"></label> <br>
-                        </th>
-                        
-                        
-                    </tr>
-                    <tr>
-                        <th>9:00-9:20 AM EST</th>
-                        <th>
-                            <input type = "checkbox" id ="mon-900-920-am" name = "mon-900-920-am">
-                            <label for = "mon-900-920-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="tues-900-920-am" name = "tues-900-920-am">
-                            <label for = "tues-900-920-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="wed-900-920-am" name = "wed-900-920-am">
-                            <label for = "wed-900-920-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="thurs-900-920-am" name = "thurs-900-920-am">
-                            <label for = "thurs-900-920-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="fri-900-920-am" name = "fri-900-920-am">
-                            <label for = "fri-900-920-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="sat-900-920-am" name = "sat-900-920-am">
-                            <label for = "sat-900-920-am"></label> <br>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>9:20-9:40 AM EST</th>
-                        <th>
-                            <input type = "checkbox" id ="mon-920-940-am" name = "mon-920-940-am">
-                            <label for = "mon-920-940-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="tues-920-940-am" name = "tues-920-940-am">
-                            <label for = "tues-920-940-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="wed-920-940-am" name = "wed-920-940-am">
-                            <label for = "wed-920-940-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="thurs-920-940-am" name = "thurs-920-940-am">
-                            <label for = "thurs-920-940-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="fri-920-940-am" name = "fri-920-940-am">
-                            <label for = "fri-920-940-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="sat-920-940-am" name = "sat-920-940-am">
-                            <label for = "sat-920-940-am"></label> <br>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>9:40-10:00 AM EST</th>
-                        <th>
-                            <input type = "checkbox" id ="mon-940-1000-am" name = "mon-940-1000-am">
-                            <label for = "mon-940-1000-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="tues-940-1000-am" name = "tues-940-1000-am">
-                            <label for = "tues-940-1000-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="wed-940-1000-am" name = "wed-940-1000-am">
-                            <label for = "wed-940-1000-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="thurs-940-1000-am" name = "thurs-940-1000-am">
-                            <label for = "thurs-940-1000-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="fri-940-1000-am" name = "fri-940-1000-am">
-                            <label for = "fri-940-1000-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="sat-940-1000-am" name = "sat-940-1000-am">
-                            <label for = "sat-940-1000-am"></label> <br>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>10:00-10:20 AM EST</th>
-                        <th>
-                            <input type = "checkbox" id ="mon-1000-1020-am" name = "mon-1000-1020-am">
-                            <label for = "mon-1000-1020-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="tues-1000-1020-am" name = "tues-1000-1020-am">
-                            <label for = "tues-1000-1020-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="wed-1000-1020-am" name = "wed-1000-1020-am">
-                            <label for = "wed-1000-1020-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="thurs-1000-1020-am" name = "thurs-1000-1020-am">
-                            <label for = "thurs-1000-1020-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="fri-1000-1020-am" name = "fri-1000-1020-am">
-                            <label for = "fri-1000-1020-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="sat-1000-1020-am" name = "sat-1000-1020-am">
-                            <label for = "sat-1000-1020-am"></label> <br>
-                        </th>
-
-                    </tr>
-                    <tr>
-                        <th>10:20-10:40 AM EST</th>
-                        <th>
-                            <input type = "checkbox" id ="mon-1020-1040-am" name = "mon-1020-1040-am">
-                            <label for = "mon-1020-1040-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="tues-1020-1040-am" name = "tues-1020-1040-am">
-                            <label for = "tues-1020-1040-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="wed-1020-1040-am" name = "wed-1020-1040-am">
-                            <label for = "wed-1020-1040-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="thurs-1020-1040-am" name = "thurs-1020-1040-am">
-                            <label for = "thurs-1020-1040-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="fri-1020-1040-am" name = "fri-1020-1040-am">
-                            <label for = "fri-1020-1040-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="sat-1020-1040-am" name = "sat-1020-1040-am">
-                            <label for = "sat-1020-1040-am"></label> <br>
-                        </th>
-
-                    </tr>
-                    <tr>
-                        <th>10:40-11:00 AM EST</th>
-                        <th>
-                            <input type = "checkbox" id ="mon-1040-1100-am" name = "mon-1040-1100-am">
-                            <label for = "mon-1040-1100-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="tues-1040-1100-am" name = "tues-1040-1100-am">
-                            <label for = "tues-1040-1100-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="wed-1040-1100-am" name = "wed-1040-1100-am">
-                            <label for = "wed-1040-1100-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="thurs-1040-1100-am" name = "thurs-1040-1100-am">
-                            <label for = "thurs-1040-1100-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="fri-1040-1100-am" name = "fri-1040-1100-am">
-                            <label for = "fri-1040-1100-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="sat-1040-1100-am" name = "sat-1040-1100-am">
-                            <label for = "sat-1040-1100-am"></label> <br>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>11:00-11:20 AM EST</th>
-                        <th>
-                            <input type = "checkbox" id ="mon-1100-1120-am" name = "mon-1100-1120-am">
-                            <label for = "mon-1100-1120-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="tues-1100-1120-am" name = "tues-1100-1120-am">
-                            <label for = "tues-1100-1120-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="wed-1100-1120-am" name = "wed-1100-1120-am">
-                            <label for = "wed-1100-1120-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="thurs-1100-1120-am" name = "thurs-1100-1120-am">
-                            <label for = "thurs-1100-1120-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="fri-1100-1120-am" name = "fri-1100-1120-am">
-                            <label for = "fri-1100-1120-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="sat-1100-1120-am" name = "sat-1100-1120-am">
-                            <label for = "sat-1100-1120-am"></label> <br>
-                        </th>
-
-                    </tr>
-                    <tr>
-                        <th>11:20-11:40 AM EST</th>
-                        <th>
-                            <input type = "checkbox" id ="mon-1120-1140-am" name = "mon-1120-1140-am">
-                            <label for = "mon-1120-1140-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="tues-1120-1140-am" name = "tues-1120-1140-am">
-                            <label for = "tues-1120-1140-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="wed-1120-1140-am" name = "wed-1120-1140-am">
-                            <label for = "wed-1120-1140-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="thurs-1120-1140-am" name = "thurs-1120-1140-am">
-                            <label for = "thurs-1120-1140-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="fri-1120-1140-am" name = "fri-1120-1140-am">
-                            <label for = "fri-1120-1140-am"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="sat-1120-1140-am" name = "sat-1120-1140-am">
-                            <label for = "sat-1120-1140-am"></label> <br>
-                        </th>
-
-                    </tr>
-                    <tr>
-                        <th>10:40-11:00 AM EST</th>
-                        <th>
-                            <input type = "checkbox" id ="mon-1140-1200-pm" name = "mon-1140-1200-pm">
-                            <label for = "mon-1140-1200-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="tues-1140-1200-pm" name = "tues-1140-1200-pm">
-                            <label for = "tues-1140-1200-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="wed-1140-1200-pm" name = "wed-1140-1200-pm">
-                            <label for = "wed-1140-1200-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="thurs-1140-1200-pm" name = "thurs-1140-1200-pm">
-                            <label for = "thurs-1140-1200-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="fri-1140-1200-pm" name = "fri-1140-1200-pm">
-                            <label for = "fri-1140-1200-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="sat-1140-1200-pm" name = "sat-1140-1200-pm">
-                            <label for = "sat-1140-1200-pm"></label> <br>
-                        </th>
-
-                    </tr>
-                    <tr>
-                        <th>12:00-12:20 PM EST</th>
-                        <th>
-                            <input type = "checkbox" id ="mon-1200-1220-pm" npme = "mon-1200-1220-pm">
-                            <label for = "mon-1200-1220-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="tues-1200-1220-pm" npme = "tues-1200-1220-pm">
-                            <label for = "tues-1200-1220-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="wed-1200-1220-pm" npme = "wed-1200-1220-pm">
-                            <label for = "wed-1200-1220-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="thurs-1200-1220-pm" npme = "thurs-1200-1220-pm">
-                            <label for = "thurs-1200-1220-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="fri-1200-1220-pm" npme = "fri-1200-1220-pm">
-                            <label for = "fri-1200-1220-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="sat-1200-1220-pm" npme = "sat-1200-1220-pm">
-                            <label for = "sat-1200-1220-pm"></label> <br>
-                        </th>
-
-
-                    </tr>
-                    <tr>
-                        <th>12:20-12:40 PM EST</th>
-                        <th>
-                            <input type = "checkbox" id ="mon-1220-1240-pm" npme = "mon-1220-1240-pm">
-                            <label for = "mon-1220-1240-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="tues-1220-1240-pm" npme = "tues-1220-1240-pm">
-                            <label for = "tues-1220-1240-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="wed-1220-1240-pm" npme = "wed-1220-1240-pm">
-                            <label for = "wed-1220-1240-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="thurs-1220-1240-pm" npme = "thurs-1220-1240-pm">
-                            <label for = "thurs-1220-1240-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="fri-1220-1240-pm" npme = "fri-1220-1240-pm">
-                            <label for = "fri-1220-840-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="sat-1220-1240-pm" npme = "sat-1220-1240-pm">
-                            <label for = "sat-1220-1240-pm"></label> <br>
-                        </th>
-
-                    </tr>
-                    <tr>
-                        <th>12:40-1:00 PM EST</th>
-                        <th>
-                            <input type = "checkbox" id ="mon-1240-100-pm" npme = "mon-1240-100-pm">
-                            <label for = "mon-1240-100-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="tues-1240-100-pm" npme = "tues-1240-100-pm">
-                            <label for = "tues-1240-100-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="wed-1240-100-pm" npme = "wed-1240-100-pm">
-                            <label for = "wed-1240-100-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="thurs-1240-100-pm" npme = "thurs-1240-100-pm">
-                            <label for = "thurs-1240-100-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="fri-1240-100-pm" npme = "fri-1240-100-pm">
-                            <label for = "fri-1240-100-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="sat-1240-100-pm" npme = "sat-1240-100-pm">
-                            <label for = "sat-1240-100-pm"></label> <br>
-                        </th>
-
-                    </tr>
-                    <tr>
-                        <th>1:00-1:20 AM EST</th>
-                        <th>
-                            <input type = "checkbox" id ="mon-100-120-pm" npme = "mon-100-120-pm">
-                            <label for = "mon-100-120-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="tues-100-120-pm" npme = "tues-100-120-pm">
-                            <label for = "tues-100-120-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="wed-100-120-pm" npme = "wed-100-120-pm">
-                            <label for = "wed-100-120-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="thurs-100-120-pm" npme = "thurs-100-120-pm">
-                            <label for = "thurs-100-120-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="fri-100-120-pm" npme = "fri-100-120-pm">
-                            <label for = "fri-100-120-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="sat-100-120-pm" npme = "sat-100-120-pm">
-                            <label for = "sat-100-120-pm"></label> <br>
-                        </th>
-
-                    </tr>
-                    <tr>
-                        <th>1:20-1:40 PM EST</th>
-                        <th>
-                            <input type = "checkbox" id ="mon-120-140-pm" npme = "mon-120-140-pm">
-                            <label for = "mon-120-140-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="tues-120-140-pm" npme = "tues-120-140-pm">
-                            <label for = "tues-120-140-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="wed-120-140-pm" npme = "wed-120-140-pm">
-                            <label for = "wed-120-140-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="thurs-120-140-pm" npme = "thurs-120-140-pm">
-                            <label for = "thurs-120-140-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="fri-120-140-pm" npme = "fri-120-140-pm">
-                            <label for = "fri-120-840-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="sat-120-140-pm" npme = "sat-120-140-pm">
-                            <label for = "sat-120-140-pm"></label> <br>
-                        </th>
-
-                    </tr>
-                    <tr>
-                        <th>1:40-2:00 PM EST</th>
-                        <th>
-                            <input type = "checkbox" id ="mon-140-200-pm" npme = "mon-140-200-pm">
-                            <label for = "mon-140-200-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="tues-140-200-pm" npme = "tues-140-200-pm">
-                            <label for = "tues-140-200-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="wed-140-200-pm" npme = "wed-140-200-pm">
-                            <label for = "wed-140-200-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="thurs-140-200-pm" npme = "thurs-140-200-pm">
-                            <label for = "thurs-140-200-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="fri-140-200-pm" npme = "fri-140-200-pm">
-                            <label for = "fri-140-200-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="sat-140-200-pm" npme = "sat-140-200-pm">
-                            <label for = "sat-140-200-pm"></label> <br>
-                        </th>
-
-                    </tr>
-                    <tr>
-                        <th>2:00-2:20 PM EST</th>
-                        <th>
-                            <input type = "checkbox" id ="mon-200-220-pm" npme = "mon-200-220-pm">
-                            <label for = "mon-200-220-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="tues-200-220-pm" npme = "tues-200-220-pm">
-                            <label for = "tues-200-220-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="wed-200-220-pm" npme = "wed-200-220-pm">
-                            <label for = "wed-200-220-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="thurs-200-220-pm" npme = "thurs-200-220-pm">
-                            <label for = "thurs-200-220-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="fri-200-220-pm" npme = "fri-200-220-pm">
-                            <label for = "fri-200-220-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="sat-200-220-pm" npme = "sat-200-220-pm">
-                            <label for = "sat-200-220-pm"></label> <br>
-                        </th>
-
-                    </tr>
-                    <tr>
-                        <th>2:20-2:40 PM EST</th>
-                        <th>
-                            <input type = "checkbox" id ="mon-220-240-pm" npme = "mon-220-240-pm">
-                            <label for = "mon-220-240-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="tues-220-240-pm" npme = "tues-220-240-pm">
-                            <label for = "tues-220-240-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="wed-220-240-pm" npme = "wed-220-240-pm">
-                            <label for = "wed-220-240-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="thurs-220-240-pm" npme = "thurs-220-240-pm">
-                            <label for = "thurs-220-240-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="fri-220-240-pm" npme = "fri-220-240-pm">
-                            <label for = "fri-220-840-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="sat-220-240-pm" npme = "sat-220-240-pm">
-                            <label for = "sat-220-240-pm"></label> <br>
-                        </th>
-
-                    </tr>
-                    <tr>
-                        <th>2:40-3:00 PM EST</th>
-                        <th>
-                            <input type = "checkbox" id ="mon-240-300-pm" npme = "mon-240-300-pm">
-                            <label for = "mon-240-300-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="tues-240-300-pm" npme = "tues-240-300-pm">
-                            <label for = "tues-240-300-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="wed-240-300-pm" npme = "wed-240-300-pm">
-                            <label for = "wed-240-300-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="thurs-240-300-pm" npme = "thurs-240-300-pm">
-                            <label for = "thurs-240-300-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="fri-240-300-pm" npme = "fri-240-300-pm">
-                            <label for = "fri-240-300-pm"></label> <br>
-                        </th>
-                        <th>
-                            <input type = "checkbox" id ="sat-240-300-pm" npme = "sat-240-300-pm">
-                            <label for = "sat-240-300-pm"></label> <br>
-                        </th>
-                    </tr>
+                        <th><pre>   Monday, June 7th</pre></th>
+                        <th><pre>   Tuesday, June 8th</pre></th>
+                        <th><pre>   Wednesday, June 9th</pre></th>
+                        <th><pre>   Thursday, June 10th</pre></th>
+                        <th><pre>   Friday, June 11th</pre></th>
+                        <th><pre>   Saturday, June 12th</pre></th>
                     <tr>
                         <th>3:00-3:20 PM EST</th>
                         <th>
@@ -1699,8 +813,7 @@
 
     <br>
     
-    <label for = "num-projects"><h2>How many projects are you willing to judge? (Each project ~ 1 hour) </h2></label>
-    <input type = "text" id = "num-projects" name = "num-projects" required>
+    
     <div id = "professional-info">
         <div class = "col-md-4">
         
@@ -1713,6 +826,12 @@
         
             <label for="linkedin"><h2>LinkedIn Profile: </h2></label> <br>
             <input type = "url" id = "linkedin" name = "linkedin" required></input>
+        
+        </div>
+        <div class = "col-md-4">
+        
+            <label for="bluejeans"><h2>BlueJeans Meeting Link: </h2></label> <br>
+            <input type = "url" id = "bluejeans" name = "bluejeans" required></input>
         
         </div>
     </div>
