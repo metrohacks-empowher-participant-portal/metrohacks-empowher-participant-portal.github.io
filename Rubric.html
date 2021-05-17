@@ -20,6 +20,7 @@
         var Rubric = new Parse.Object.extend("Rubric");
         var judge;
         var team;
+        var comments;
 
         var research =-1;
         var impact =-1;
@@ -45,6 +46,7 @@
         {
             judge = document.getElementById("judge").value;
             team = document.getElementById("team-code").value;
+            comments = document.getElementById("comments").value;
             getResearch();
             getImpact();
             getMarket();
@@ -96,6 +98,7 @@
             score.set("Video", video);
             score.set("Creativity", creativity);
             score.set("TotalScore", totalScore); 
+            score.set("Comments", comments);
 
         
             if (judge != "" && team != "" && research != -1 && impact != -1 && market != -1 && innovation != -1 && effectiveness != -1 && outreach != -1 && difficulty != -1 && userinterface != -1 && github!= -1 && references != -1 && progression != -1 && writing != -1 && video != -1 && creativity != -1)
@@ -638,6 +641,8 @@
     <p>*Degree to which the solution makes life better by improving existing options, developing a new application of existing ideas, or solving the problem in a completely new way</p>
     <p>** Examples of in-depth customer engagement may include meeting with market leaders and receiving an endorsement for their solution, conducting an informal survey, or meeting with the target demographic and collecting first-hand feedback</p>
 
+    <p>Additional Comments: </p>
+    <textarea id = "comments" rows = "10" cols="170"></textarea>
     <input type = "submit" class = "button center-button"  Value = "Submit" id = "SubmitButton" onclick="create()">
     </form>
 
