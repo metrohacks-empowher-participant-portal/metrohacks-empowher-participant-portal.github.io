@@ -35,14 +35,14 @@
         var writing;
         var video;
         var creativity;
-        var engagement;
+        
 
         var totalScore;
 
 
         function setScores()
         {
-            team = document.getElementById("team-names").value;
+            team = document.getElementById("team-code").value;
             getResearch();
             getImpact();
             getMarket();
@@ -60,7 +60,7 @@
             getCreativity();
             getEngagement();
 
-            totalScore = research + impact+ market+ innovation + effectiveness + outreach + difficulty + userinterface + experience + github + references + progression + writing + video + creativity + engagement;
+            totalScore = research + impact+ market+ innovation + effectiveness + outreach + difficulty + userinterface + experience + github + references + progression + writing + video + creativity;
 
             
 
@@ -74,7 +74,7 @@
 
             score = new Rubric();
 
-            score.set("TeamMembers", team);
+            score.set("TeamCode", team);
 
 
             score.set("Research", research);
@@ -92,7 +92,6 @@
             score.set("Writing", writing);
             score.set("Video", video);
             score.set("Creativity", creativity);
-            score.set("Engagement", engagement);
             score.set("TotalScore", totalScore); 
 
         
@@ -312,19 +311,7 @@
             if (creativity4.checked)
                 creativity = 4;
         }
-        function getEngagement()
-        {
-            if (engagement0.checked)
-                engagement = 0;
-            if (engagement1.checked)
-                engagement = 1;
-            if (engagement2.checked)
-                engagement = 2;
-            if (engagement3.checked)
-                engagement = 3;
-            if (engagement4.checked)
-                engagement = 4;
-        }
+        
         
     </script>
 </head>
@@ -335,8 +322,8 @@
     <div id = "form">
     <form onsubmit="return false">
         
-        <label for = "team-names">Team Members: </label>
-        <input type = "text" id = "team-names" name = "team-names" ><br><br>
+        <label for = "team-code">Team Code: </label>
+        <input type = "text" id = "team-code" name = "team-code" ><br><br>
 
         <h4>Please select one score per row:</h4>
         
@@ -635,27 +622,7 @@
             <th class = "cat5"><input type = "radio" id = "creativity4" name = "creativity" value = 4>
                 <label for = "creativity4">Very engaging and exceptionally imaginative</label></th>
         </tr>
-        <tr>
-            <th class = "section6"><h3 class = "section-text">Competition Engagement</h3></th>
-            <th  class = "section6"></th>
-            <th  class = "section6"></th>
-            <th  class = "section6"></th>
-            <th  class = "section6"></th>
-            <th  class = "section6"></th>
-        </tr>
-        <tr>
-            <th class = "cat6">Event and Mentor Engagement</th>
-            <th class = "cat6"><input type = "radio" id = "engagement0" name = "engagement" value = 0>
-                <label for = "engagement0">Did not attend any events or interact with a mentor</label></th>
-            <th class = "cat6"><input type = "radio" id = "engagement1" name = "engagement" value = 1>
-                <label for = "engagement1">Attendance and communication was very sporadic</label></th>
-            <th class = "cat6"h><input type = "radio" id = "engagement2" name = "engagement" value = 2>
-                <label for = "engagement2">An effort was made for attendance and communication</label></th>
-            <th class = "cat6"><input type = "radio" id = "engagement3" name = "engagement" value = 3>
-                <label for = "engagement3">Event attendance and work with the mentor was good</label></th>
-            <th class = "cat6"><input type = "radio" id = "engagement4" name = "engagement" value = 4>
-                <label for = "engagement4">Event attendance and mentor communication was excellent; the team utilized all competition opportunities</label></th>
-        </tr>
+    
     </table>
     <p>*Degree to which the solution makes life better by improving existing options, developing a new application of existing ideas, or solving the problem in a completely new way</p>
     <p>** Examples of in-depth customer engagement may include meeting with market leaders and receiving an endorsement for their solution, conducting an informal survey, or meeting with the target demographic and collecting first-hand feedback</p>
