@@ -29,6 +29,12 @@
 
         var email = document.getElementById("judge-email").value;
         form.set("Email", email);
+        
+        var state = document.getElementById("state").value;
+        form.set("State", state);
+
+        var phone = document.getElementById("phone").value;
+        form.set("Phone", phone);
 
         var webdev = document.getElementById("web-dev").checked;
         var mobapp = document.getElementById("mobile-app").checked;
@@ -49,7 +55,7 @@
         form.set("Blockchain", blockchain);
         form.set("IoT", iot);
         form.set("CAD", cad);
-        form.set("UI/UX", ui);
+        form.set("UIUX", ui);
         form.set("VirtualReality",vr);
 
         var jobdesc = document.getElementById("job-description").value;
@@ -298,7 +304,10 @@
 
         
 
-        form.save().then(function(judgeForm){
+        if (name != "" && email != "" && jobdesc != "" && linkedin != "" && bluejeans != "" && numProjects != "" && state != "" && phone != "")
+        {
+
+            form.save().then(function(judgeForm){
             console.log("Successful");
             alert("Your form has been submitted. You can now close this tab. Thank you!");
 
@@ -306,6 +315,10 @@
         }).catch(function(error){
             console.log("Error: " + error.message);
         });
+        }
+        
+
+        
 
 
         
@@ -337,10 +350,15 @@
             <input type = "text" id ="judge-name" name = "judge-name" required>
             <h2><label for = "judge-email">Email:</label></h2>
             <input type = "email" id = "judge-email" name = "judge-name" required>
+            <h2><label for = "state"> State: </label> </h2>
+            <input type = "text" name = "state" id = "state" required>
+            <h2><label for = "phone">Phone Number:</label></h2>
+            <input type = "tel" name = "phone" id = "phone">
             <br>
             <label for = "num-projects"><h2>How many projects are you willing to judge? (Each project ~ 1 hour) </h2></label>
             <br>
             <input type = "number" id = "num-projects" name = "num-projects" required min = "1">
+            
             
             </div>
             
