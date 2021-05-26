@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Information</title>
+
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">  
+    <link rel="stylesheet" href="empowher-assets/styles.css">
+    <link rel = "stylesheet" href = "empowher-assets/team.css">
+    
+    
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <script type="text/javascript" type="text/javascript">
+    
+
+    
+    Parse.initialize("2bLSypMifZwtcnA82P5M9LonZAiZX84xAz8E93mg","bqYQwNlW9g6dGEF3BDprzySZ2UXFjWJXXSUXu6ct"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
+    Parse.serverURL = 'https://parseapi.back4app.com/'
+
+    var teaminfo = new Parse.Object.extend("TeamInfo");
+
+    var name1;
+    var name2;
+    var name3;
+    var name4;
+
+    var email1;
+    var email2;
+    var email3;
+    var email4;
+
+    var grade1;
+    var grade2;
+    var grade3;
+    var grade4;
+
+    var school1;
+    var school2;
+    var school3;
+    var school4;
+
+    var state1;
+    var state2;
+    var state3;
+    var state4;
+
+    var country1;
+    var country2;
+    var country3;
+    var country4;
+
+    var courses1;
+    var courses2;
+    var courses3;
+    var courses4;
+
+    var experience1;
+    var experience2;
+    var experience3;
+    var experience4;
+
+
+    var projectname;
+    var mentorname;
+    var mentoremail;
+    var projecttype;
+
+    
+    
+    function create()
+    {
+
+        form = new teaminfo();
+
+        name1 = document.getElementById("name1").value;
+        name2 = document.getElementById("name2").value;
+        name3 = document.getElementById("name3").value;;
+        name4 = document.getElementById("name4").value;
+
+        email1 = document.getElementById("email1").value;
+        email2 = document.getElementById("email1").value;
+        email3 = document.getElementById("email1").value;
+        email = document.getElementById("email1").value;
+
+        grade1 = document.getElementById("grade1").value;
+        grade2 = document.getElementById("grade2").value;
+        grade3 = document.getElementById("grade3").value;
+        grade4 = document.getElementById("grade4").value;
+
+        school1 = document.getElementById("school1").value;
+        school2 = document.getElementById("school1").value;
+        school3 = document.getElementById("school1").value;
+        school4 = document.getElementById("school1").value;
+
+        state1 = document.getElementById("state1").value;
+        state2 = document.getElementById("state1").value;
+        state3 = document.getElementById("state1").value;
+        state4 = document.getElementById("state1").value;
+
+        country1 = document.getElementById("country1").value;
+        country2 = document.getElementById("country1").value;
+        country3 = document.getElementById("country1").value;
+        country4 = document.getElementById("country1").value;
+
+        courses1 = document.getElementById("cscourse1").value;
+        courses2  = document.getElementById("cscourse1").value;
+        courses3 = document.getElementById("cscourse1").value;
+        courses4 = document.getElementById("cscourse1").value;
+
+        experience1 = document.getElementById("cstaken1").value;
+        experience2 = document.getElementById("cstaken1").value;
+        experience3 = document.getElementById("cstaken1").value;
+        experience4 = document.getElementById("cstaken1").value;
+
+        projectname = document.getElementById("project-name").value;
+        mentorname = document.getElementById("mentor-name").value;
+        mentoremail = document.getElementById("mentor-email").value;
+        projecttype = document.getElementById("project-type").value;
+
+        
+        form.set("Name1", name1);
+        form.set("Name2", name2);
+        form.set("Name3", name3);
+        form.set("Name4", name4);
+
+        form.set("Email1", email1);
+        form.set("Email2", email2);
+        form.set("Email3", email3);
+        form.set("Email3", email4);
+
+        form.set("Grade1", grade1);
+        form.set("Grade2", grade2);
+        form.set("Grade3", grade3);
+        form.set("Grade4", grade4);
+
+        form.set("School1", school1);
+        form.set("School2", school2);
+        form.set("School3", school3);
+        form.set("School4", school4);
+
+        form.set("State1", state1);
+        form.set("State2", state2);
+        form.set("State3", state3);
+        form.set("State4", state4);
+
+        form.set("Country1", country1);
+        form.set("Country2", country2);
+        form.set("Country3", country3);
+        form.set("Country4", country4);
+
+        form.set("Courses1", courses1);
+        form.set("Courses2", courses2);
+        form.set("Courses3", courses3);
+        form.set("Courses4", courses4);
+
+        form.set("Experience1", experience1);
+        form.set("Experience2", experience2);
+        form.set("Experience3", experience3);
+        form.set("Experience4", experience4);
+
+        form.set("ProjectName", projectname);
+        form.set("MentorName", mentorname);
+        form.set("MentorEmail", mentoremail);
+        form.set("ProjectType", projecttype);
+
+
+        
+        console.log(name1);
+        console.log(grade1);
+        console.log(state1);
+        console.log(email1);
+        console.log(country1);
+        console.log(experience1);
+        console.log(projectname);
+        console.log(mentorname);
+        console.log(mentoremail);
+        console.log(projecttype);
+
+        if (name1 != "name" && email1 != "email@example.com" && grade1 != "Grade" && school1 != "School" && state1 != "State" && country1 != "Country" && mentorname != "" && mentoremail != "" && projectname != "" && projecttype != "")
+        {
+
+            form.save().then(function(judgeForm){
+            console.log("Successful");
+            alert("Your form has been submitted. You can now close this tab. Thank you!");
+
+
+        }).catch(function(error){
+            console.log("Error: " + error.message);
+        });
+        }
+        else
+        {
+            alert("Please make sure you have filled out all required form fields and try again.");
+        }
+
+
+    }
+
+    
+
+
+    </script>
+  
+</head>
+<body>
+
+    <h1><pre><img src = "empowher-assets/img/logo.png" width = "70px"> Team Information Form</h1></pre>
+    <form onsubmit="return false">
+    <h3>Team Member 1</h3>
+
+    <p><label for = "name1">Name: *</label></p>
+    <input type = "text" id = "name1" name = "name1" required value = "Name"> 
+    
+    <p><label for = "email1">Email Address: *</label></p>
+    <input type = "email" id = "email1" name = "email1" required value = "email@example.com"> 
+    <p><label for = "grade1">Grade: *</label></p>
+    <input type = "text" id = "grade1" name = "grade1" required value = "Grade">
+    <p><label for = "school1">School: *</label></p>
+    <input type = "text" id = "school1" name = "school1" required value = "School"> 
+    <p><label for = "state1">State (if in US): </label></p>
+    <input type = "text" id = "state1" name = "state1" value = "State"> 
+    <p><label for = "country1">Country: *</label></p>
+    <input type = "text" id = "country1" name = "country1" required value = "Country"> 
+
+
+
+    <p><label for = "cscourse1">What computer science courses does your school offer?: *</label></p>
+    <textarea id = "cscourse1" name = "cscourse1" required rows = "5" cols = "100">Please list all computer science courses offered </textarea>
+    <p><label for = "cstaken1">Previous CS experience (This will not be used to grade your submission. This is used to gather demographic information): *</label></p>
+    <textarea id = "cstaken1" name = "cstaken1" required rows = "5" cols = "100"> Please describe your previous experience in computer science.</textarea>
+
+    <h3>Team Member 2 (If applicable) </h3>
+
+    <p><label for = "name2">Name: </label></p>
+    <input type = "text" id = "name2" name = "name2" value = "Name"> 
+    <p><label for = "email2">Email Address: </label></p>
+    <input type = "email" id = "email2" name = "email2" value = "email@example.com" > 
+    <p><label for = "grade2">Grade: </label></p>
+    <input type = "text" id = "grade2" name = "grade2" value = "Grade" >
+    <p><label for = "school2">School: </label></p>
+    <input type = "text" id = "school2" name = "school2" value = "School" > 
+    <p><label for = "state2">State (if in US): </label></p>
+    <input type = "text" id = "state2" name = "state2" value = "State"> 
+    <p><label for = "country2">Country: </label></p>
+    <input type = "text" id = "country2" name = "country2" value = "Country"> 
+
+
+
+    <p><label for = "cscourse2">What computer science courses does your school offer?: </label></p>
+    <textarea id = "cscourse2" name = "cscourse2" rows = "5" cols = "100">Please list all computer science courses offered. </textarea>
+    <p><label for = "cstaken2">Previous CS experience (This will not be used to grade your submission. This is used to gather demographic information): </label></p>
+    <textarea id = "cstaken2" name = "cstaken2" rows = "5" cols = "100">Please describe your previous experience in computer science. </textarea>
+
+
+    <h3>Team Member 3 (If applicable)</h3>
+
+    <p><label for = "name3">Name: </label></p>
+    <input type = "text" id = "name3" name = "name3" value = "Name"> 
+    <p><label for = "email3">Email Address: </label></p>
+    <input type = "email" id = "email3" name = "email3" value = "email@example.com" > 
+    <p><label for = "grade3">Grade: </label></p>
+    <input type = "text" id = "grade3" name = "grade3" value = "Grade">
+    <p><label for = "school3">School: </label></p>
+    <input type = "text" id = "school3" name = "school3" value = "School" > 
+    <p><label for = "state3">State (if in US): </label></p>
+    <input type = "text" id = "state3" name = "state3" value = "State"> 
+    <p><label for = "country3">Country: </label></p>
+    <input type = "text" id = "country3" name = "country3" value = "Country"> 
+
+
+    <p><label for = "cscourse3">What computer science courses does your school offer?: </label></p>
+    <textarea id = "cscourse3" name = "cscourse3" rows = "5" cols = "100">Please list all computer science courses offered. </textarea>
+    <p><label for = "cstaken3">Previous CS experience (This will not be used to grade your submission. This is used to gather demographic information): </label></p>
+    <textarea id = "cstaken3" name = "cstaken3" rows = "5" cols = "100">Please describe your previous experience in computer science. </textarea>
+
+
+    <h3>Team Member 4 (If applicable)</h3>
+
+    <p><label for = "name4">Name: </label></p>
+    <input type = "text" id = "name4" name = "name4" value = "Name"> 
+    <p><label for = "email4">Email Address: </label></p>
+    <input type = "email" id = "email4" name = "email4" value = "email@example.com"> 
+    <p><label for = "grade4">Grade: </label></p>
+    <input type = "text" id = "grade4" name = "grade4" value = "Grade">
+    <p><label for = "school4">School: </label></p>
+    <input type = "text" id = "school4" name = "school4" value = "School"> 
+    <p><label for = "state4">State (if in US): </label></p>
+    <input type = "text" id = "state4" name = "state4" value = "State"> 
+    <p><label for = "country4">Country: </label></p>
+    <input type = "text" id = "country4" name = "country4" value = "Country"> 
+
+
+
+    <p><label for = "cscourse4">What computer science courses does your school offer?: </label></p>
+    <textarea id = "cscourse4" name = "cscourse4" rows = "5" cols = "100">Please list all computer science courses offered. </textarea>
+    <p><label for = "cstaken4">Previous CS experience (This will not be used to grade your submission. This is used to gather demographic information): </label></p>
+    <textarea id = "cstaken4" name = "cstaken4" rows = "5" cols = "100">Please describe your previous experience in computer science. </textarea>
+
+    <h3>Project Information</h3>
+    <p><label for = "project-name">Project Name: *</label></p>
+    <input type = "text" id = "project-name" name = "project-name" required>
+    <p><label for = "mentor-name">Mentor Name: *</label></p>
+    <input type = "text" id = "mentor-name" name = "mentor-name" required>
+    <p><label for = "mentor-email">Mentor Email: *</label></p>
+    <input type = "email" id = "mentor-email" name = "mentor-email" required>
+
+    <p><label for = "project-type">Project Type: *</label></p>
+    <select name="project-type" class="project-type" id = "project-type">
+        <option value = ""></option>
+        <option value="web-dev">Web Development</option>
+        <option value="mob-app">Mobile App Development</option>
+        <option value="desk-app">Desktop App Development</option>
+        <option value="db">Databases</option>
+        <option value="ai-ml">AI/ML</option>
+        <option value="blockchain">Blockchain</option>
+        <option value="iot">IoT</option>
+        <option value="cad">CAD</option>
+        <option value="uiux">UI/UX</option>
+        <option value="vr">VR</option>
+        <option value="desk-app">Desktop App Development</option>
+        <option value="db">Databases</option>
+        
+      </select>
+
+      <input type = "submit" class = "button center-button"  Value = "Submit" id = "SubmitButton" onclick="create()">
+
+
+
+    </form>
+    
+    
+
+    
+</body>
+</html>
